@@ -1,5 +1,3 @@
 # Logos fetched from Wikipedia and turned white: file-name | Wikipedia article
 bbc-radio-3-unwind | BBC Radio 3 Unwind
 bbc-radio-orkney | BBC Radio Orkney
-bbc-radio-scotland-wiki | BBC Radio Scotland
-bbc-radio-solent-wiki | BBC Radio Solent

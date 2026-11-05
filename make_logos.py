@@ -18,6 +18,23 @@ def logo_url(article):
     page = next(iter(pages.values()))
     return page.get("pageimage"), (page.get("thumbnail") or {}).get("source")
 
+def logo_from_article_files(article):
+    """Fallback: look through the article's image files for one named after the station (works for non-free logos too)."""
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "images", "imlimit": 50, "redirects": 1, "titles": article})
+    pages = json.loads(get("https://en.wikipedia.org/w/api.php?" + q))["query"]["pages"]
+    files = [i["title"] for p in pages.values() for i in p.get("images", [])]
+    words = [w.lower() for w in article.replace("BBC", "").replace("Radio", "").split() if len(w) > 1]
+    cands = [f for f in files if f.lower().endswith((".svg", ".png")) and all(w in f.lower() for w in words)]
+    for f in cands:
+        q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo", "iiprop": "url",
+                                    "iiurlwidth": 1200, "titles": f})
+        info = next(iter(json.loads(get("https://en.wikipedia.org/w/api.php?" + q))["query"]["pages"].values()))
+        ii = (info.get("imageinfo") or [{}])[0]
+        url = ii.get("thumburl") or ii.get("url")
+        if url:
+            return f, url
+    return None, None
+
 def whiten(data):
     im = Image.open(io.BytesIO(data)).convert("RGBA")
     a = im.getchannel("A")
@@ -39,6 +56,8 @@ def main():
         name, article = [x.strip() for x in line.split("|", 1)]
         try:
             fname, url = logo_url(article)
+            if not url:
+                fname, url = logo_from_article_files(article)
             if not url:
                 print(f"!! {article}: no logo image on Wikipedia"); continue
             img = whiten(get(url))
