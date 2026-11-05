@@ -268,6 +268,31 @@ def fetch(src, tmpdir, i, days=7):
     os.remove(raw)
     return plain
 
+def refresh_plex_token():
+    """Plex's free channels need a guest token (the same kind Plex's own web player uses when you're not signed in).
+    Get a fresh one each run and put it into playlist.m3u, so the Plex links never go stale or get rate-limited."""
+    import json, re, uuid
+    path = os.path.join(HERE, "playlist.m3u")
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    if "epg.provider.plex.tv" not in text:
+        return
+    hdr = {"X-Plex-Product": "Plex Web", "X-Plex-Client-Identifier": str(uuid.uuid4()), "X-Plex-Version": "4.145.0",
+           "X-Plex-Platform": "Chrome", "Accept": "application/json", "User-Agent": "Mozilla/5.0"}
+    try:
+        req = urllib.request.Request("https://plex.tv/api/v2/users/anonymous", data=b"", headers=hdr, method="POST")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            token = json.load(r)["authToken"]
+    except Exception as e:
+        print(f"   !! could not get a Plex guest token, keeping the old one: {e}", flush=True)
+        return
+    text = re.sub(r"(epg\.provider\.plex\.tv/library/parts/[^?\s]+\?X-Plex-Token=)[^&\s]+", r"\g<1>" + token, text)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+    print("   Plex guest token refreshed", flush=True)
+
 def update_playlist_header():
     """Point playlist.m3u's first line at this repo's own epg.xml.gz, so apps load the guide automatically."""
     repo, branch = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_REF_NAME") or "main"
@@ -363,6 +388,7 @@ def main():
     os.replace(out_path + ".tmp", out_path)
     shutil.rmtree(tmpdir, ignore_errors=True)
     update_playlist_header()
+    refresh_plex_token()
     mb = os.path.getsize(out_path) / 1e6
     print(f"Done: {len(channels_done)} channels, {total_prog} programmes, {mb:.1f} MB -> epg.xml.gz")
 
