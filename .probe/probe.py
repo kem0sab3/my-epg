@@ -1,19 +1,23 @@
-import json, urllib.request, urllib.error, time
+import json, urllib.request, urllib.error
 def p(tag, obj): print("P|" + tag + "|" + json.dumps(obj, ensure_ascii=False)[:300], flush=True)
-def fetch(u):
+Q = "?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000"
+urls = {
+ "Clyde 1": "https://stream-al.hellorayo.co.uk/clyde1.aac", "Forth 1": "https://stream-al.hellorayo.co.uk/forth1.aac",
+ "Northsound 1": "https://stream-mz.hellorayo.co.uk/northsound1.aac", "Tay FM": "https://stream-mz.hellorayo.co.uk/tayfm.aac",
+ "MFR": "https://stream-mz.hellorayo.co.uk/mfrfm.aac",
+ "GHR (apollo)": "https://stream.apollo.audio/gh0/hi/aac/", "Hits (apollo)": "https://stream.apollo.audio/hit/hi/aac/",
+ "Magic (apollo)": "https://stream.apollo.audio/mag/hi/aac/", "Clyde (apollo)": "https://stream.apollo.audio/cl1/hi/aac/",
+ "Absolute": "https://stream-ar.hellorayo.co.uk/absoluteradiohigh.aac", "Absolute 80s": "https://stream-ar.hellorayo.co.uk/absolute80shigh.aac",
+ "Absolute 90s": "https://stream-ar.hellorayo.co.uk/absolute90shigh.aac", "KISS": "https://live-bauerkiss.sharp-stream.com/kissnational.aac",
+ "KISSTORY": "https://live-bauerkiss.sharp-stream.com/kisstory.aac", "Jazz FM": "https://stream-al.hellorayo.co.uk/jazzhigh.aac",
+ "Kerrang": "https://stream-al.hellorayo.co.uk/kerrang.aac", "Planet Rock": "https://stream-mz.hellorayo.co.uk/planetrock.aac",
+}
+for name, base in urls.items():
+    u = base + Q
     try:
         with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=20) as r:
-            return r.status, r.headers.get("Content-Type"), len(r.read(1000))
+            p("s", {"name": name, "st": r.status, "ct": r.headers.get("Content-Type"), "final": r.geturl().split("?")[0], "n": len(r.read(2000))})
     except urllib.error.HTTPError as e:
-        return e.code, None, 0
+        p("s", {"name": name, "st": e.code})
     except Exception as e:
-        return str(e)[:60], None, 0
-now = int(time.time())
-for pid in ["BMUK_inpage_html5", "BMUK_html5", "BMUK_Web", "BMUK_RPH5", "BMUK_Rayo", "BMUK_rayo_web"]:
-    for q in [f"?direct=true&aw_0_1st.playerid={pid}", f"?direct=true&aw_0_1st.playerid={pid}&aw_0_1st.skey={now}"]:
-        u = "https://stream-al.hellorayo.co.uk/clyde1.aac" + q
-        st, ct, n = fetch(u); p("pid", {"q": q, "st": st, "ct": ct, "n": n})
-# also the apollo redirector used by Bauer's own apps, with the web player id
-for q in ["?direct=true&aw_0_1st.playerid=BMUK_inpage_html5", "?direct=false&aw_0_1st.playerid=BMUK_inpage_html5"]:
-    u = "https://stream.apollo.audio/cl1/hi/aac/" + q
-    st, ct, n = fetch(u); p("apollo", {"q": q, "st": st, "ct": ct, "n": n})
+        p("s", {"name": name, "err": str(e)[:80]})
