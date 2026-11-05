@@ -108,7 +108,7 @@ https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_c
 https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/pc_hd_abr_v2.mpd
 #EXTINF:-1 tvg-id="ess-bbc_persian_tv" tvg-name="BBC Persian" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/bbc-persian-int.png" group-title="BBC World",BBC Persian
 https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/hevc_iptv_mse_v0.mpd
-#EXTINF:-1 tvg-id="ess-bbc_afghan_tv" tvg-name="BBC Pashto" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png" group-title="BBC World",BBC Pashto
+#EXTINF:-1 tvg-id="ess-bbc_afghan_tv" tvg-name="BBC Pashto" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-pashto.png" group-title="BBC World",BBC Pashto
 https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_afghan_tv/pc_hd_abr_v2.mpd
 #EXTINF:-1 tvg-id="BBCOneScotHD.uk" tvg-name="BBC One Scotland (backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-one-uk.png" group-title="BBC Backup (720p)",BBC One Scotland (backup)
 https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_scotland_hd/mobile_wifi_main_hd_abr_v2.m3u8
