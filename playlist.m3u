@@ -310,22 +310,46 @@ https://stream-al.hellorayo.co.uk/downtown.aac?direct=true&aw_0_1st.playerid=kem
 https://media-ssl.musicradio.com/CapitalUKMP3
 #EXTINF:-1 radio="true" tvg-id="CapitalXtra.uk" tvg-name="Capital XTRA" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital-Xtra.png" group-title="UK Radio",Capital XTRA
 https://media-ssl.musicradio.com/CapitalXTRANationalMP3
+#EXTINF:-1 radio="true" tvg-id="global-capitaldance" tvg-name="Capital Dance" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/capital-dance.png" group-title="UK Radio",Capital Dance
+https://media-ssl.musicradio.com/CapitalDanceMP3
+#EXTINF:-1 radio="true" tvg-id="global-capitalchill" tvg-name="Capital Chill" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/capital-chill.png" group-title="UK Radio",Capital Chill
+https://media-ssl.musicradio.com/CapitalChillMP3
+#EXTINF:-1 radio="true" tvg-id="global-capitalanthems" tvg-name="Capital Anthems" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/capital-anthems.png" group-title="UK Radio",Capital Anthems
+https://media-ssl.musicradio.com/CapitalAnthemsMP3
 #EXTINF:-1 radio="true" tvg-id="HeartRadio.uk" tvg-name="Heart" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart.png" group-title="UK Radio",Heart
 https://media-ssl.musicradio.com/HeartUKMP3
+#EXTINF:-1 radio="true" tvg-id="global-heart70s" tvg-name="Heart 70s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/heart-70s.png" group-title="UK Radio",Heart 70s
+https://media-ssl.musicradio.com/Heart70sMP3
 #EXTINF:-1 radio="true" tvg-id="Heart80s.uk" tvg-name="Heart 80s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-80s.png" group-title="UK Radio",Heart 80s
 https://media-ssl.musicradio.com/Heart80sMP3
 #EXTINF:-1 radio="true" tvg-id="Heart90s.uk" tvg-name="Heart 90s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-90s.png" group-title="UK Radio",Heart 90s
 https://media-ssl.musicradio.com/Heart90sMP3
+#EXTINF:-1 radio="true" tvg-id="global-heart00s" tvg-name="Heart 00s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/heart-00s.png" group-title="UK Radio",Heart 00s
+https://media-ssl.musicradio.com/Heart00sMP3
 #EXTINF:-1 radio="true" tvg-id="HeartDance.uk" tvg-name="Heart Dance" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-Dance.png" group-title="UK Radio",Heart Dance
 https://media-ssl.musicradio.com/HeartDanceMP3
 #EXTINF:-1 radio="true" tvg-id="SmoothRadio.uk" tvg-name="Smooth Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Smooth-Radio.png" group-title="UK Radio",Smooth Radio
 https://media-ssl.musicradio.com/SmoothUKMP3
+#EXTINF:-1 radio="true" tvg-id="global-smoothrelax" tvg-name="Smooth Relax" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/smooth-relax.png" group-title="UK Radio",Smooth Relax
+https://media-ssl.musicradio.com/SmoothRelaxMP3
+#EXTINF:-1 radio="true" tvg-id="global-smoothchill" tvg-name="Smooth Chill" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/smooth-chill.png" group-title="UK Radio",Smooth Chill
+https://media-ssl.musicradio.com/SmoothChillMP3
+#EXTINF:-1 radio="true" tvg-id="global-smoothcountry" tvg-name="Smooth Country" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/smooth-country.png" group-title="UK Radio",Smooth Country
+https://media-ssl.musicradio.com/SmoothCountryMP3
+#EXTINF:-1 radio="true" tvg-id="global-smooth70s" tvg-name="Smooth 70s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/smooth-70s.png" group-title="UK Radio",Smooth 70s
+https://media-ssl.musicradio.com/Smooth70sMP3
 #EXTINF:-1 radio="true" tvg-id="ClassicFM.uk" tvg-name="Classic FM" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Classic-FM.png" group-title="UK Radio",Classic FM
 https://media-ssl.musicradio.com/ClassicFMMP3
+#EXTINF:-1 radio="true" tvg-id="global-classicfmmovies" tvg-name="Classic FM Movies" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/classic-fm-movies.png" group-title="UK Radio",Classic FM Movies
+https://media-ssl.musicradio.com/ClassicFMMoviesMP3
+#EXTINF:-1 radio="true" tvg-id="global-classicfmcalm" tvg-name="Classic FM Calm" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/classic-fm-calm.png" group-title="UK Radio",Classic FM Calm
+https://media-ssl.musicradio.com/ClassicFM-M-Relax
 #EXTINF:-1 radio="true" tvg-id="GoldRadio.uk" tvg-name="Gold" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Gold-Radio.png" group-title="UK Radio",Gold
 https://media-ssl.musicradio.com/GoldMP3
 #EXTINF:-1 radio="true" tvg-id="RadioX.uk" tvg-name="Radio X" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Radio-X.png" group-title="UK Radio",Radio X
 https://media-ssl.musicradio.com/RadioXUKMP3
+#EXTINF:-1 radio="true" tvg-id="global-radioxclassicrock" tvg-name="Radio X Classic Rock" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/radio-x-classic-rock.png" group-title="UK Radio",Radio X Classic Rock
+https://media-ssl.musicradio.com/RadioXClassicRockMP3
 #EXTINF:-1 radio="true" tvg-id="LBCRadio.uk" tvg-name="LBC" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/LBC.png" group-title="UK Radio",LBC
 https://media-ssl.musicradio.com/LBCUKMP3
 #EXTINF:-1 radio="true" tvg-id="LBCNews.uk" tvg-name="LBC News" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/LBC-News.png" group-title="UK Radio",LBC News

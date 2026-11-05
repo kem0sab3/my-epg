@@ -10,6 +10,7 @@ on:
       - channels.txt
       - settings.txt
       - playlist.m3u
+      - static_guide.txt
 
 permissions:
   contents: write

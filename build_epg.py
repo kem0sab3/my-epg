@@ -212,8 +212,34 @@ def grab_rakuten_uk(days, out_path):
     print(f"   Rakuten TV UK: {total} programmes", flush=True)
     return out_path
 
+def static_guide(path, days, out_path):
+    """All-day listings for stations that publish no schedule (non-stop music streams).
+    Reads lines of 'channel-id | title | description' and writes one listing per day."""
+    tv = ET.Element("tv")
+    today = datetime.datetime.now(datetime.timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    n = 0
+    for line in read_list(path):
+        parts = [x.strip() for x in line.split("|")]
+        if len(parts) < 2:
+            continue
+        cid, title, desc = parts[0], parts[1], (parts[2] if len(parts) > 2 else "")
+        ET.SubElement(ET.SubElement(tv, "channel", id=cid), "display-name").text = title
+        for d in range(-1, int(days)):
+            start = today + datetime.timedelta(days=d)
+            p = ET.SubElement(tv, "programme", start=start.strftime("%Y%m%d%H%M%S +0000"),
+                              stop=(start + datetime.timedelta(days=1)).strftime("%Y%m%d%H%M%S +0000"), channel=cid)
+            ET.SubElement(p, "title").text = title
+            if desc:
+                ET.SubElement(p, "desc").text = desc
+            n += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Static guide: {n} all-day listings", flush=True)
+    return out_path
+
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.startswith("static:"):
+        return static_guide(src.split(":", 1)[1].strip(), days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("bbc-radio:"):
         stations = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
         return grab_bbc_radio(stations, int(days), os.path.join(tmpdir, f"src{i}.xml"))

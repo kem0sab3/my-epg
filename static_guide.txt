@@ -1,0 +1,14 @@
+# All-day guide listings for stations that don't publish a schedule (non-stop music).
+# One line per station: channel id | title shown in the guide | description
+global-capitaldance | Capital Dance | Non-stop dance anthems and the biggest club tracks.
+global-capitalchill | Capital Chill | Chilled electronic beats, non-stop.
+global-capitalanthems | Capital Anthems | The biggest Capital hits of the last 20 years, non-stop.
+global-heart70s | Heart 70s | Non-stop feel-good hits from the 1970s.
+global-heart00s | Heart 00s | Non-stop hits from the 2000s.
+global-smoothrelax | Smooth Relax | Relaxing, easy songs, non-stop.
+global-smoothchill | Smooth Chill | Laid-back, chilled music, non-stop.
+global-smoothcountry | Smooth Country | The best country music, old and new.
+global-smooth70s | Smooth 70s | Non-stop easy hits from the 1970s.
+global-classicfmmovies | Classic FM Movies | Non-stop film soundtracks and movie music.
+global-classicfmcalm | Classic FM Calm | Calming classical music, non-stop.
+global-radioxclassicrock | Radio X Classic Rock | Non-stop classic rock.

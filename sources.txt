@@ -23,5 +23,8 @@ bauer:cl1,fo1,no1,ta1,mf1,coo,dra,gh0,g6s,70s,80s,hit,h90,h00,abr,ab7,ab8,ab9,ab
 # Sky's TV guide, by Sky service number (1005 = Times Radio)
 sky:1005
 
+# All-day listings for non-stop music stations with no published schedule (edit static_guide.txt)
+static:static_guide.txt
+
 # Big guide used for BBC Red Button 2-24 and BBC World News
 https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz

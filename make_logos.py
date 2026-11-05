@@ -82,11 +82,13 @@ def main():
             continue
         name, article = [x.strip() for x in line.split("|", 1)]
         try:
-            if article.startswith(("url:", "tile:", "raw:")):
+            if article.startswith(("url:", "tile:", "raw:", "white:")):
                 mode, url = article.split(":", 1)
                 fname, url = "direct", url.strip()
                 if mode == "tile":
                     img = tile_lettering(get(url))
+                elif mode == "white":
+                    img = whiten(get(url))
                 elif mode == "raw":
                     img = Image.open(io.BytesIO(get(url))).convert("RGBA")
                 else:
