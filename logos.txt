@@ -2,3 +2,20 @@
 bbc-radio-3-unwind | BBC Radio 3 Unwind
 bbc-radio-orkney | BBC Radio Orkney
 bbc-radio-shetland | BBC Radio Shetland
+ghr-60s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1741162799/brand_manager/stations/m9drlgrvphh9nwakbabn.jpg
+ghr-70s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1741162312/brand_manager/stations/hgk6phanaeyamape00bg.jpg
+ghr-80s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1741162682/brand_manager/stations/hkdhyamxjajapmoylebw.jpg
+hits-radio-90s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1743072442/brand_manager/stations/mt7dm07txfmr3zirgxar.jpg
+hits-radio-00s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1743072752/brand_manager/stations/ibhow82rul04u2cymvzq.jpg
+absolute-70s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678797002/brand_manager/stations/ewdggb1ezsc5uvweoes8.png
+absolute-00s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678796903/brand_manager/stations/u9pb7pyvwufaywva8qfv.png
+absolute-10s | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678797104/brand_manager/stations/d0ndh5q6kvqxkdldrfeg.png
+kiss-xtra | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1776026091/brand_manager/stations/cosvxg3lj4ik7osrpscw.png
+kisstory-rnb | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1776026143/brand_manager/stations/o4lrjblpfxyqzofyg17v.png
+heat-radio | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1691403438/brand_manager/stations/qq5f1hav9qycgr0zrslv.png
+magic-soul | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1747286935/brand_manager/stations/whlfhozmobazoyrxj6od.jpg
+mellow-magic | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1747288783/brand_manager/stations/vfim58bl8xduu46ignqk.jpg
+magic-classical | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1747289759/brand_manager/stations/tfj3hbaowixcb3zpbpad.jpg
+cool-fm | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678805285/brand_manager/stations/enheqwgpzibdn4htnbyz.png
+downtown-radio | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678805392/brand_manager/stations/yfddwlmfdtjdasqgtkek.png
+times-radio | Times Radio

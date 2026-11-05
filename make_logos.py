@@ -82,10 +82,15 @@ def main():
             continue
         name, article = [x.strip() for x in line.split("|", 1)]
         try:
-            if article.startswith(("url:", "tile:")):
+            if article.startswith(("url:", "tile:", "raw:")):
                 mode, url = article.split(":", 1)
                 fname, url = "direct", url.strip()
-                img = tile_lettering(get(url)) if mode == "tile" else whiten(get(url), only_if_dark=True)
+                if mode == "tile":
+                    img = tile_lettering(get(url))
+                elif mode == "raw":
+                    img = Image.open(io.BytesIO(get(url))).convert("RGBA")
+                else:
+                    img = whiten(get(url), only_if_dark=True)
                 img.thumbnail((1200, 1200))
                 img.save(os.path.join(HERE, "logos", name + ".png"), optimize=True)
                 print(f"ok {name}.png  <- {url} {img.size}")
