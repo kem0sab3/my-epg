@@ -12,3 +12,4 @@ global-smooth70s | Smooth 70s | Non-stop easy hits from the 1970s.
 global-classicfmmovies | Classic FM Movies | Non-stop film soundtracks and movie music.
 global-classicfmcalm | Classic FM Calm | Calming classical music, non-stop.
 global-radioxclassicrock | Radio X Classic Rock | Non-stop classic rock.
+sky-news-weather | Sky News Weather | Live UK and world weather forecasts, around the clock.

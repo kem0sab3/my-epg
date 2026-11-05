@@ -304,10 +304,8 @@
 AlJazeeraEnglish.qa
 ArirangTV.kr
 BBCAlba.uk
-BBCArabic.uk@SD
 BBCFourHD.uk
 BBCNews.uk
-BBCNewsPashto.uk@HD
 BBCOneChannelIslands.uk
 BBCOneEast.uk
 BBCOneEastMidlands.uk
@@ -325,7 +323,6 @@ BBCOneWestMidlands.uk
 BBCOneYorksLincs.uk
 BBCOneYorkshire.uk
 BBCParliament.uk
-BBCPersian.uk@SD
 BBCR1.uk
 BBCR1X.uk
 BBCR2.uk
@@ -688,7 +685,6 @@ RTERadio1.ie
 RTERnaG.ie
 RadioX.uk
 S4C.uk
-SkyNewsWeather.uk@SD
 SmoothRadio.uk
 TJC.uk
 TRTWorld.tr
@@ -769,6 +765,9 @@ bbcredbutton7.uk
 bbcredbutton8.uk
 bbcredbutton9.uk
 bbcworldnews.uk
+ess-bbc_afghan_tv
+ess-bbc_arabic_tv
+ess-bbc_persian_tv
 global-capitalanthems
 global-capitalchill
 global-capitaldance
@@ -802,4 +801,5 @@ rakuten-the-design-network-new
 rakuten-thriller-rakuten-tv
 rakuten-top-movies-rakuten-tv
 sky-1005
+sky-news-weather
 tbn-uk

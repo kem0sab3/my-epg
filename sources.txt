@@ -28,6 +28,9 @@ sky:1005
 # All-day listings for non-stop music stations with no published schedule (edit static_guide.txt)
 static:static_guide.txt
 
+# BBC Arabic, BBC Persian and BBC Pashto (BBC Afghan TV), from the BBC's own schedules
+bbc-ess:bbc_arabic_tv,bbc_persian_tv,bbc_afghan_tv
+
 # TBN UK, from tbn.uk/tv-guide
 tbn-uk
 

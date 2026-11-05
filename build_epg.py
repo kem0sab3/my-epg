@@ -317,6 +317,36 @@ def grab_islam_channel(days, out_path):
     print(f"   Islam Channel guide: {total} programmes", flush=True)
     return out_path
 
+def grab_bbc_ess(services, out_path):
+    """BBC World Service TV schedules (BBC Arabic, Persian, Afghan/Pashto) from the BBC's own schedule service."""
+    import json
+    tv = ET.Element("tv")
+    total = 0
+    for sid in services:
+        ET.SubElement(ET.SubElement(tv, "channel", id=f"ess-{sid}"), "display-name").text = sid
+        try:
+            req = urllib.request.Request(f"https://ess.api.bbci.co.uk/schedules?serviceId={sid}",
+                                         headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                items = json.load(r).get("items") or []
+        except Exception as e:
+            print(f"   !! bbc schedule {sid}: {e}", flush=True)
+            continue
+        for it in items:
+            t = it.get("published_time") or {}
+            if not t.get("start") or not t.get("end"):
+                continue
+            p = ET.SubElement(tv, "programme", start=_xmltv_time(t["start"]), stop=_xmltv_time(t["end"]), channel=f"ess-{sid}")
+            brand = ((it.get("brand") or {}).get("title") or "").strip()
+            ep = ((it.get("episode") or {}).get("title") or "").strip()
+            ET.SubElement(p, "title").text = brand or ep or sid
+            if brand and ep and ep != brand:
+                ET.SubElement(p, "sub-title").text = ep
+            total += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   BBC World Service TV schedules: {total} programmes", flush=True)
+    return out_path
+
 def static_guide(path, days, out_path):
     """All-day listings for stations that publish no schedule (non-stop music streams).
     Reads lines of 'channel-id | title | description' and writes one listing per day."""
@@ -343,6 +373,9 @@ def static_guide(path, days, out_path):
 
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.startswith("bbc-ess:"):
+        services = [x.strip() for x in src.split(":", 1)[1].split(",") if x.strip()]
+        return grab_bbc_ess(services, os.path.join(tmpdir, f"src{i}.xml"))
     if src.strip() == "islam-channel":
         return grab_islam_channel(days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.strip() == "tbn-uk":
