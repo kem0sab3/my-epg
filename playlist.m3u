@@ -240,7 +240,7 @@ https://as-hls-uk-live.akamaized.net/pool_01505109/live/uk/bbc_radio_one/bbc_rad
 https://as-hls-uk-live.akamaized.net/pool_92079267/live/uk/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="bbc_radio_one_dance" tvg-name="BBC Radio 1 Dance" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-radio-1-dance.png" group-title="BBC Radio",BBC Radio 1 Dance
 https://as-hls-uk-live.akamaized.net/pool_62063831/live/uk/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio%3d320000.norewind.m3u8
-#EXTINF:-1 radio="true" tvg-id="bbc_radio_one_anthems" tvg-name="BBC Radio 1 Anthems" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-1.png" group-title="BBC Radio",BBC Radio 1 Anthems
+#EXTINF:-1 radio="true" tvg-id="bbc_radio_one_anthems" tvg-name="BBC Radio 1 Anthems" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-radio-1-anthems.png" group-title="BBC Radio",BBC Radio 1 Anthems
 https://as-hls-uk-live.akamaized.net/pool_11351741/live/uk/bbc_radio_one_anthems/bbc_radio_one_anthems.isml/bbc_radio_one_anthems-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCR2.uk" tvg-name="BBC Radio 2" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-2.png" group-title="BBC Radio",BBC Radio 2
 https://as-hls-uk-live.akamaized.net/pool_74208725/live/uk/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d320000.norewind.m3u8
