@@ -2,7 +2,7 @@
 """Builds epg.xml.gz from the links in sources.txt.
 Run by GitHub every day (see .github/workflows/update-epg.yml).
 You shouldn't need to edit this file - change sources.txt / channels.txt / settings.txt instead."""
-import datetime, gzip, os, shutil, sys, tempfile, urllib.request
+import datetime, gzip, os, re, shutil, sys, tempfile, urllib.request
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -293,6 +293,40 @@ def refresh_plex_token():
         f.write(text)
     print("   Plex guest token refreshed", flush=True)
 
+STREAMING_SERVICES = ("jmp2.uk/", "epg.provider.plex.tv/", "rakuten", "amagi.tv", "wurl.", "tubi.video")
+
+def build_playlist(listed):
+    """Make playlist.m3u from playlist_source.m3u. Channels from free streaming services (Pluto, Samsung, Rakuten, Plex)
+    whose guide has nothing for them today are left out for today, and come back automatically when their listings return."""
+    src = os.path.join(HERE, "playlist_source.m3u")
+    if not os.path.exists(src):
+        return
+    with open(src, encoding="utf-8") as f:
+        lines = f.read().splitlines()
+    out, hidden, i = [], [], 0
+    while i < len(lines):
+        line = lines[i]
+        if line.startswith("#EXTINF"):
+            block = [line]; j = i + 1
+            while j < len(lines) and lines[j].startswith("#") and not lines[j].startswith("#EXTINF"):
+                block.append(lines[j]); j += 1
+            if j < len(lines):
+                block.append(lines[j]); j += 1
+            m = re.search(r'tvg-id="([^"]*)"', line)
+            cid = m.group(1) if m else ""
+            url = block[-1]
+            if any(s in url for s in STREAMING_SERVICES) and cid not in listed:
+                hidden.append(line.rsplit(",", 1)[-1])
+            else:
+                out.extend(block)
+            i = j
+        else:
+            out.append(line); i += 1
+    with open(os.path.join(HERE, "playlist.m3u"), "w", encoding="utf-8") as f:
+        f.write("\n".join(out) + "\n")
+    print(f"   playlist.m3u: {sum(1 for l in out if l.startswith('#EXTINF'))} channels"
+          f" ({len(hidden)} streaming channels hidden today for having no listings: {', '.join(hidden[:15])}{'...' if len(hidden) > 15 else ''})", flush=True)
+
 def update_playlist_header():
     """Point playlist.m3u's first line at this repo's own epg.xml.gz, so apps load the guide automatically."""
     repo, branch = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_REF_NAME") or "main"
@@ -325,6 +359,7 @@ def main():
     pr_out = open(os.path.join(tmpdir, "programmes.part"), "w", encoding="utf-8")
     channels_done = set()   # channel IDs already written
     owned = {}              # channel ID -> source number that supplies its listings
+    listed = set()          # channel IDs that got at least one listing
     total_prog = 0
     ok_sources = 0
 
@@ -362,6 +397,7 @@ def main():
                             seen.add(key)
                             el.tail = "\n"
                             pr_out.write(ET.tostring(el, encoding="unicode"))
+                            listed.add(cid)
                             n_pr += 1
                     el.clear()
             ok_sources += 1
@@ -387,6 +423,7 @@ def main():
         out.write("</tv>\n")
     os.replace(out_path + ".tmp", out_path)
     shutil.rmtree(tmpdir, ignore_errors=True)
+    build_playlist(listed)
     update_playlist_header()
     refresh_plex_token()
     mb = os.path.getsize(out_path) / 1e6

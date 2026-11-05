@@ -9,7 +9,7 @@ on:
       - sources.txt
       - channels.txt
       - settings.txt
-      - playlist.m3u
+      - playlist_source.m3u
       - static_guide.txt
 
 permissions:

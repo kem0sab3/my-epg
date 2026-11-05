@@ -28,6 +28,11 @@ with the guide rebuilt automatically every day.
 
 ## How it updates
 
+`playlist_source.m3u` is the full channel list. Each day GitHub builds `playlist.m3u`
+(the one TiviMate loads) from it, leaving out any Pluto TV, Samsung TV Plus,
+Rakuten TV or Plex channel that has no guide listings that day. Those channels
+come back on their own when their listings return.
+
 Every morning at about 3am, GitHub runs `build_epg.py`. It downloads every guide
 in `sources.txt`, keeps only the channels listed in `channels.txt`, and saves the
 result as `epg.xml.gz`. It also runs a minute after you change any of the files
@@ -42,7 +47,7 @@ Open a file, click the ✏️ pencil, make the change, then **Commit changes**.
 |---|---|---|
 | Add a guide source | `sources.txt` | Paste the link on a new line. Higher in the list wins when two sources cover the same channel. |
 | Switch the old epg6 guide back on | `sources.txt` | Remove the `#` from the start of the epg6 line. |
-| Add or remove a channel | `playlist.m3u` and `channels.txt` | Each channel is two lines in `playlist.m3u`: the `#EXTINF` line and the link under it. Its `tvg-id` also needs to be in `channels.txt` to get guide listings. |
+| Add or remove a channel | `playlist_source.m3u` and `channels.txt` | Each channel is two lines in `playlist_source.m3u`: the `#EXTINF` line and the link under it. Its `tvg-id` also needs to be in `channels.txt` to get guide listings. |
 | Keep every channel from every guide | `channels.txt` | Delete all the IDs (keep the lines starting with `#`). |
 | Show more or fewer days | `settings.txt` | Change `days_ahead`. |
 | Change the all-day listing for a non-stop music station | `static_guide.txt` | Edit the title or description on that station's line. |
