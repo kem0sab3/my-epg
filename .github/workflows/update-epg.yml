@@ -32,4 +32,5 @@ jobs:
           git add epg.xml.gz playlist.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update EPG $(date -u +'%Y-%m-%d')"
+          git pull --rebase -X theirs
           git push
