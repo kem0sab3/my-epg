@@ -10,6 +10,9 @@ https://i.mjh.nz/PlutoTV/gb.xml.gz
 # Samsung TV Plus UK
 https://i.mjh.nz/SamsungTVPlus/gb.xml.gz
 
-# Your original big guide (US, sport etc.). Remove the # to switch it back on,
-# and empty channels.txt if you want all of its 15,000 channels.
-# https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz
+# BBC radio stations the Freeview guide doesn't cover, straight from the BBC's own schedules.
+# Station IDs are separated by commas.
+bbc-radio:bbc_radio_scotland_mw,bbc_radio_one_dance,bbc_radio_one_anthems,bbc_radio_three_unwind,bbc_radio_coventry_warwickshire,bbc_radio_essex,bbc_radio_guernsey,bbc_radio_hereford_worcester,bbc_radio_oxford,bbc_radio_solent,bbc_radio_solent_west_dorset,bbc_radio_somerset_sound,bbc_radio_stoke,bbc_radio_suffolk,bbc_radio_sussex,bbc_radio_wiltshire,bbc_wm
+
+# Big guide used for BBC Red Button 2-24 and BBC World News
+https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz

@@ -32,8 +32,74 @@ def parse_time(t):
     except ValueError:
         return None
 
-def fetch(src, tmpdir, i):
+BBC_SCHEDULE = "https://rms.api.bbc.co.uk/v2/experience/inline/schedules/{station}/{date}"
+
+def _find_broadcasts(node, found):
+    """Walk the BBC's schedule JSON and collect anything that looks like a broadcast."""
+    if isinstance(node, dict):
+        start = node.get("start") or (node.get("published_time") or {}).get("start")
+        end = node.get("end") or (node.get("published_time") or {}).get("end")
+        titles = node.get("titles") if isinstance(node.get("titles"), dict) else None
+        if start and end and titles:
+            found.append(node)
+        for v in node.values():
+            _find_broadcasts(v, found)
+    elif isinstance(node, list):
+        for v in node:
+            _find_broadcasts(v, found)
+
+def _xmltv_time(iso):
+    d = datetime.datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    return d.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000")
+
+def grab_bbc_radio(stations, days, out_path):
+    """Build an XMLTV file from the BBC's own radio schedules (the data BBC Sounds uses)."""
+    import json
+    tv = ET.Element("tv")
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    total = 0
+    for station in stations:
+        ch = ET.SubElement(tv, "channel", id=station)
+        ET.SubElement(ch, "display-name").text = station
+        seen, n = set(), 0
+        for day in range(-1, days):
+            url = BBC_SCHEDULE.format(station=station, date=(today + datetime.timedelta(days=day)).isoformat())
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    data = json.load(r)
+            except Exception as e:
+                if day == 0:
+                    print(f"   !! {station}: {e}", flush=True)
+                continue
+            items = []
+            _find_broadcasts(data, items)
+            for it in items:
+                start = it.get("start") or it["published_time"]["start"]
+                end = it.get("end") or it["published_time"]["end"]
+                if start in seen:
+                    continue
+                seen.add(start)
+                t = it["titles"]
+                p = ET.SubElement(tv, "programme", start=_xmltv_time(start), stop=_xmltv_time(end), channel=station)
+                ET.SubElement(p, "title").text = t.get("primary") or station
+                if t.get("secondary"):
+                    ET.SubElement(p, "sub-title").text = t["secondary"]
+                syn = it.get("synopses") or {}
+                desc = syn.get("medium") or syn.get("short") or syn.get("long")
+                if desc:
+                    ET.SubElement(p, "desc").text = desc
+                n += 1
+        total += n
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   BBC radio schedules: {total} programmes for {len(stations)} stations", flush=True)
+    return out_path
+
+def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.startswith("bbc-radio:"):
+        stations = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
+        return grab_bbc_radio(stations, int(days), os.path.join(tmpdir, f"src{i}.xml"))
     raw = os.path.join(tmpdir, f"src{i}.raw")
     if os.path.exists(src):
         shutil.copy(src, raw)
@@ -89,7 +155,7 @@ def main():
     for i, src in enumerate(sources):
         print(f"[{i+1}/{len(sources)}] {src}", flush=True)
         try:
-            path = fetch(src, tmpdir, i)
+            path = fetch(src, tmpdir, i, settings.get("days_ahead", 7))
         except Exception as e:
             print(f"   !! could not download, skipping: {e}", flush=True)
             continue
