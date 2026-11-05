@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://raw.githubusercontent.com/Kem0sab3/my-epg/main/epg.xml.gz" x-tvg-url="https://raw.githubusercontent.com/Kem0sab3/my-epg/main/epg.xml.gz"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/kem0sab3/my-epg/main/epg.xml.gz" x-tvg-url="https://raw.githubusercontent.com/kem0sab3/my-epg/main/epg.xml.gz"
 # Brad's Freeview playlist - free, official streams only. Built 2026-11-04.
 #EXTINF:-1 tvg-id="BBCOneScotHD.uk" tvg-name="BBC One Scotland" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-one-uk.png" group-title="BBC",BBC One Scotland
 https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_scotland_hd/hevc_iptv_mse_v0.mpd
