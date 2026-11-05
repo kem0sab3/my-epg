@@ -293,15 +293,15 @@ https://as-hls-uk-live.akamaized.net/pool_05353924/live/uk/bbc_wm/bbc_wm.isml/bb
 #EXTINF:-1 radio="true" tvg-id="BBCRadioYork.uk" tvg-name="BBC Radio York" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-York.png" group-title="BBC Radio",BBC Radio York
 https://as-hls-uk-live.akamaized.net/pool_90848428/live/uk/bbc_radio_york/bbc_radio_york.isml/bbc_radio_york-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="bauer-cl1" tvg-name="Clyde 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/clyde-1.png?v=2" group-title="UK Radio",Clyde 1
-https://stream.apollo.audio/cl1/hi/hls/?direct=true
+https://stream-al.hellorayo.co.uk/clyde1.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-fo1" tvg-name="Forth 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/forth-1.png?v=2" group-title="UK Radio",Forth 1
-https://hls-al.hellorayo.co.uk/forth1.aac/playlist.m3u8
+https://stream-al.hellorayo.co.uk/forth1.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-no1" tvg-name="Northsound 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/northsound-1.png?v=2" group-title="UK Radio",Northsound 1
-https://hls-mz.hellorayo.co.uk/northsound1.aac/playlist.m3u8
+https://stream-mz.hellorayo.co.uk/northsound1.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ta1" tvg-name="Tay FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/tay-fm.png?v=2" group-title="UK Radio",Tay FM
-https://hls-mz.hellorayo.co.uk/tayfm.aac/playlist.m3u8
+https://stream-mz.hellorayo.co.uk/tayfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-mf1" tvg-name="MFR" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/mfr.png?v=2" group-title="UK Radio",MFR
-https://hls-mz.hellorayo.co.uk/mfrfm.aac/playlist.m3u8
+https://stream-mz.hellorayo.co.uk/mfrfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="CapitalRadio.uk" tvg-name="Capital" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital.png" group-title="UK Radio",Capital
 https://media-ssl.musicradio.com/CapitalUKMP3
 #EXTINF:-1 radio="true" tvg-id="CapitalXtra.uk" tvg-name="Capital XTRA" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital-Xtra.png" group-title="UK Radio",Capital XTRA
@@ -327,27 +327,27 @@ https://media-ssl.musicradio.com/LBCUKMP3
 #EXTINF:-1 radio="true" tvg-id="LBCNews.uk" tvg-name="LBC News" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/LBC-News.png" group-title="UK Radio",LBC News
 https://media-ssl.musicradio.com/LBCNewsUKMP3
 #EXTINF:-1 radio="true" tvg-id="bauer-gh0" tvg-name="Greatest Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Greatest-Hits-Radio.png" group-title="UK Radio",Greatest Hits Radio
-https://stream.apollo.audio/gh0/hi/hls/?direct=true
+https://stream-mz.hellorayo.co.uk/net2national.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-hit" tvg-name="Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Hits-Radio.png" group-title="UK Radio",Hits Radio
-https://stream.apollo.audio/hit/hi/hls/?direct=true
+https://stream-al.hellorayo.co.uk/hits.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-abr" tvg-name="Absolute Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio.png" group-title="UK Radio",Absolute Radio
-https://hls-ar.hellorayo.co.uk/absoluteradiohigh.aac/playlist.m3u8
+https://stream-ar.hellorayo.co.uk/absoluteradiohigh.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ab8" tvg-name="Absolute 80s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio-80s.png" group-title="UK Radio",Absolute 80s
-https://hls-ar.hellorayo.co.uk/absolute80shigh.aac/playlist.m3u8
+https://stream-ar.hellorayo.co.uk/absolute80shigh.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ab9" tvg-name="Absolute 90s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio-90s.png" group-title="UK Radio",Absolute 90s
-https://hls-ar.hellorayo.co.uk/absolute90shigh.aac/playlist.m3u8
+https://stream-ar.hellorayo.co.uk/absolute90shigh.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ki1" tvg-name="KISS" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kiss.png" group-title="UK Radio",KISS
-https://hls-kiss.hellorayo.co.uk/kissnational.aac/playlist.m3u8
+https://live-bauerkiss.sharp-stream.com/kissnational.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ki2" tvg-name="KISSTORY" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kisstory.png" group-title="UK Radio",KISSTORY
-https://hls-kiss.hellorayo.co.uk/kisstory.aac/playlist.m3u8
+https://live-bauerkiss.sharp-stream.com/kisstory.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-mag" tvg-name="Magic Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Magic-Radio.png" group-title="UK Radio",Magic Radio
-https://stream.apollo.audio/mag/hi/hls/?direct=true
+https://stream-mz.hellorayo.co.uk/magicnational.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-jaz" tvg-name="Jazz FM" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Jazz-FM.png" group-title="UK Radio",Jazz FM
-https://hls-al.hellorayo.co.uk/jazzhigh.aac/playlist.m3u8
+https://stream-al.hellorayo.co.uk/jazzhigh.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-ker" tvg-name="Kerrang! Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kerrang-Radio.png" group-title="UK Radio",Kerrang! Radio
-https://hls-al.hellorayo.co.uk/kerrang.aac/playlist.m3u8
+https://stream-al.hellorayo.co.uk/kerrang.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="PlanetRock.uk" tvg-name="Planet Rock" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Planet-Rock.png" group-title="UK Radio",Planet Rock
-https://hls-mz.hellorayo.co.uk/planetrock.aac/playlist.m3u8
+https://stream-mz.hellorayo.co.uk/planetrock.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="TalkSport.uk" tvg-name="talkSPORT" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Talksport.png" group-title="UK Radio",talkSPORT
 https://radio.talksport.com/stream
 #EXTINF:-1 radio="true" tvg-id="VirginRadio.uk" tvg-name="Virgin Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Virgin-Radio-UK.png" group-title="UK Radio",Virgin Radio
