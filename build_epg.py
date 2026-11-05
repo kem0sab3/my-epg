@@ -212,13 +212,27 @@ def grab_rakuten_uk(days, out_path):
     print(f"   Rakuten TV UK: {total} programmes", flush=True)
     return out_path
 
+def tbn_show_description(url, cache):
+    """Fallback: the short description from a TBN show's own page (fetched once per show)."""
+    import html as htmllib
+    if url not in cache:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                page = r.read().decode("utf-8", "replace")
+            m = re.search(r'<meta property="og:description" content="([^"]*)"', page)
+            cache[url] = htmllib.unescape(m.group(1)).strip() if m else ""
+        except Exception:
+            cache[url] = ""
+    return cache[url]
+
 def grab_tbn_uk(days, out_path):
     """TBN UK's own TV guide (tbn.uk/tv-guide/<date>/), one page per day."""
     import html as htmllib
     tv = ET.Element("tv")
     ET.SubElement(ET.SubElement(tv, "channel", id="tbn-uk"), "display-name").text = "TBN UK"
     today = datetime.datetime.now(datetime.timezone.utc).date()
-    seen, total = set(), 0
+    seen, total, show_cache = set(), 0, {}
     for d in range(-1, int(days)):
         day = today + datetime.timedelta(days=d)
         try:
@@ -235,11 +249,21 @@ def grab_tbn_uk(days, out_path):
                 continue
             seen.add(start_ms)
             title = re.search(r'aria-label="([^"]+)"', rest)
+            synopsis = re.search(r"data-synopsis>(.*?)</div>", rest, re.S)
+            desc = htmllib.unescape(re.sub(r"<[^>]+>|\s+", " ", synopsis.group(1))).strip() if synopsis else ""
+            link = re.search(r'href="(https://tbn\.uk/tv/[^"]+)"', rest)
+            if not desc and link:
+                desc = tbn_show_description(link.group(1), show_cache)
+            img = re.search(r'<img[^>]+src="([^"]+)"', rest)
             start = datetime.datetime.fromtimestamp(start_ms / 1000, datetime.timezone.utc)
             stop = datetime.datetime.fromtimestamp(end_ms / 1000, datetime.timezone.utc)
             p = ET.SubElement(tv, "programme", start=start.strftime("%Y%m%d%H%M%S +0000"),
                               stop=stop.strftime("%Y%m%d%H%M%S +0000"), channel="tbn-uk")
             ET.SubElement(p, "title").text = htmllib.unescape(title.group(1)) if title else "TBN UK"
+            if desc:
+                ET.SubElement(p, "desc").text = desc
+            if img:
+                ET.SubElement(p, "icon", src=re.sub(r"-60x60(\.\w+)$", r"-300x300\1", img.group(1)))
             for g in (genres or "").split():
                 ET.SubElement(p, "category").text = g.replace("-", " ").title()
             total += 1
