@@ -232,7 +232,7 @@ https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm
 https://as-hls-uk-live.akamaized.net/pool_59378121/live/uk/bbc_radio_scotland_mw/bbc_radio_scotland_mw.isml/bbc_radio_scotland_mw-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCRadioGaidhael.uk" tvg-name="BBC Radio nan Gàidheal" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-nan-Gaidheal.png" group-title="BBC Radio",BBC Radio nan Gàidheal
 https://as-hls-uk-live.akamaized.net/pool_01935182/live/uk/bbc_radio_nan_gaidheal/bbc_radio_nan_gaidheal.isml/bbc_radio_nan_gaidheal-audio%3d320000.norewind.m3u8
-#EXTINF:-1 radio="true" tvg-id="BBCRadioOrkney.uk" tvg-name="BBC Radio Orkney" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Scotland.png" group-title="BBC Radio",BBC Radio Orkney
+#EXTINF:-1 radio="true" tvg-id="BBCRadioOrkney.uk" tvg-name="BBC Radio Orkney" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-radio-orkney.png" group-title="BBC Radio",BBC Radio Orkney
 https://as-hls-uk-live.akamaized.net/pool_50082558/live/uk/bbc_radio_orkney/bbc_radio_orkney.isml/bbc_radio_orkney-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCR1.uk" tvg-name="BBC Radio 1" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-1.png" group-title="BBC Radio",BBC Radio 1
 https://as-hls-uk-live.akamaized.net/pool_01505109/live/uk/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d320000.norewind.m3u8
@@ -246,7 +246,7 @@ https://as-hls-uk-live.akamaized.net/pool_11351741/live/uk/bbc_radio_one_anthems
 https://as-hls-uk-live.akamaized.net/pool_74208725/live/uk/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCR3.uk" tvg-name="BBC Radio 3" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-3.png" group-title="BBC Radio",BBC Radio 3
 https://as-hls-uk-live.akamaized.net/pool_23461179/live/uk/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d320000.norewind.m3u8
-#EXTINF:-1 radio="true" tvg-id="bbc_radio_three_unwind" tvg-name="BBC Radio 3 Unwind" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-3.png" group-title="BBC Radio",BBC Radio 3 Unwind
+#EXTINF:-1 radio="true" tvg-id="bbc_radio_three_unwind" tvg-name="BBC Radio 3 Unwind" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-radio-3-unwind.png" group-title="BBC Radio",BBC Radio 3 Unwind
 https://as-hls-uk-live.akamaized.net/pool_30624046/live/uk/bbc_radio_three_unwind/bbc_radio_three_unwind.isml/bbc_radio_three_unwind-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCR4FM.uk" tvg-name="BBC Radio 4" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-4.png" group-title="BBC Radio",BBC Radio 4
 https://as-hls-uk-live.akamaized.net/pool_55057080/live/uk/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d320000.norewind.m3u8
