@@ -670,7 +670,6 @@ HeartDance.uk
 HeartRadio.uk
 HobbyMaker.uk
 HorseCountryTV.uk@SD
-IslamChannel.uk@SD
 LBCNews.uk
 LBCRadio.uk
 NHKWorldJapan.jp
@@ -782,6 +781,7 @@ global-smooth70s
 global-smoothchill
 global-smoothcountry
 global-smoothrelax
+islam-channel
 rakuten-action-rakuten-tv
 rakuten-banijay-deal-or-no-deal-eng
 rakuten-comedy-rakuten-tv

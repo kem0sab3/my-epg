@@ -2,7 +2,7 @@
 """Builds epg.xml.gz from the links in sources.txt.
 Run by GitHub every day (see .github/workflows/update-epg.yml).
 You shouldn't need to edit this file - change sources.txt / channels.txt / settings.txt instead."""
-import datetime, gzip, os, re, shutil, sys, tempfile, urllib.request
+import datetime, gzip, os, re, shutil, sys, tempfile, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -247,6 +247,47 @@ def grab_tbn_uk(days, out_path):
     print(f"   TBN UK guide: {total} programmes", flush=True)
     return out_path
 
+def grab_islam_channel(days, out_path):
+    """Islam Channel's own TV guide (the service behind islamchannel.tv/tv-guide). Times are UK local time."""
+    import json
+    from zoneinfo import ZoneInfo
+    uk = ZoneInfo("Europe/London")
+    tv = ET.Element("tv")
+    ET.SubElement(ET.SubElement(tv, "channel", id="islam-channel"), "display-name").text = "Islam Channel"
+    today = datetime.datetime.now(uk).date()
+    seen, total = set(), 0
+    for d in range(-1, int(days)):
+        day = today + datetime.timedelta(days=d)
+        data = urllib.parse.urlencode({"channel_id": 4, "date": day.isoformat()}).encode()
+        req = urllib.request.Request("https://epg.etechnologies.com.tr/v1/api/dailySchedules/day-guide", data=data, headers={
+            "User-Agent": "Mozilla/5.0", "Accept": "application/json", "Origin": "https://islamchannel.tv",
+            "Referer": "https://islamchannel.tv/", "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r:
+                j = json.load(r)
+        except Exception as e:
+            print(f"   !! islam channel {day}: {e}", flush=True)
+            continue
+        for it in j.get("epg_details") or []:
+            try:
+                hh, mm = (int(x) for x in it["start_time"].split(":"))
+                start = datetime.datetime(day.year, day.month, day.day, hh, mm, tzinfo=uk)
+                stop = start + datetime.timedelta(minutes=int(it.get("epg_program_duration") or 30))
+            except Exception:
+                continue
+            if start in seen:
+                continue
+            seen.add(start)
+            p = ET.SubElement(tv, "programme", start=start.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"),
+                              stop=stop.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"), channel="islam-channel")
+            ET.SubElement(p, "title").text = (it.get("epg_tilte") or it.get("epg_title") or "Islam Channel").strip()
+            if it.get("epg_synopsis"):
+                ET.SubElement(p, "desc").text = it["epg_synopsis"].strip()
+            total += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Islam Channel guide: {total} programmes", flush=True)
+    return out_path
+
 def static_guide(path, days, out_path):
     """All-day listings for stations that publish no schedule (non-stop music streams).
     Reads lines of 'channel-id | title | description' and writes one listing per day."""
@@ -273,6 +314,8 @@ def static_guide(path, days, out_path):
 
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.strip() == "islam-channel":
+        return grab_islam_channel(days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.strip() == "tbn-uk":
         return grab_tbn_uk(days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("static:"):
