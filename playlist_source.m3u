@@ -352,11 +352,11 @@ https://media-ssl.musicradio.com/LBCUKMP3
 https://media-ssl.musicradio.com/LBCNewsUKMP3
 #EXTINF:-1 radio="true" tvg-id="bauer-gh0" tvg-name="Greatest Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Greatest-Hits-Radio.png" group-title="UK Radio",Greatest Hits Radio
 https://stream-mz.hellorayo.co.uk/net2national.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
-#EXTINF:-1 radio="true" tvg-id="bauer-g6s" tvg-name="Greatest Hits Radio 60s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-60s.png?v=3" group-title="UK Radio",Greatest Hits Radio 60s
+#EXTINF:-1 radio="true" tvg-id="bauer-g6s" tvg-name="Greatest Hits Radio 60s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-60s.png?v=4" group-title="UK Radio",Greatest Hits Radio 60s
 https://stream-al.hellorayo.co.uk/ghr60s.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
-#EXTINF:-1 radio="true" tvg-id="bauer-70s" tvg-name="Greatest Hits Radio 70s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-70s.png?v=3" group-title="UK Radio",Greatest Hits Radio 70s
+#EXTINF:-1 radio="true" tvg-id="bauer-70s" tvg-name="Greatest Hits Radio 70s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-70s.png?v=4" group-title="UK Radio",Greatest Hits Radio 70s
 https://stream-al.hellorayo.co.uk/ghr70s.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
-#EXTINF:-1 radio="true" tvg-id="bauer-80s" tvg-name="Greatest Hits Radio 80s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-80s.png?v=3" group-title="UK Radio",Greatest Hits Radio 80s
+#EXTINF:-1 radio="true" tvg-id="bauer-80s" tvg-name="Greatest Hits Radio 80s" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/ghr-80s.png?v=4" group-title="UK Radio",Greatest Hits Radio 80s
 https://stream-al.hellorayo.co.uk/ghr80s.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-hit" tvg-name="Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Hits-Radio.png" group-title="UK Radio",Hits Radio
 https://stream-al.hellorayo.co.uk/hits.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
