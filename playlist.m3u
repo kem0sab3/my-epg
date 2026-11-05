@@ -292,15 +292,15 @@ https://as-hls-uk-live.akamaized.net/pool_44240917/live/uk/bbc_radio_wiltshire/b
 https://as-hls-uk-live.akamaized.net/pool_05353924/live/uk/bbc_wm/bbc_wm.isml/bbc_wm-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCRadioYork.uk" tvg-name="BBC Radio York" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-York.png" group-title="BBC Radio",BBC Radio York
 https://as-hls-uk-live.akamaized.net/pool_90848428/live/uk/bbc_radio_york/bbc_radio_york.isml/bbc_radio_york-audio%3d320000.norewind.m3u8
-#EXTINF:-1 radio="true" tvg-id="bauer-cl1" tvg-name="Clyde 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/clyde-1.png" group-title="UK Radio",Clyde 1
+#EXTINF:-1 radio="true" tvg-id="bauer-cl1" tvg-name="Clyde 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/clyde-1.png?v=2" group-title="UK Radio",Clyde 1
 https://stream.apollo.audio/cl1/hi/hls/?direct=true
-#EXTINF:-1 radio="true" tvg-id="bauer-fo1" tvg-name="Forth 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/forth-1.png" group-title="UK Radio",Forth 1
+#EXTINF:-1 radio="true" tvg-id="bauer-fo1" tvg-name="Forth 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/forth-1.png?v=2" group-title="UK Radio",Forth 1
 https://hls-al.hellorayo.co.uk/forth1.aac/playlist.m3u8
-#EXTINF:-1 radio="true" tvg-id="bauer-no1" tvg-name="Northsound 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/northsound-1.png" group-title="UK Radio",Northsound 1
+#EXTINF:-1 radio="true" tvg-id="bauer-no1" tvg-name="Northsound 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/northsound-1.png?v=2" group-title="UK Radio",Northsound 1
 https://hls-mz.hellorayo.co.uk/northsound1.aac/playlist.m3u8
-#EXTINF:-1 radio="true" tvg-id="bauer-ta1" tvg-name="Tay FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/tay-fm.png" group-title="UK Radio",Tay FM
+#EXTINF:-1 radio="true" tvg-id="bauer-ta1" tvg-name="Tay FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/tay-fm.png?v=2" group-title="UK Radio",Tay FM
 https://hls-mz.hellorayo.co.uk/tayfm.aac/playlist.m3u8
-#EXTINF:-1 radio="true" tvg-id="bauer-mf1" tvg-name="MFR" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/mfr.png" group-title="UK Radio",MFR
+#EXTINF:-1 radio="true" tvg-id="bauer-mf1" tvg-name="MFR" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/mfr.png?v=2" group-title="UK Radio",MFR
 https://hls-mz.hellorayo.co.uk/mfrfm.aac/playlist.m3u8
 #EXTINF:-1 radio="true" tvg-id="CapitalRadio.uk" tvg-name="Capital" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital.png" group-title="UK Radio",Capital
 https://media-ssl.musicradio.com/CapitalUKMP3

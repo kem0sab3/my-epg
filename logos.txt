@@ -2,8 +2,3 @@
 bbc-radio-3-unwind | BBC Radio 3 Unwind
 bbc-radio-orkney | BBC Radio Orkney
 bbc-radio-shetland | BBC Radio Shetland
-clyde-1 | tile:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678798562/brand_manager/stations/oon9474dm4xlzlf56hig.png
-forth-1 | tile:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678798619/brand_manager/stations/capjpnpwnjy5el9a5cjg.png
-northsound-1 | tile:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678799819/brand_manager/stations/m761i709hr3d7kcvihvt.png
-tay-fm | tile:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678800076/brand_manager/stations/jbgjtqfymewz8uosi9de.png
-mfr | tile:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678799782/brand_manager/stations/minwuybtxes3czjurjjl.png
