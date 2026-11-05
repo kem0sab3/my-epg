@@ -264,6 +264,8 @@ https://as-hls-uk-live.akamaized.net/pool_50082558/live/uk/bbc_radio_orkney/bbc_
 https://as-hls-uk-live.akamaized.net/pool_19212690/live/uk/bbc_radio_oxford/bbc_radio_oxford.isml/bbc_radio_oxford-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCRadioSheffield.uk" tvg-name="BBC Radio Sheffield" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Sheffield.png" group-title="BBC Radio",BBC Radio Sheffield
 https://as-hls-uk-live.akamaized.net/pool_19967704/live/uk/bbc_radio_sheffield/bbc_radio_sheffield.isml/bbc_radio_sheffield-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioShetland.uk" tvg-name="BBC Radio Shetland" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/bbc-radio-shetland.png" group-title="BBC Radio",BBC Radio Shetland
+https://as-hls-uk-live.akamaized.net/pool_23386112/live/uk/bbc_radio_shetland/bbc_radio_shetland.isml/bbc_radio_shetland-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCRadioShropshire.uk" tvg-name="BBC Radio Shropshire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Shropshire.png" group-title="BBC Radio",BBC Radio Shropshire
 https://as-hls-uk-live.akamaized.net/pool_83478576/live/uk/bbc_radio_shropshire/bbc_radio_shropshire.isml/bbc_radio_shropshire-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="bbc_radio_solent" tvg-name="BBC Radio Solent" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Solent.png" group-title="BBC Radio",BBC Radio Solent

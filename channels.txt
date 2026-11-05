@@ -250,6 +250,7 @@ BBCRadioNorthampton.uk
 BBCRadioNottingham.uk
 BBCRadioOrkney.uk
 BBCRadioSheffield.uk
+BBCRadioShetland.uk
 BBCRadioShropshire.uk
 BBCRadioSurrey.uk
 BBCRadioTees.uk
