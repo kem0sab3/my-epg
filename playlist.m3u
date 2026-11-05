@@ -302,10 +302,6 @@ https://stream-mz.hellorayo.co.uk/northsound1.aac?direct=true&aw_0_1st.playerid=
 https://stream-mz.hellorayo.co.uk/tayfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="bauer-mf1" tvg-name="MFR" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/mfr.png?v=2" group-title="UK Radio",MFR
 https://stream-mz.hellorayo.co.uk/mfrfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
-#EXTINF:-1 radio="true" tvg-id="bauer-coo" tvg-name="Cool FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/cool-fm.png" group-title="UK Radio",Cool FM
-https://stream-al.hellorayo.co.uk/coolfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
-#EXTINF:-1 radio="true" tvg-id="bauer-dra" tvg-name="Downtown Radio" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/downtown-radio.png" group-title="UK Radio",Downtown Radio
-https://stream-al.hellorayo.co.uk/downtown.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 radio="true" tvg-id="CapitalRadio.uk" tvg-name="Capital" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital.png" group-title="UK Radio",Capital
 https://media-ssl.musicradio.com/CapitalUKMP3
 #EXTINF:-1 radio="true" tvg-id="CapitalXtra.uk" tvg-name="Capital XTRA" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital-Xtra.png" group-title="UK Radio",Capital XTRA
@@ -416,6 +412,10 @@ https://radio.virginradio.co.uk/stream
 https://listen-ssvcbfbs.sharp-stream.com/ssvcbfbs1.aac
 #EXTINF:-1 radio="true" tvg-id="PremierRadio.uk" tvg-name="Premier Christian Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Premier-Radio.png" group-title="UK Radio",Premier Christian Radio
 https://pcr.streamguys1.com/pcrnational-96k.aac
+#EXTINF:-1 radio="true" tvg-id="bauer-coo" tvg-name="Cool FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/cool-fm.png" group-title="UK Radio",Cool FM
+https://stream-al.hellorayo.co.uk/coolfm.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
+#EXTINF:-1 radio="true" tvg-id="bauer-dra" tvg-name="Downtown Radio" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/downtown-radio.png" group-title="UK Radio",Downtown Radio
+https://stream-al.hellorayo.co.uk/downtown.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey=1793860000
 #EXTINF:-1 tvg-id="66fd37885049580008d295b6" tvg-name="AWSN" tvg-logo="https://images.pluto.tv/channels/66fd37885049580008d295b6/colorLogoPNG_1748590960405.png" group-title="Sport",AWSN
 https://jmp2.uk/plu-66fd37885049580008d295b6.m3u8
 #EXTINF:-1 tvg-id="GB1100002OE" tvg-name="Barça 24H" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1100002OE_20261102T070516SQUARE.png" group-title="Sport",Barça 24H
