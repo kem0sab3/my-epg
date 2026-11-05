@@ -44,6 +44,7 @@ Open a file, click the ✏️ pencil, make the change, then **Commit changes**.
 | Add or remove a channel | `playlist.m3u` and `channels.txt` | Each channel is two lines in `playlist.m3u`: the `#EXTINF` line and the link under it. Its `tvg-id` also needs to be in `channels.txt` to get guide listings. |
 | Keep every channel from every guide | `channels.txt` | Delete all the IDs (keep the lines starting with `#`). |
 | Show more or fewer days | `settings.txt` | Change `days_ahead`. |
+| Change the all-day listing for a non-stop music station | `static_guide.txt` | Edit the title or description on that station's line. |
 | Add a logo from Wikipedia | `logos.txt` | Add a line like `bbc-radio-orkney \| BBC Radio Orkney` (file name \| Wikipedia article). GitHub downloads it, turns it white and saves it in `logos/`. Then set the channel's `tvg-logo` in `playlist.m3u` to `https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/` followed by the file name and `.png`. |
 
 ## If something goes wrong
