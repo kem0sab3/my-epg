@@ -39,6 +39,12 @@ result as `epg.xml.gz`. It also runs a minute after you change any of the files
 below. To update straight away, open the **Actions** tab → **Update EPG** →
 **Run workflow**.
 
+## Radio links
+
+Bauer's radio streams (Clyde 1, Forth 1, KISS, Magic, Absolute, Greatest Hits Radio and the rest)
+only play when their link carries a recent session number. A small job (**Refresh radio links**)
+updates it every 2 hours, so set TiviMate to reload the playlist regularly (every few hours).
+
 ## Changing things
 
 Open a file, click the ✏️ pencil, make the change, then **Commit changes**.

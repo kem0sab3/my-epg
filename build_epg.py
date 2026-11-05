@@ -570,6 +570,11 @@ def main():
     os.replace(out_path + ".tmp", out_path)
     shutil.rmtree(tmpdir, ignore_errors=True)
     build_playlist(listed)
+    try:
+        import refresh_links
+        refresh_links.refresh()
+    except Exception as e:
+        print(f"   !! could not refresh radio links: {e}", flush=True)
     update_playlist_header()
     refresh_plex_token()
     mb = os.path.getsize(out_path) / 1e6
