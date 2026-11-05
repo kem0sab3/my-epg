@@ -18,14 +18,13 @@ with the guide rebuilt automatically every day.
 - **BBC:** every BBC TV channel and all BBC One regions in 1080p, 24 Red Button
   event streams, BBC World News and the BBC's Arabic, Persian and Pashto
   channels, plus 720p backups
-- **BBC Radio:** all 65 national, Scottish and local stations in one group, at 320k
-- **UK Radio:** Clyde 1, Forth 1, Northsound 1, Tay FM, MFR, Capital, Heart, Smooth, Classic FM, LBC, Radio X, Greatest Hits Radio, KISS, Magic, Absolute and more
-- **Sport:** free sport channels from Pluto TV and Samsung TV Plus in one group
-- **Other UK channels:** news (including DW, NHK World and ABC News Australia), entertainment, kids, music, shopping, faith and S4C
-- **Rakuten TV:** Rakuten's free UK film and entertainment channels
-- **Irish Radio:** RTÉ Radio 1, 2FM, Lyric FM and Raidió na Gaeltachta
-- **Plex:** Plex's free UK channels (its sport channels are in Sport)
-- **Free streaming channels:** the UK line-ups of Pluto TV and Samsung TV Plus
+- **BBC Radio, UK Radio and Irish Radio:** BBC, Global, Bauer, talkSPORT, Times Radio, Virgin, RTÉ and more
+- **Sport**
+- **TV by category:** News, Entertainment, Comedy, Drama, Movies, Crime, Reality,
+  Documentaries, Nature, Sci-Fi & Paranormal, Food & Lifestyle, Kids, Music,
+  Christmas, Shopping, Faith and International. These mix the UK channels with
+  the free channels from Pluto TV, Samsung TV Plus, Rakuten TV and Plex, with
+  duplicates removed.
 
 ## How it updates
 
