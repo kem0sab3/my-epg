@@ -95,11 +95,100 @@ def grab_bbc_radio(stations, days, out_path):
     print(f"   BBC radio schedules: {total} programmes for {len(stations)} stations", flush=True)
     return out_path
 
+def _get_json(url):
+    import json
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        return json.load(r)
+
+def grab_bauer(stations, days, out_path):
+    """Radio schedules for Bauer (Rayo) stations: Clyde 1, Forth 1, Greatest Hits Radio, KISS, Magic, Absolute..."""
+    tv = ET.Element("tv")
+    total = 0
+    for code in stations:
+        ch = ET.SubElement(tv, "channel", id=f"bauer-{code}")
+        ET.SubElement(ch, "display-name").text = code
+        try:
+            data = _get_json(f"https://listenapi.planetradio.co.uk/api9.2/schedule/{code}/today/%2B{int(days)}%20days")
+        except Exception as e:
+            print(f"   !! bauer {code}: {e}", flush=True)
+            continue
+        if not isinstance(data, dict):
+            continue
+        seen = set()
+        for day in data.values():
+            for it in day if isinstance(day, list) else []:
+                try:
+                    start = datetime.datetime.fromisoformat(it["start"])
+                    stop = start + datetime.timedelta(seconds=int(it.get("duration") or 3600))
+                except Exception:
+                    continue
+                if it["start"] in seen:
+                    continue
+                seen.add(it["start"])
+                p = ET.SubElement(tv, "programme", start=start.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"),
+                                  stop=stop.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"), channel=f"bauer-{code}")
+                ET.SubElement(p, "title").text = it.get("title") or code
+                if it.get("shortdesc"):
+                    ET.SubElement(p, "desc").text = it["shortdesc"]
+                if it.get("image_url"):
+                    ET.SubElement(p, "icon", src=it["image_url"])
+                total += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Bauer radio schedules: {total} programmes for {len(stations)} stations", flush=True)
+    return out_path
+
+def grab_rakuten_uk(days, out_path):
+    """Listings for Rakuten TV's free UK channels, from Rakuten's own channel guide."""
+    now = datetime.datetime.now(datetime.timezone.utc).replace(minute=0, second=0, microsecond=0)
+    end = now + datetime.timedelta(days=min(int(days), 3))
+    tv = ET.Element("tv")
+    total, page, pages = 0, 1, 1
+    while page <= pages:
+        q = (f"classification_id=18&device_identifier=web&locale=en&market_code=uk&per_page=50&page={page}"
+             f"&epg_starts_at={now:%Y-%m-%dT%H:%M:%S.000Z}&epg_ends_at={end:%Y-%m-%dT%H:%M:%S.000Z}"
+             f"&epg_duration_minutes=360").replace(":", "%3A")
+        try:
+            j = _get_json("https://gizmo.rakuten.tv/v3/live_channels?" + q)
+        except Exception as e:
+            print(f"   !! rakuten page {page}: {e}", flush=True)
+            break
+        pages = ((j.get("meta") or {}).get("pagination") or {}).get("total_pages") or 1
+        for c in j.get("data") or []:
+            cid = f"rakuten-{c['id']}"
+            ch = ET.SubElement(tv, "channel", id=cid)
+            ET.SubElement(ch, "display-name").text = c.get("title") or cid
+            imgs = c.get("images") or {}
+            if imgs.get("artwork_negative") or imgs.get("artwork"):
+                ET.SubElement(ch, "icon", src=imgs.get("artwork_negative") or imgs.get("artwork"))
+            for pr in c.get("live_programs") or []:
+                try:
+                    s = datetime.datetime.fromisoformat(pr["starts_at"]); e = datetime.datetime.fromisoformat(pr["ends_at"])
+                except Exception:
+                    continue
+                p = ET.SubElement(tv, "programme", start=s.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"),
+                                  stop=e.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"), channel=cid)
+                ET.SubElement(p, "title").text = pr.get("title") or c.get("title")
+                if pr.get("subtitle"):
+                    ET.SubElement(p, "sub-title").text = pr["subtitle"]
+                if pr.get("description"):
+                    ET.SubElement(p, "desc").text = pr["description"]
+                total += 1
+        page += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Rakuten TV UK: {total} programmes", flush=True)
+    return out_path
+
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
     if src.startswith("bbc-radio:"):
         stations = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
         return grab_bbc_radio(stations, int(days), os.path.join(tmpdir, f"src{i}.xml"))
+    if src.startswith("bauer:"):
+        stations = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
+        return grab_bauer(stations, int(days), os.path.join(tmpdir, f"src{i}.xml"))
+    if src.strip() == "rakuten-uk":
+        return grab_rakuten_uk(days, os.path.join(tmpdir, f"src{i}.xml"))
     raw = os.path.join(tmpdir, f"src{i}.raw")
     if os.path.exists(src):
         shutil.copy(src, raw)

@@ -292,6 +292,148 @@ https://as-hls-uk-live.akamaized.net/pool_44240917/live/uk/bbc_radio_wiltshire/b
 https://as-hls-uk-live.akamaized.net/pool_05353924/live/uk/bbc_wm/bbc_wm.isml/bbc_wm-audio%3d320000.norewind.m3u8
 #EXTINF:-1 radio="true" tvg-id="BBCRadioYork.uk" tvg-name="BBC Radio York" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-York.png" group-title="BBC Radio",BBC Radio York
 https://as-hls-uk-live.akamaized.net/pool_90848428/live/uk/bbc_radio_york/bbc_radio_york.isml/bbc_radio_york-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-cl1" tvg-name="Clyde 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/clyde-1.png" group-title="UK Radio",Clyde 1
+https://stream.apollo.audio/cl1/hi/hls/?direct=true
+#EXTINF:-1 radio="true" tvg-id="bauer-fo1" tvg-name="Forth 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/forth-1.png" group-title="UK Radio",Forth 1
+https://hls-al.hellorayo.co.uk/forth1.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-no1" tvg-name="Northsound 1" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/northsound-1.png" group-title="UK Radio",Northsound 1
+https://hls-mz.hellorayo.co.uk/northsound1.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ta1" tvg-name="Tay FM" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/tay-fm.png" group-title="UK Radio",Tay FM
+https://hls-mz.hellorayo.co.uk/tayfm.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-mf1" tvg-name="MFR" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/mfr.png" group-title="UK Radio",MFR
+https://hls-mz.hellorayo.co.uk/mfrfm.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="CapitalRadio.uk" tvg-name="Capital" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital.png" group-title="UK Radio",Capital
+https://media-ssl.musicradio.com/CapitalUKMP3
+#EXTINF:-1 radio="true" tvg-id="CapitalXtra.uk" tvg-name="Capital XTRA" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Capital-Xtra.png" group-title="UK Radio",Capital XTRA
+https://media-ssl.musicradio.com/CapitalXTRANationalMP3
+#EXTINF:-1 radio="true" tvg-id="HeartRadio.uk" tvg-name="Heart" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart.png" group-title="UK Radio",Heart
+https://media-ssl.musicradio.com/HeartUKMP3
+#EXTINF:-1 radio="true" tvg-id="Heart80s.uk" tvg-name="Heart 80s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-80s.png" group-title="UK Radio",Heart 80s
+https://media-ssl.musicradio.com/Heart80sMP3
+#EXTINF:-1 radio="true" tvg-id="Heart90s.uk" tvg-name="Heart 90s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-90s.png" group-title="UK Radio",Heart 90s
+https://media-ssl.musicradio.com/Heart90sMP3
+#EXTINF:-1 radio="true" tvg-id="HeartDance.uk" tvg-name="Heart Dance" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Heart-Dance.png" group-title="UK Radio",Heart Dance
+https://media-ssl.musicradio.com/HeartDanceMP3
+#EXTINF:-1 radio="true" tvg-id="SmoothRadio.uk" tvg-name="Smooth Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Smooth-Radio.png" group-title="UK Radio",Smooth Radio
+https://media-ssl.musicradio.com/SmoothUKMP3
+#EXTINF:-1 radio="true" tvg-id="ClassicFM.uk" tvg-name="Classic FM" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Classic-FM.png" group-title="UK Radio",Classic FM
+https://media-ssl.musicradio.com/ClassicFMMP3
+#EXTINF:-1 radio="true" tvg-id="GoldRadio.uk" tvg-name="Gold" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Gold-Radio.png" group-title="UK Radio",Gold
+https://media-ssl.musicradio.com/GoldMP3
+#EXTINF:-1 radio="true" tvg-id="RadioX.uk" tvg-name="Radio X" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Radio-X.png" group-title="UK Radio",Radio X
+https://media-ssl.musicradio.com/RadioXUKMP3
+#EXTINF:-1 radio="true" tvg-id="LBCRadio.uk" tvg-name="LBC" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/LBC.png" group-title="UK Radio",LBC
+https://media-ssl.musicradio.com/LBCUKMP3
+#EXTINF:-1 radio="true" tvg-id="LBCNews.uk" tvg-name="LBC News" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/LBC-News.png" group-title="UK Radio",LBC News
+https://media-ssl.musicradio.com/LBCNewsUKMP3
+#EXTINF:-1 radio="true" tvg-id="bauer-gh0" tvg-name="Greatest Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Greatest-Hits-Radio.png" group-title="UK Radio",Greatest Hits Radio
+https://stream.apollo.audio/gh0/hi/hls/?direct=true
+#EXTINF:-1 radio="true" tvg-id="bauer-hit" tvg-name="Hits Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Hits-Radio.png" group-title="UK Radio",Hits Radio
+https://stream.apollo.audio/hit/hi/hls/?direct=true
+#EXTINF:-1 radio="true" tvg-id="bauer-abr" tvg-name="Absolute Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio.png" group-title="UK Radio",Absolute Radio
+https://hls-ar.hellorayo.co.uk/absoluteradiohigh.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ab8" tvg-name="Absolute 80s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio-80s.png" group-title="UK Radio",Absolute 80s
+https://hls-ar.hellorayo.co.uk/absolute80shigh.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ab9" tvg-name="Absolute 90s" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Absolute-Radio-90s.png" group-title="UK Radio",Absolute 90s
+https://hls-ar.hellorayo.co.uk/absolute90shigh.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ki1" tvg-name="KISS" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kiss.png" group-title="UK Radio",KISS
+https://hls-kiss.hellorayo.co.uk/kissnational.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ki2" tvg-name="KISSTORY" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kisstory.png" group-title="UK Radio",KISSTORY
+https://hls-kiss.hellorayo.co.uk/kisstory.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-mag" tvg-name="Magic Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Magic-Radio.png" group-title="UK Radio",Magic Radio
+https://stream.apollo.audio/mag/hi/hls/?direct=true
+#EXTINF:-1 radio="true" tvg-id="bauer-jaz" tvg-name="Jazz FM" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Jazz-FM.png" group-title="UK Radio",Jazz FM
+https://hls-al.hellorayo.co.uk/jazzhigh.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="bauer-ker" tvg-name="Kerrang! Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Kerrang-Radio.png" group-title="UK Radio",Kerrang! Radio
+https://hls-al.hellorayo.co.uk/kerrang.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="PlanetRock.uk" tvg-name="Planet Rock" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Planet-Rock.png" group-title="UK Radio",Planet Rock
+https://hls-mz.hellorayo.co.uk/planetrock.aac/playlist.m3u8
+#EXTINF:-1 radio="true" tvg-id="TalkSport.uk" tvg-name="talkSPORT" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Talksport.png" group-title="UK Radio",talkSPORT
+https://radio.talksport.com/stream
+#EXTINF:-1 radio="true" tvg-id="VirginRadio.uk" tvg-name="Virgin Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Virgin-Radio-UK.png" group-title="UK Radio",Virgin Radio
+https://radio.virginradio.co.uk/stream
+#EXTINF:-1 radio="true" tvg-id="BFBSRadio.uk" tvg-name="BFBS Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BFBS-Radio.png" group-title="UK Radio",BFBS Radio
+https://listen-ssvcbfbs.sharp-stream.com/ssvcbfbs1.aac
+#EXTINF:-1 radio="true" tvg-id="PremierRadio.uk" tvg-name="Premier Christian Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/Premier-Radio.png" group-title="UK Radio",Premier Christian Radio
+https://pcr.streamguys1.com/pcrnational-96k.aac
+#EXTINF:-1 tvg-id="66fd37885049580008d295b6" tvg-name="AWSN" tvg-logo="https://images.pluto.tv/channels/66fd37885049580008d295b6/colorLogoPNG_1748590960405.png" group-title="Sport",AWSN
+https://jmp2.uk/plu-66fd37885049580008d295b6.m3u8
+#EXTINF:-1 tvg-id="GB1100002OE" tvg-name="Barça 24H" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1100002OE_20261102T070516SQUARE.png" group-title="Sport",Barça 24H
+https://jmp2.uk/stvp-GB1100002OE
+#EXTINF:-1 tvg-id="GB3500002R8" tvg-name="Bundesliga" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3500002R8_20260512T060044SQUARE.png" group-title="Sport",Bundesliga
+https://jmp2.uk/stvp-GB3500002R8
+#EXTINF:-1 tvg-id="GBBD30000038U" tvg-name="DAZN Ringside" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD30000038U_20260421T123903SQUARE.png" group-title="Sport",DAZN Ringside
+https://jmp2.uk/stvp-GBBD30000038U
+#EXTINF:-1 tvg-id="GB26000118T" tvg-name="DFB Play TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB26000118T_20251230T031136SQUARE.png" group-title="Sport",DFB Play TV
+https://jmp2.uk/stvp-GB26000118T
+#EXTINF:-1 tvg-id="GB5200001TM" tvg-name="DP World Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB5200001TM_20260421T123838SQUARE.png" group-title="Sport",DP World Tour
+https://jmp2.uk/stvp-GB5200001TM
+#EXTINF:-1 tvg-id="GB3800003OS" tvg-name="Eurovision Sport" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800003OS_20260428T031432SQUARE.png" group-title="Sport",Eurovision Sport
+https://jmp2.uk/stvp-GB3800003OS
+#EXTINF:-1 tvg-id="GBBD1100008YW" tvg-name="FIFA+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD1100008YW_20260609T043659SQUARE.png" group-title="Sport",FIFA+
+https://jmp2.uk/stvp-GBBD1100008YW
+#EXTINF:-1 tvg-id="GB3800009F0" tvg-name="FIFA+ Women" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800009F0_20251028T010335SQUARE.png" group-title="Sport",FIFA+ Women
+https://jmp2.uk/stvp-GB3800009F0
+#EXTINF:-1 tvg-id="GB2200002CC" tvg-name="GFN Football" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2200002CC_20261014T010220SQUARE.png" group-title="Sport",GFN Football
+https://jmp2.uk/stvp-GB2200002CC
+#EXTINF:-1 tvg-id="GB1500003S4" tvg-name="Golf Life" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1500003S4_20260901T102446SQUARE.png" group-title="Sport",Golf Life
+https://jmp2.uk/stvp-GB1500003S4
+#EXTINF:-1 tvg-id="GB4000015BP" tvg-name="Graveyard Carz" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4000015BP_20261026T042414SQUARE.png" group-title="Sport",Graveyard Carz
+https://jmp2.uk/stvp-GB4000015BP
+#EXTINF:-1 tvg-id="HorseCountryTV.uk@SD" tvg-name="Horse & Country" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/horse-and-country-uk.png" group-title="Sport",Horse & Country
+https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
+#EXTINF:-1 tvg-id="GB310000151" tvg-name="INTER 24/7" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB310000151_20251118T015428SQUARE.png" group-title="Sport",INTER 24/7
+https://jmp2.uk/stvp-GB310000151
+#EXTINF:-1 tvg-id="67063e78b2ffb10008195d08" tvg-name="MODUS Super Series Darts" tvg-logo="https://images.pluto.tv/channels/67063e78b2ffb10008195d08/colorLogoPNG.png" group-title="Sport",MODUS Super Series Darts
+https://jmp2.uk/plu-67063e78b2ffb10008195d08.m3u8
+#EXTINF:-1 tvg-id="GBBA1500006H6" tvg-name="MotorRacing" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBA1500006H6_20250107T022613SQUARE.png" group-title="Sport",MotorRacing
+https://jmp2.uk/stvp-GBBA1500006H6
+#EXTINF:-1 tvg-id="6a6a02ce1b1c90d8bf9556d8" tvg-name="NFL Channel" tvg-logo="https://images.pluto.tv/channels/6a6a02ce1b1c90d8bf9556d8/colorLogoPNG_1785333477887.png" group-title="Sport",NFL Channel
+https://jmp2.uk/plu-6a6a02ce1b1c90d8bf9556d8.m3u8
+#EXTINF:-1 tvg-id="GB4700003NV" tvg-name="Padel Time TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4700003NV_20260622T064044SQUARE.png" group-title="Sport",Padel Time TV
+https://jmp2.uk/stvp-GB4700003NV
+#EXTINF:-1 tvg-id="GB300036IM" tvg-name="PGA Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB300036IM_20250218T040040SQUARE.png" group-title="Sport",PGA Tour
+https://jmp2.uk/stvp-GB300036IM
+#EXTINF:-1 tvg-id="GBAI5000001A" tvg-name="Pluto TV Motor" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAI5000001A_20250107T022644SQUARE.png" group-title="Sport",Pluto TV Motor
+https://jmp2.uk/stvp-GBAI5000001A
+#EXTINF:-1 tvg-id="655b7cbb2c46f300086f0afa" tvg-name="Pluto TV Snooker 900" tvg-logo="https://images.pluto.tv/channels/655b7cbb2c46f300086f0afa/colorLogoPNG_1759435114417.png" group-title="Sport",Pluto TV Snooker 900
+https://jmp2.uk/plu-655b7cbb2c46f300086f0afa.m3u8
+#EXTINF:-1 tvg-id="GB4200009EC" tvg-name="Racing TV Play" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4200009EC_20260421T125755SQUARE.png" group-title="Sport",Racing TV Play
+https://jmp2.uk/stvp-GB4200009EC
+#EXTINF:-1 tvg-id="696e024a7e92438c27a425a8" tvg-name="Rally TV" tvg-logo="https://images.pluto.tv/channels/696e024a7e92438c27a425a8/colorLogoPNG_1770892518087.png" group-title="Sport",Rally TV
+https://jmp2.uk/plu-696e024a7e92438c27a425a8.m3u8
+#EXTINF:-1 tvg-id="GB51000026A" tvg-name="Rally.TV FAST+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB51000026A_20260120T031439SQUARE.png" group-title="Sport",Rally.TV FAST+
+https://jmp2.uk/stvp-GB51000026A
+#EXTINF:-1 tvg-id="GB3800010LT" tvg-name="Real Madrid TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800010LT_20261013T055017SQUARE.png" group-title="Sport",Real Madrid TV
+https://jmp2.uk/stvp-GB3800010LT
+#EXTINF:-1 tvg-id="GBBD2300003IK" tvg-name="Red Bull TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2300003IK_20250805T005540SQUARE.png" group-title="Sport",Red Bull TV
+https://jmp2.uk/stvp-GBBD2300003IK
+#EXTINF:-1 tvg-id="GB330000144" tvg-name="RugbyPass TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB330000144_20250624T020553SQUARE.png" group-title="Sport",RugbyPass TV
+https://jmp2.uk/stvp-GB330000144
+#EXTINF:-1 tvg-id="GB2700012HS" tvg-name="Sky Sports Classics" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2700012HS_20260317T034217SQUARE.png" group-title="Sport",Sky Sports Classics
+https://jmp2.uk/stvp-GB2700012HS
+#EXTINF:-1 tvg-id="GB2700013Y7" tvg-name="Sky Sports Stories" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2700013Y7_20260317T034220SQUARE.png" group-title="Sport",Sky Sports Stories
+https://jmp2.uk/stvp-GB2700013Y7
+#EXTINF:-1 tvg-id="GB380000473" tvg-name="Sports First TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB380000473_20260622T064057SQUARE.png" group-title="Sport",Sports First TV
+https://jmp2.uk/stvp-GB380000473
+#EXTINF:-1 tvg-id="GBBC90001089" tvg-name="Strongman Champions League" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBC90001089_20250107T153921SQUARE.png" group-title="Sport",Strongman Champions League
+https://jmp2.uk/stvp-GBBC90001089
+#EXTINF:-1 tvg-id="GB30003577" tvg-name="talkSPORT" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB30003577_20260721T035939SQUARE.png" group-title="Sport",talkSPORT
+https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
+#EXTINF:-1 tvg-id="GBBA33000529G" tvg-name="Tennis Channel" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBA33000529G_20260113T032555SQUARE.png" group-title="Sport",Tennis Channel
+https://jmp2.uk/stvp-GBBA33000529G
+#EXTINF:-1 tvg-id="GB2000010ML" tvg-name="Tennis+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2000010ML_20250624T021705SQUARE.png" group-title="Sport",Tennis+
+https://jmp2.uk/stvp-GB2000010ML
+#EXTINF:-1 tvg-id="69b91797611b4a9fce103037" tvg-name="That Peter Crouch Podcast" tvg-logo="https://images.pluto.tv/channels/69b91797611b4a9fce103037/colorLogoPNG_1776258946102.png" group-title="Sport",That Peter Crouch Podcast
+https://jmp2.uk/plu-69b91797611b4a9fce103037.m3u8
+#EXTINF:-1 tvg-id="66ed3e9d5e4a6e0008b346e0" tvg-name="UFC" tvg-logo="https://images.pluto.tv/channels/66ed3e9d5e4a6e0008b346e0/colorLogoPNG.png" group-title="Sport",UFC
+https://jmp2.uk/plu-66ed3e9d5e4a6e0008b346e0.m3u8
+#EXTINF:-1 tvg-id="GBBD2900001VD" tvg-name="World Poker Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2900001VD_20250107T030834SQUARE.png" group-title="Sport",World Poker Tour
+https://jmp2.uk/stvp-GBBD2900001VD
+#EXTINF:-1 tvg-id="GB500013LT" tvg-name="Wrestling Legends TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB500013LT_20260505T035911SQUARE.png" group-title="Sport",Wrestling Legends TV
+https://jmp2.uk/stvp-GB500013LT
+#EXTINF:-1 tvg-id="GB2000016YM" tvg-name="Your Sports News" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2000016YM_20260811T045355SQUARE.png" group-title="Sport",Your Sports News
+https://jmp2.uk/stvp-GB2000016YM
 #EXTINF:-1 tvg-id="GBNews.uk" tvg-name="GB News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png" group-title="News",GB News
 https://amg01076-lightningintern-gbnews-samsunguk-0lu52.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/aljazeera-uk.png" group-title="News",Al Jazeera English
@@ -310,6 +452,12 @@ https://tv-trtworld.medya.trt.com.tr/master.m3u8
 https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="SkyNewsWeather.uk@SD" tvg-name="Sky News Weather" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png" group-title="News",Sky News Weather
 https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8
+#EXTINF:-1 tvg-id="GB1300001RX" tvg-name="DW English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/dw-english-int.png" group-title="News",DW English
+https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8
+#EXTINF:-1 tvg-id="NHKWorldJapan.jp" tvg-name="NHK World-Japan" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/nhk-world-japan-int.png" group-title="News",NHK World-Japan
+https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
+#EXTINF:-1 tvg-id="abcnews.au" tvg-name="ABC News Australia" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/australia/abc-news-au.png" group-title="News",ABC News Australia
+https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
 #EXTINF:-1 tvg-id="Blaze.uk" tvg-name="Blaze" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/blaze-uk.png" group-title="Entertainment",Blaze
 https://live-blaze-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/blaze-live-broadcast-scte/index.m3u8
 #EXTINF:-1 tvg-id="GreatMovies.uk" tvg-name="GREAT! movies" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/great-movies-uk.png" group-title="Entertainment",GREAT! movies
@@ -322,10 +470,6 @@ https://b6cca454.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 https://amg00841-aenetworksukane-mysterytv-samsunguk-mggb7.amagi.tv/playlist/amg00841-aenetworksukane-mysterytv-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="GBBD500002R4" tvg-name="Inside Crime" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD500002R4_20250107T030707SQUARE.png" group-title="Entertainment",Inside Crime
 https://amg00841-aenetworksukane-insidecrime-samsunguk-o968i.amagi.tv/playlist/amg00841-aenetworksukane-insidecrime-samsunguk/playlist.m3u8
-#EXTINF:-1 tvg-id="HorseCountryTV.uk@SD" tvg-name="Horse & Country" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/horse-and-country-uk.png" group-title="Entertainment",Horse & Country
-https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
-#EXTINF:-1 tvg-id="GB30003577" tvg-name="talkSPORT" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB30003577_20260721T035939SQUARE.png" group-title="Entertainment",talkSPORT
-https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="GBBC430000128" tvg-name="Pop" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBC430000128_20250107T030729SQUARE.png" group-title="Kids",Pop
 https://amg01753-narrativeentert-popkids-samsunguk-yjjil.amagi.tv/playlist/amg01753-narrativeentert-popkids-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-id="GBBD3200003T6" tvg-name="Tiny Pop" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tiny-pop-uk.png" group-title="Kids",Tiny Pop
@@ -356,6 +500,44 @@ https://live-tbn-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34
 https://live.islamchannel.tv/live11/islamtv_english/bitrate1.isml/live.m3u8
 #EXTINF:-1 tvg-id="S4C.uk" tvg-name="S4C" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/s4c-uk.png" group-title="Welsh",S4C
 https://v2.uk.live.s4c-cdn.co.uk/out/v1/S4C/UK_TX/uk_live/uk-tx-dvb.mpd
+#EXTINF:-1 tvg-id="rakuten-cosmic-frontiers-uk" tvg-name="Cosmic Frontiers" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork-negative/bfd0c5ea-24a3-4633-a520-c48687cf1ef9.png" group-title="Rakuten TV",Cosmic Frontiers
+https://amg00376-magellan-amg00376c14-rakuten-uk-1694.playouts.now.amagi.tv/playlist/amg00376-magellantv-spacesciencenowcauk-rakutenuk/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-banijay-deal-or-no-deal-eng" tvg-name="Deal or No Deal" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork-negative/4d381c42-5ba7-49ca-8bc0-ac01592b4335.png" group-title="Rakuten TV",Deal or No Deal
+https://deal-or-no-deal-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-hardcore-pawn" tvg-name="Hardcore Pawn" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/8e1a168c-e373-4f8f-8178-6d0a7abcc51d.png" group-title="Rakuten TV",Hardcore Pawn
+https://amg00627-amg00627c8-rakuten-uk-4801.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-highway-thru-hell" tvg-name="Highway Thru Hell" tvg-logo="https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork-negative/13cf4f67-f8e1-4b26-ac41-02edfa1f4270.png" group-title="Rakuten TV",Highway Thru Hell
+https://amg00627-amg00627c15-rakuten-uk-4803.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-hotel-inspector" tvg-name="Hotel Inspector" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork-negative/1ba065a6-cb2c-4e6e-925f-5b11a8a84ff5.png" group-title="Rakuten TV",Hotel Inspector
+https://amg00654-itv-amg00654c4-rakuten-uk-5263.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-jail-new" tvg-name="Jail" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/c3aa6bf2-186d-4d73-9adb-044cb95f29fe.png" group-title="Rakuten TV",Jail
+https://langleyproductions-jail-1-eu.rakuten.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-mr-bean-en" tvg-name="Mr Bean" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/4a7556af-8f3e-4f84-889c-e53738588070.png" group-title="Rakuten TV",Mr Bean
+https://amg00627-amg00627c28-rakuten-uk-3984.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanukcc-rakutenuk/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-ntd-tv" tvg-name="NTD News" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/3947fd69-d2fc-493a-ba6e-8ed3c509b110.png" group-title="Rakuten TV",NTD News
+https://amg17596-ntdtv-amg17596c1-rakuten-gb-6741.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-rakutengb/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-action-rakuten-tv" tvg-name="Rakuten Action Movies" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork-negative/33ef404c-5ac7-4a76-8ac5-d2c8b614940e.png" group-title="Rakuten TV",Rakuten Action Movies
+https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-comedy-rakuten-tv" tvg-name="Rakuten Comedy Movies" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork-negative/faca9886-f324-4240-9f27-3725a2834116.png" group-title="Rakuten TV",Rakuten Comedy Movies
+https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-drama-rakuten-tv" tvg-name="Rakuten Drama Movies" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork-negative/b8a5d017-1777-4a42-8f52-36d81e7c0f84.png" group-title="Rakuten TV",Rakuten Drama Movies
+https://fee09fd665814f51b939b6d106cf5f66.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6093/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-family-rakuten-tv" tvg-name="Rakuten Family Movies" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/7065135c-85f6-48f0-b87e-b4d29039f408.png" group-title="Rakuten TV",Rakuten Family Movies
+https://e3207568b726401995c25670faaf32e4.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6203/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-reality-rakuten-tv" tvg-name="Rakuten Reality" tvg-logo="https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork-negative/bc6eeb80-e224-4207-a489-a1656dc0e3f5.png" group-title="Rakuten TV",Rakuten Reality
+https://68f6dfd1f2bd415b9c42f1d383004b69.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6233/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-romance-rakuten-tv" tvg-name="Rakuten Romance Movies" tvg-logo="https://images-1.rakuten.tv/storage/global-live-channel/translation/artwork-negative/492e53b3-5777-4002-9cf3-037edaa3aa30.png" group-title="Rakuten TV",Rakuten Romance Movies
+https://2c88ed8c4df9479aa0c7138dc42115e2.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6194/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-sci-fi-rakuten-tv" tvg-name="Rakuten Sci-Fi" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/3bae481e-2c87-4e98-85b3-2a1ad67ffb8b.png" group-title="Rakuten TV",Rakuten Sci-Fi
+https://sci-fi-rakuten-tv-uk.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6241/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-thriller-rakuten-tv" tvg-name="Rakuten Thrillers" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork-negative/62b63228-1059-487a-b2f3-8512d351483c.png" group-title="Rakuten TV",Rakuten Thrillers
+https://thriller-rakuten-tv-uk.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6482/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-top-movies-rakuten-tv" tvg-name="Rakuten Top Movies" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork-negative/df7d1fb3-9ae0-48e9-bd1a-a3e6109c01d0.png" group-title="Rakuten TV",Rakuten Top Movies
+https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8
+#EXTINF:-1 tvg-id="rakuten-real-crime-uk" tvg-name="Real Crime" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork-negative/c214c32e-7781-48c0-a980-0c53c4d5ad4c.png" group-title="Rakuten TV",Real Crime
+https://lds-realcrimebeta-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="rakuten-the-design-network-new" tvg-name="The Design Network" tvg-logo="https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork-negative/fc527509-8dba-4ef9-81e1-c143204ed49e.png" group-title="Rakuten TV",The Design Network
+https://amg00441-amg00441c1-rakuten-us-6050.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="68503d585965a2fd49fc2f0b" tvg-name="MacGyver" tvg-logo="https://images.pluto.tv/channels/68503d585965a2fd49fc2f0b/colorLogoPNG_1750164241502.png" group-title="Pluto TV · Bingeable Drama",MacGyver
 https://jmp2.uk/plu-68503d585965a2fd49fc2f0b.m3u8
 #EXTINF:-1 tvg-id="66d717d2abec540008ba7ec4" tvg-name="Pluto TV 80's Action" tvg-logo="https://images.pluto.tv/channels/66d717d2abec540008ba7ec4/colorLogoPNG_1787911717842.png" group-title="Pluto TV · Bingeable Drama",Pluto TV 80's Action
@@ -658,34 +840,6 @@ https://jmp2.uk/plu-68e38b6e20115bbaf9c91083.m3u8
 https://jmp2.uk/plu-677fb0b33a225c2d0d8a17be.m3u8
 #EXTINF:-1 tvg-id="68e38aaf8082ad3760def7bc" tvg-name="Hercules: The Legendary Journeys" tvg-logo="https://images.pluto.tv/channels/68e38aaf8082ad3760def7bc/colorLogoPNG_1770826301055.png" group-title="Pluto TV · Sci-Fi & Fantasy",Hercules: The Legendary Journeys
 https://jmp2.uk/plu-68e38aaf8082ad3760def7bc.m3u8
-#EXTINF:-1 tvg-id="655b7cbb2c46f300086f0afa" tvg-name="Pluto TV Snooker 900" tvg-logo="https://images.pluto.tv/channels/655b7cbb2c46f300086f0afa/colorLogoPNG_1759435114417.png" group-title="Pluto TV · Sports",Pluto TV Snooker 900
-https://jmp2.uk/plu-655b7cbb2c46f300086f0afa.m3u8
-#EXTINF:-1 tvg-id="67063e78b2ffb10008195d08" tvg-name="MODUS Super Series Darts" tvg-logo="https://images.pluto.tv/channels/67063e78b2ffb10008195d08/colorLogoPNG.png" group-title="Pluto TV · Sports",MODUS Super Series Darts
-https://jmp2.uk/plu-67063e78b2ffb10008195d08.m3u8
-#EXTINF:-1 tvg-id="5ad8d796e738977e2c31094a" tvg-name="World Poker Tour" tvg-logo="https://images.pluto.tv/channels/5ad8d796e738977e2c31094a/colorLogoPNG.png" group-title="Pluto TV · Sports",World Poker Tour
-https://jmp2.uk/plu-5ad8d796e738977e2c31094a.m3u8
-#EXTINF:-1 tvg-id="68c820525ec82769fdfcd104" tvg-name="Wrestling Legends TV" tvg-logo="https://images.pluto.tv/channels/68c820525ec82769fdfcd104/colorLogoPNG_1765359753710.png" group-title="Pluto TV · Sports",Wrestling Legends TV
-https://jmp2.uk/plu-68c820525ec82769fdfcd104.m3u8
-#EXTINF:-1 tvg-id="69b91797611b4a9fce103037" tvg-name="That Peter Crouch Podcast" tvg-logo="https://images.pluto.tv/channels/69b91797611b4a9fce103037/colorLogoPNG_1776258946102.png" group-title="Pluto TV · Sports",That Peter Crouch Podcast
-https://jmp2.uk/plu-69b91797611b4a9fce103037.m3u8
-#EXTINF:-1 tvg-id="696e024a7e92438c27a425a8" tvg-name="Rally TV" tvg-logo="https://images.pluto.tv/channels/696e024a7e92438c27a425a8/colorLogoPNG_1770892518087.png" group-title="Pluto TV · Sports",Rally TV
-https://jmp2.uk/plu-696e024a7e92438c27a425a8.m3u8
-#EXTINF:-1 tvg-id="6a6a02ce1b1c90d8bf9556d8" tvg-name="NFL Channel" tvg-logo="https://images.pluto.tv/channels/6a6a02ce1b1c90d8bf9556d8/colorLogoPNG_1785333477887.png" group-title="Pluto TV · Sports",NFL Channel
-https://jmp2.uk/plu-6a6a02ce1b1c90d8bf9556d8.m3u8
-#EXTINF:-1 tvg-id="66f137cb483d460008ece053" tvg-name="Rugby Pass TV" tvg-logo="https://images.pluto.tv/channels/66f137cb483d460008ece053/colorLogoPNG.png" group-title="Pluto TV · Sports",Rugby Pass TV
-https://jmp2.uk/plu-66f137cb483d460008ece053.m3u8
-#EXTINF:-1 tvg-id="66ed3e9d5e4a6e0008b346e0" tvg-name="UFC" tvg-logo="https://images.pluto.tv/channels/66ed3e9d5e4a6e0008b346e0/colorLogoPNG.png" group-title="Pluto TV · Sports",UFC
-https://jmp2.uk/plu-66ed3e9d5e4a6e0008b346e0.m3u8
-#EXTINF:-1 tvg-id="6627621d56fc840008e47c90" tvg-name="Tennis Channel" tvg-logo="https://images.pluto.tv/channels/6627621d56fc840008e47c90/colorLogoPNG_1756973184696.png" group-title="Pluto TV · Sports",Tennis Channel
-https://jmp2.uk/plu-6627621d56fc840008e47c90.m3u8
-#EXTINF:-1 tvg-id="66fd37885049580008d295b6" tvg-name="AWSN" tvg-logo="https://images.pluto.tv/channels/66fd37885049580008d295b6/colorLogoPNG_1748590960405.png" group-title="Pluto TV · Sports",AWSN
-https://jmp2.uk/plu-66fd37885049580008d295b6.m3u8
-#EXTINF:-1 tvg-id="65b14aae0cb1a100087a216e" tvg-name="DAZN Ringside" tvg-logo="https://images.pluto.tv/channels/65b14aae0cb1a100087a216e/colorLogoPNG.png" group-title="Pluto TV · Sports",DAZN Ringside
-https://jmp2.uk/plu-65b14aae0cb1a100087a216e.m3u8
-#EXTINF:-1 tvg-id="66d885aef0f17500084b6750" tvg-name="PGA TOUR" tvg-logo="https://images.pluto.tv/channels/66d885aef0f17500084b6750/colorLogoPNG.png" group-title="Pluto TV · Sports",PGA TOUR
-https://jmp2.uk/plu-66d885aef0f17500084b6750.m3u8
-#EXTINF:-1 tvg-id="63d91d2560bc8f0008a225e4" tvg-name="FIFA+" tvg-logo="https://images.pluto.tv/channels/63d91d2560bc8f0008a225e4/colorLogoPNG_1750064962067.png" group-title="Pluto TV · Sports",FIFA+
-https://jmp2.uk/plu-63d91d2560bc8f0008a225e4.m3u8
 #EXTINF:-1 tvg-id="5d767790d0438aceb41d03ae" tvg-name="Pluto TV Crime" tvg-logo="https://images.pluto.tv/channels/5d767790d0438aceb41d03ae/colorLogoPNG.png" group-title="Pluto TV · True Crime",Pluto TV Crime
 https://jmp2.uk/plu-5d767790d0438aceb41d03ae.m3u8
 #EXTINF:-1 tvg-id="63808dc806aa4700075f319a" tvg-name="Pluto TV Investigation" tvg-logo="https://images.pluto.tv/channels/63808dc806aa4700075f319a/colorLogoPNG.png" group-title="Pluto TV · True Crime",Pluto TV Investigation
@@ -1104,8 +1258,6 @@ https://jmp2.uk/stvp-GB1200006IV
 https://jmp2.uk/stvp-GBBD1100002L5
 #EXTINF:-1 tvg-id="GB2300005ML" tvg-name="Al Jazeera" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2300005ML_20251118T015422SQUARE.png" group-title="Samsung TV Plus · News",Al Jazeera
 https://jmp2.uk/stvp-GB2300005ML
-#EXTINF:-1 tvg-id="GB1300001RX" tvg-name="DW" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1300001RX_20250902T003744SQUARE.png" group-title="Samsung TV Plus · News",DW
-https://jmp2.uk/stvp-GB1300001RX
 #EXTINF:-1 tvg-id="GBBD3600001NO" tvg-name="CNBC" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD3600001NO_20260317T034210SQUARE.png" group-title="Samsung TV Plus · News",CNBC
 https://jmp2.uk/stvp-GBBD3600001NO
 #EXTINF:-1 tvg-id="GBBB1500004LG" tvg-name="NBC News NOW" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBB1500004LG_20250107T030724SQUARE.png" group-title="Samsung TV Plus · News",NBC News NOW
@@ -1172,68 +1324,6 @@ https://jmp2.uk/stvp-GBBA330003941
 https://jmp2.uk/stvp-GB2000007ID
 #EXTINF:-1 tvg-id="GB17000066A" tvg-name="CJ ENM K-Reality" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB17000066A_20260915T041621SQUARE.png" group-title="Samsung TV Plus · Reality",CJ ENM K-Reality
 https://jmp2.uk/stvp-GB17000066A
-#EXTINF:-1 tvg-id="GB30003577" tvg-name="talkSPORT" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB30003577_20260721T035939SQUARE.png" group-title="Samsung TV Plus · Sport",talkSPORT
-https://jmp2.uk/stvp-GB30003577
-#EXTINF:-1 tvg-id="GB5200001TM" tvg-name="DP World Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB5200001TM_20260421T123838SQUARE.png" group-title="Samsung TV Plus · Sport",DP World Tour
-https://jmp2.uk/stvp-GB5200001TM
-#EXTINF:-1 tvg-id="GB300036IM" tvg-name="PGA Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB300036IM_20250218T040040SQUARE.png" group-title="Samsung TV Plus · Sport",PGA Tour
-https://jmp2.uk/stvp-GB300036IM
-#EXTINF:-1 tvg-id="GBBA33000529G" tvg-name="Tennis Channel" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBA33000529G_20260113T032555SQUARE.png" group-title="Samsung TV Plus · Sport",Tennis Channel
-https://jmp2.uk/stvp-GBBA33000529G
-#EXTINF:-1 tvg-id="GB2000010ML" tvg-name="Tennis+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2000010ML_20250624T021705SQUARE.png" group-title="Samsung TV Plus · Sport",Tennis+
-https://jmp2.uk/stvp-GB2000010ML
-#EXTINF:-1 tvg-id="GB330000144" tvg-name="RugbyPass TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB330000144_20250624T020553SQUARE.png" group-title="Samsung TV Plus · Sport",RugbyPass TV
-https://jmp2.uk/stvp-GB330000144
-#EXTINF:-1 tvg-id="GBBD30000038U" tvg-name="DAZN Ringside" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD30000038U_20260421T123903SQUARE.png" group-title="Samsung TV Plus · Sport",DAZN Ringside
-https://jmp2.uk/stvp-GBBD30000038U
-#EXTINF:-1 tvg-id="GB3800003OS" tvg-name="Eurovision Sport" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800003OS_20260428T031432SQUARE.png" group-title="Samsung TV Plus · Sport",Eurovision Sport
-https://jmp2.uk/stvp-GB3800003OS
-#EXTINF:-1 tvg-id="GB500013LT" tvg-name="Wrestling Legends TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB500013LT_20260505T035911SQUARE.png" group-title="Samsung TV Plus · Sport",Wrestling Legends TV
-https://jmp2.uk/stvp-GB500013LT
-#EXTINF:-1 tvg-id="GBBD2300003IK" tvg-name="Red Bull TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2300003IK_20250805T005540SQUARE.png" group-title="Samsung TV Plus · Sport",Red Bull TV
-https://jmp2.uk/stvp-GBBD2300003IK
-#EXTINF:-1 tvg-id="GB380000473" tvg-name="Sports First TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB380000473_20260622T064057SQUARE.png" group-title="Samsung TV Plus · Sport",Sports First TV
-https://jmp2.uk/stvp-GB380000473
-#EXTINF:-1 tvg-id="GB1500003S4" tvg-name="Golf Life" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1500003S4_20260901T102446SQUARE.png" group-title="Samsung TV Plus · Sport",Golf Life
-https://jmp2.uk/stvp-GB1500003S4
-#EXTINF:-1 tvg-id="GB4700003NV" tvg-name="Padel Time TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4700003NV_20260622T064044SQUARE.png" group-title="Samsung TV Plus · Sport",Padel Time TV
-https://jmp2.uk/stvp-GB4700003NV
-#EXTINF:-1 tvg-id="GB2000016YM" tvg-name="Your Sports News" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2000016YM_20260811T045355SQUARE.png" group-title="Samsung TV Plus · Sport",Your Sports News
-https://jmp2.uk/stvp-GB2000016YM
-#EXTINF:-1 tvg-id="GB2700013Y7" tvg-name="Sky Sports Stories" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2700013Y7_20260317T034220SQUARE.png" group-title="Samsung TV Plus · Sport",Sky Sports Stories
-https://jmp2.uk/stvp-GB2700013Y7
-#EXTINF:-1 tvg-id="GBBD1100008YW" tvg-name="FIFA+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD1100008YW_20260609T043659SQUARE.png" group-title="Samsung TV Plus · Sport",FIFA+
-https://jmp2.uk/stvp-GBBD1100008YW
-#EXTINF:-1 tvg-id="GB26000118T" tvg-name="DFB Play TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB26000118T_20251230T031136SQUARE.png" group-title="Samsung TV Plus · Sport",DFB Play TV
-https://jmp2.uk/stvp-GB26000118T
-#EXTINF:-1 tvg-id="GB3500002R8" tvg-name="Bundesliga" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3500002R8_20260512T060044SQUARE.png" group-title="Samsung TV Plus · Sport",Bundesliga
-https://jmp2.uk/stvp-GB3500002R8
-#EXTINF:-1 tvg-id="GB2700012HS" tvg-name="Sky Sports Classics" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2700012HS_20260317T034217SQUARE.png" group-title="Samsung TV Plus · Sport",Sky Sports Classics
-https://jmp2.uk/stvp-GB2700012HS
-#EXTINF:-1 tvg-id="GB2200002CC" tvg-name="GFN Football" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2200002CC_20261014T010220SQUARE.png" group-title="Samsung TV Plus · Sport",GFN Football
-https://jmp2.uk/stvp-GB2200002CC
-#EXTINF:-1 tvg-id="GB1100002OE" tvg-name="Barça 24H" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1100002OE_20261102T070516SQUARE.png" group-title="Samsung TV Plus · Sport",Barça 24H
-https://jmp2.uk/stvp-GB1100002OE
-#EXTINF:-1 tvg-id="GB3800010LT" tvg-name="Real Madrid TV" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800010LT_20261013T055017SQUARE.png" group-title="Samsung TV Plus · Sport",Real Madrid TV
-https://jmp2.uk/stvp-GB3800010LT
-#EXTINF:-1 tvg-id="GB310000151" tvg-name="INTER 24/7" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB310000151_20251118T015428SQUARE.png" group-title="Samsung TV Plus · Sport",INTER 24/7
-https://jmp2.uk/stvp-GB310000151
-#EXTINF:-1 tvg-id="GB3800009F0" tvg-name="FIFA+ Women" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3800009F0_20251028T010335SQUARE.png" group-title="Samsung TV Plus · Sport",FIFA+ Women
-https://jmp2.uk/stvp-GB3800009F0
-#EXTINF:-1 tvg-id="GBAI5000001A" tvg-name="Pluto TV Motor" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBAI5000001A_20250107T022644SQUARE.png" group-title="Samsung TV Plus · Sport",Pluto TV Motor
-https://jmp2.uk/stvp-GBAI5000001A
-#EXTINF:-1 tvg-id="GBBA1500006H6" tvg-name="MotorRacing" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBA1500006H6_20250107T022613SQUARE.png" group-title="Samsung TV Plus · Sport",MotorRacing
-https://jmp2.uk/stvp-GBBA1500006H6
-#EXTINF:-1 tvg-id="GB51000026A" tvg-name="Rally.TV FAST+" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB51000026A_20260120T031439SQUARE.png" group-title="Samsung TV Plus · Sport",Rally.TV FAST+
-https://jmp2.uk/stvp-GB51000026A
-#EXTINF:-1 tvg-id="GB4000015BP" tvg-name="Graveyard Carz" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4000015BP_20261026T042414SQUARE.png" group-title="Samsung TV Plus · Sport",Graveyard Carz
-https://jmp2.uk/stvp-GB4000015BP
-#EXTINF:-1 tvg-id="GBBD2900001VD" tvg-name="World Poker Tour" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD2900001VD_20250107T030834SQUARE.png" group-title="Samsung TV Plus · Sport",World Poker Tour
-https://jmp2.uk/stvp-GBBD2900001VD
-#EXTINF:-1 tvg-id="GBBC90001089" tvg-name="Strongman Champions League" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBC90001089_20250107T153921SQUARE.png" group-title="Samsung TV Plus · Sport",Strongman Champions League
-https://jmp2.uk/stvp-GBBC90001089
-#EXTINF:-1 tvg-id="GB4200009EC" tvg-name="Racing TV Play" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB4200009EC_20260421T125755SQUARE.png" group-title="Samsung TV Plus · Sport",Racing TV Play
-https://jmp2.uk/stvp-GB4200009EC
 #EXTINF:-1 tvg-id="GBBD3100006XM" tvg-name="Sky Mix" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD3100006XM_20260421T123849SQUARE.png" group-title="Samsung TV Plus · TV Series",Sky Mix
 https://jmp2.uk/stvp-GBBD3100006XM
 #EXTINF:-1 tvg-id="GB51000044P" tvg-name="Heartland" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB51000044P_20260528T054101SQUARE.png" group-title="Samsung TV Plus · TV Series",Heartland

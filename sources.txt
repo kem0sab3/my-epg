@@ -14,5 +14,11 @@ https://i.mjh.nz/SamsungTVPlus/gb.xml.gz
 # Station IDs are separated by commas.
 bbc-radio:bbc_radio_scotland_mw,bbc_radio_one_dance,bbc_radio_one_anthems,bbc_radio_three_unwind,bbc_radio_coventry_warwickshire,bbc_radio_essex,bbc_radio_guernsey,bbc_radio_hereford_worcester,bbc_radio_oxford,bbc_radio_solent,bbc_radio_solent_west_dorset,bbc_radio_somerset_sound,bbc_radio_stoke,bbc_radio_suffolk,bbc_radio_sussex,bbc_radio_wiltshire,bbc_wm
 
+# Rakuten TV's free UK channels, from Rakuten's own guide
+rakuten-uk
+
+# Bauer radio stations (Clyde 1, Forth 1, Greatest Hits Radio, KISS, Magic, Absolute...), from Bauer's own schedules
+bauer:cl1,fo1,no1,ta1,mf1,gh0,hit,abr,ab8,ab9,ki1,ki2,mag,jaz,ker
+
 # Big guide used for BBC Red Button 2-24 and BBC World News
 https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz

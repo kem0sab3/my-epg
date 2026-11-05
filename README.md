@@ -19,7 +19,10 @@ with the guide rebuilt automatically every day.
   event streams, BBC World News and the BBC's Arabic, Persian and Pashto
   channels, plus 720p backups
 - **BBC Radio:** all 65 national, Scottish and local stations in one group, at 320k
-- **Other UK channels:** news, entertainment, kids, music, shopping, faith and S4C
+- **UK Radio:** Clyde 1, Forth 1, Northsound 1, Tay FM, MFR, Capital, Heart, Smooth, Classic FM, LBC, Radio X, Greatest Hits Radio, KISS, Magic, Absolute and more
+- **Sport:** free sport channels from Pluto TV and Samsung TV Plus in one group
+- **Other UK channels:** news (including DW, NHK World and ABC News Australia), entertainment, kids, music, shopping, faith and S4C
+- **Rakuten TV:** Rakuten's free UK film and entertainment channels
 - **Free streaming channels:** the UK line-ups of Pluto TV and Samsung TV Plus
 
 ## How it updates

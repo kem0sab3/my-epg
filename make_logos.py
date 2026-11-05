@@ -2,7 +2,7 @@
 """Downloads channel logos from Wikipedia, turns them white for dark TV app backgrounds,
 and saves them in logos/. The list is in logos.txt: one line per logo, 'file-name | Wikipedia article'."""
 import io, json, os, sys, urllib.parse, urllib.request
-from PIL import Image, ImageChops
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = {"User-Agent": "my-epg-logo-fetcher/1.0 (personal TV playlist; github.com/kem0sab3/my-epg)"}
@@ -41,6 +41,24 @@ def is_dark(im):
     px = [l for l, al in zip(L.getdata(), a.getdata()) if al > 128]
     return bool(px) and sum(px) / len(px) < 110
 
+def tile_lettering(data):
+    """For logos drawn as white lettering on a grey/coloured tile (with a white margin around it):
+    keep only the lettering, in white, and drop the tile and the margin."""
+    im = Image.open(io.BytesIO(data)).convert("RGBA")
+    flat = Image.new("RGBA", im.size, (255, 255, 255, 255)); flat.alpha_composite(im)
+    L = flat.convert("L")
+    light = L.point(lambda v: 255 if v > 200 else 0)
+    w, h = light.size
+    for xy in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)):
+        if light.getpixel(xy) == 255:
+            ImageDraw.floodfill(light, xy, 128)          # 128 = margin connected to the edge
+    margin = light.point(lambda v: 255 if v == 128 else 0).filter(ImageFilter.MaxFilter(5))
+    inside = ImageChops.invert(margin)
+    alpha = ImageChops.multiply(L.point(lambda v: max(0, min(255, int((v - 150) * 255 / 90)))), inside)
+    out = Image.new("RGBA", im.size, (255, 255, 255, 0)); out.putalpha(alpha)
+    box = alpha.getbbox()
+    return out.crop(box) if box else out
+
 def whiten(data, only_if_dark=False):
     im = Image.open(io.BytesIO(data)).convert("RGBA")
     if only_if_dark and im.getchannel("A").getextrema()[0] < 250 and not is_dark(im):
@@ -64,9 +82,10 @@ def main():
             continue
         name, article = [x.strip() for x in line.split("|", 1)]
         try:
-            if article.startswith("url:"):
-                fname, url = "direct", article[4:].strip()
-                img = whiten(get(url), only_if_dark=True)
+            if article.startswith(("url:", "tile:")):
+                mode, url = article.split(":", 1)
+                fname, url = "direct", url.strip()
+                img = tile_lettering(get(url)) if mode == "tile" else whiten(get(url), only_if_dark=True)
                 img.thumbnail((1200, 1200))
                 img.save(os.path.join(HERE, "logos", name + ".png"), optimize=True)
                 print(f"ok {name}.png  <- {url} {img.size}")
