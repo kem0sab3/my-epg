@@ -35,8 +35,17 @@ def logo_from_article_files(article):
             return f, url
     return None, None
 
-def whiten(data):
+def is_dark(im):
+    """True when the visible part of a logo is mostly dark (would vanish on a dark TV background)."""
+    a = im.getchannel("A"); L = im.convert("L")
+    px = [l for l, al in zip(L.getdata(), a.getdata()) if al > 128]
+    return bool(px) and sum(px) / len(px) < 110
+
+def whiten(data, only_if_dark=False):
     im = Image.open(io.BytesIO(data)).convert("RGBA")
+    if only_if_dark and im.getchannel("A").getextrema()[0] < 250 and not is_dark(im):
+        box = im.getchannel("A").getbbox()
+        return im.crop(box) if box else im
     a = im.getchannel("A")
     if a.getextrema()[0] < 250:      # has a see-through background: make every visible pixel white
         alpha = a
@@ -55,6 +64,13 @@ def main():
             continue
         name, article = [x.strip() for x in line.split("|", 1)]
         try:
+            if article.startswith("url:"):
+                fname, url = "direct", article[4:].strip()
+                img = whiten(get(url), only_if_dark=True)
+                img.thumbnail((1200, 1200))
+                img.save(os.path.join(HERE, "logos", name + ".png"), optimize=True)
+                print(f"ok {name}.png  <- {url} {img.size}")
+                continue
             fname, url = logo_url(article)
             if not url:
                 fname, url = logo_from_article_files(article)
