@@ -28,5 +28,8 @@ sky:1005
 # All-day listings for non-stop music stations with no published schedule (edit static_guide.txt)
 static:static_guide.txt
 
+# TBN UK, from tbn.uk/tv-guide
+tbn-uk
+
 # Big guide used for BBC Red Button 2-24 and BBC World News
 https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz

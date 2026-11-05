@@ -691,7 +691,6 @@ RadioX.uk
 S4C.uk
 SkyNewsWeather.uk@SD
 SmoothRadio.uk
-TBNUK.uk@SD
 TJC.uk
 TRTWorld.tr
 TalkSport.uk
@@ -803,3 +802,4 @@ rakuten-the-design-network-new
 rakuten-thriller-rakuten-tv
 rakuten-top-movies-rakuten-tv
 sky-1005
+tbn-uk

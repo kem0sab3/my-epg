@@ -212,6 +212,41 @@ def grab_rakuten_uk(days, out_path):
     print(f"   Rakuten TV UK: {total} programmes", flush=True)
     return out_path
 
+def grab_tbn_uk(days, out_path):
+    """TBN UK's own TV guide (tbn.uk/tv-guide/<date>/), one page per day."""
+    import html as htmllib
+    tv = ET.Element("tv")
+    ET.SubElement(ET.SubElement(tv, "channel", id="tbn-uk"), "display-name").text = "TBN UK"
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    seen, total = set(), 0
+    for d in range(-1, int(days)):
+        day = today + datetime.timedelta(days=d)
+        try:
+            req = urllib.request.Request(f"https://tbn.uk/tv-guide/{day.isoformat()}/", headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                page = r.read().decode("utf-8", "replace")
+        except Exception as e:
+            print(f"   !! tbn {day}: {e}", flush=True)
+            continue
+        for m in re.finditer(r"data-start-time='(\d+)' data-end-time='(\d+)'(?: data-genres=\"([^\"]*)\")?(.*?)(?=data-start-time=|\Z)", page, re.S):
+            start_ms, end_ms, genres, rest = int(m.group(1)), int(m.group(2)), m.group(3), m.group(4)
+            if start_ms in seen:
+                continue
+            seen.add(start_ms)
+            title = re.search(r'aria-label="([^"]+)"', rest)
+            start = datetime.datetime.fromtimestamp(start_ms / 1000, datetime.timezone.utc)
+            stop = datetime.datetime.fromtimestamp(end_ms / 1000, datetime.timezone.utc)
+            p = ET.SubElement(tv, "programme", start=start.strftime("%Y%m%d%H%M%S +0000"),
+                              stop=stop.strftime("%Y%m%d%H%M%S +0000"), channel="tbn-uk")
+            ET.SubElement(p, "title").text = htmllib.unescape(title.group(1)) if title else "TBN UK"
+            for g in (genres or "").split():
+                ET.SubElement(p, "category").text = g.replace("-", " ").title()
+            total += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   TBN UK guide: {total} programmes", flush=True)
+    return out_path
+
 def static_guide(path, days, out_path):
     """All-day listings for stations that publish no schedule (non-stop music streams).
     Reads lines of 'channel-id | title | description' and writes one listing per day."""
@@ -238,6 +273,8 @@ def static_guide(path, days, out_path):
 
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.strip() == "tbn-uk":
+        return grab_tbn_uk(days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("static:"):
         return static_guide(src.split(":", 1)[1].strip(), days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("bbc-radio:"):
