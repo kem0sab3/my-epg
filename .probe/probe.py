@@ -1,4 +1,4 @@
-import json, re, urllib.request, urllib.error, urllib.parse, html as H
+import json, re, urllib.request, urllib.error, urllib.parse
 def p(tag, obj): print("P|" + tag + "|" + json.dumps(obj, ensure_ascii=False)[:2500], flush=True)
 HD = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
       "Origin": "https://watch.islamchannel.tv", "Referer": "https://watch.islamchannel.tv/"}
@@ -10,17 +10,33 @@ def get(u, hdr=None, n=None):
     except urllib.error.HTTPError as e:
         return e.code, u, e.read(400).decode("utf-8", "replace")
 st, _, page = get("https://watch.islamchannel.tv/live/1025")
-attrs = dict(re.findall(r'data-(id|key|userid|uvid|expiry|token|env)="([^"]*)"', page.split('data-env="production"', 1)[1][:1500].join(['data-env="production"', ''])) )
-p("attrs", {k: (v if k not in ("token", "key") else v[:6] + "…") for k, v in attrs.items()})
-st, _, js = get("https://ssmp.simplestreamcdn.com/dist/builds/bitmovin/v1.1.32/ssmp.bundle.js?plugins=youbora,ima")
-urls = sorted(set(re.findall(r'https?://[a-z0-9.\-]*simplestream[a-z0-9.\-]*/[^"\'`\s]{0,120}', js)))
-p("ssmp-urls", urls[:40])
-for kw in ["/api/live", "live/stream", "stream/", "expiry"]:
-    for m in list(re.finditer(re.escape(kw), js))[:2]:
-        i = m.start(); p("js-" + kw, re.sub(r"\s+", " ", js[max(0, i-400):i+500]))
-# try the usual Simplestream live stream API
-sid, key, tok, exp, uid = attrs.get("id"), attrs.get("key"), attrs.get("token"), attrs.get("expiry"), attrs.get("userid")
-for base in ["https://v2-streams-elb.simplestreamcdn.com/api/live/stream/", "https://v2-streams.simplestreamcdn.com/api/live/stream/"]:
-    q = urllib.parse.urlencode({"key": key, "platform": "chrome", "user": uid, "token": tok, "expiry": exp, "uvid": attrs.get("uvid")})
-    st, fu, body = get(base + sid + "?" + q, {"Accept": "application/json"})
-    p("api", {"base": base, "st": st, "body": body[:700]})
+blk = page[page.find('data-env="production"'):][:1500]
+a = dict(re.findall(r'data-([a-z\-]+)="([^"]*)"', blk))
+st, _, body = get("https://mm-v2.simplestream.com/ssmp/api.php?id=" + a["id"] + "&env=production")
+p("player-api", {"st": st, "body": body[:800]})
+try:
+    pa = json.loads(body); pa = pa.get("response", pa)
+except Exception:
+    pa = {}
+host, comp = pa.get("api_hostname"), pa.get("company_uuid")
+p("host", {"host": host, "company": comp})
+if host:
+    if "https://api" in host:
+        url = f"{host}/streams/v2/{comp}/live/{a['uvid']}"
+    else:
+        url = f"{host}/streams/api/live/stream/{a['uvid']}"
+    url += "?" + urllib.parse.urlencode({"key": a["key"], "cc": "GB", "platform": "chrome", "url": "https://watch.islamchannel.tv/live/1025", "gdpr": "0", "gdpr_consent": ""})
+    hdr = {"Accept": "application/json", "Token": a["token"], "Token-Expiry": a["expiry"], "Userid": a.get("userid", "123456"), "Uvid": a["uvid"]}
+    st, _, body = get(url, hdr)
+    p("streams", {"st": st, "url": url.split("?")[0], "body": body[:1500]})
+    m = re.findall(r'https?:\\?/\\?/[^"]+\.m3u8[^"]*', body)
+    for u in m[:3]:
+        u = u.replace("\\/", "/")
+        st2, fu, b2 = get(u, {}, 2000)
+        p("hls", {"u": u[:200], "st": st2, "head": b2[:300]})
+        # does it work without the page's referer/origin?
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as r:
+                p("hls-plain", {"st": r.status})
+        except urllib.error.HTTPError as e:
+            p("hls-plain", {"st": e.code})
