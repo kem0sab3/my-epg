@@ -255,7 +255,7 @@ def grab_islam_channel(days, out_path):
     tv = ET.Element("tv")
     ET.SubElement(ET.SubElement(tv, "channel", id="islam-channel"), "display-name").text = "Islam Channel"
     today = datetime.datetime.now(uk).date()
-    seen, total = set(), 0
+    seen, total, items = set(), 0, []
     for d in range(-1, int(days)):
         day = today + datetime.timedelta(days=d)
         data = urllib.parse.urlencode({"channel_id": 4, "date": day.isoformat()}).encode()
@@ -278,12 +278,17 @@ def grab_islam_channel(days, out_path):
             if start in seen:
                 continue
             seen.add(start)
-            p = ET.SubElement(tv, "programme", start=start.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"),
-                              stop=stop.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"), channel="islam-channel")
-            ET.SubElement(p, "title").text = (it.get("epg_tilte") or it.get("epg_title") or "Islam Channel").strip()
-            if it.get("epg_synopsis"):
-                ET.SubElement(p, "desc").text = it["epg_synopsis"].strip()
-            total += 1
+            items.append([start, stop, (it.get("epg_tilte") or it.get("epg_title") or "Islam Channel").strip(), (it.get("epg_synopsis") or "").strip()])
+    items.sort(key=lambda x: x[0])
+    for k, (start, stop, title, desc) in enumerate(items):
+        if k + 1 < len(items) and stop > items[k + 1][0]:
+            stop = items[k + 1][0]        # their data sometimes overlaps the next programme; end it when the next one starts
+        p = ET.SubElement(tv, "programme", start=start.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"),
+                          stop=stop.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000"), channel="islam-channel")
+        ET.SubElement(p, "title").text = title
+        if desc:
+            ET.SubElement(p, "desc").text = desc
+        total += 1
     ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
     print(f"   Islam Channel guide: {total} programmes", flush=True)
     return out_path
