@@ -1,0 +1,4 @@
+# Name shown inside your EPG file
+name = Brad's EPG
+# How many days ahead to keep (smaller = smaller file, faster loading)
+days_ahead = 7

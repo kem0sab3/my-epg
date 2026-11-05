@@ -1,0 +1,15 @@
+# Your EPG sources - one link per line. Lines starting with # are ignored.
+# Both .xml and .xml.gz links work.
+# ORDER MATTERS: if two sources have listings for the same channel ID,
+# the one higher up this list wins.
+
+# Freeview (all BBC regions, plus most UK channels)
+https://raw.githubusercontent.com/dp247/Freeview-EPG/master/epg.xml
+# Pluto TV UK
+https://i.mjh.nz/PlutoTV/gb.xml.gz
+# Samsung TV Plus UK
+https://i.mjh.nz/SamsungTVPlus/gb.xml.gz
+
+# Your original big guide (US, sport etc.). Remove the # to switch it back on,
+# and empty channels.txt if you want all of its 15,000 channels.
+# https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz
