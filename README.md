@@ -23,6 +23,8 @@ with the guide rebuilt automatically every day.
 - **Sport:** free sport channels from Pluto TV and Samsung TV Plus in one group
 - **Other UK channels:** news (including DW, NHK World and ABC News Australia), entertainment, kids, music, shopping, faith and S4C
 - **Rakuten TV:** Rakuten's free UK film and entertainment channels
+- **Irish Radio:** RTÉ Radio 1, 2FM, Lyric FM and Raidió na Gaeltachta
+- **Plex:** Plex's free UK channels (its sport channels are in Sport)
 - **Free streaming channels:** the UK line-ups of Pluto TV and Samsung TV Plus
 
 ## How it updates

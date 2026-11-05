@@ -9,6 +9,8 @@ https://raw.githubusercontent.com/dp247/Freeview-EPG/master/epg.xml
 https://i.mjh.nz/PlutoTV/gb.xml.gz
 # Samsung TV Plus UK
 https://i.mjh.nz/SamsungTVPlus/gb.xml.gz
+# Plex UK
+https://i.mjh.nz/Plex/gb.xml.gz
 
 # BBC radio stations the Freeview guide doesn't cover, straight from the BBC's own schedules.
 # Station IDs are separated by commas.
