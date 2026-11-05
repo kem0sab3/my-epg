@@ -340,8 +340,12 @@ def grab_bbc_ess(services, out_path):
             brand = ((it.get("brand") or {}).get("title") or "").strip()
             ep = ((it.get("episode") or {}).get("title") or "").strip()
             ET.SubElement(p, "title").text = brand or ep or sid
-            if brand and ep and ep != brand:
+            # the BBC often uses the first-broadcast date as the episode name ("04/11/2026 18:00 GMT") - leave those out
+            is_date = bool(re.fullmatch(r"[\d/.:\-\s]+(GMT|BST|UTC)?", ep or ""))
+            if brand and ep and ep != brand and not is_date:
                 ET.SubElement(p, "sub-title").text = ep
+            if not brand and is_date:
+                p.find("title").text = sid
             total += 1
     ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
     print(f"   BBC World Service TV schedules: {total} programmes", flush=True)
