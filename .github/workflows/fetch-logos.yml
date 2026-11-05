@@ -1,0 +1,33 @@
+name: Fetch logos
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - logos.txt
+      - make_logos.py
+
+permissions:
+  contents: write
+
+jobs:
+  logos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Fetch and whiten logos
+        run: python make_logos.py
+      - name: Save logos
+        run: |
+          git config user.name "epg-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logos
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Update logos"
+          git pull --rebase
+          git push
