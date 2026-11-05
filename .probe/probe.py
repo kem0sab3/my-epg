@@ -3,19 +3,12 @@ def p(tag, obj): print("P|" + tag + "|" + json.dumps(obj, ensure_ascii=False)[:3
 def test(u):
     try:
         with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=20) as r:
-            return r.status, len(r.read(2000))
+            return r.status
     except urllib.error.HTTPError as e:
-        return e.code, 0
-    except Exception as e:
-        return str(e)[:50], 0
+        return e.code
 now = int(time.time())
-base = "https://stream-al.hellorayo.co.uk/clyde1.aac"
-for label, skey in [("current-link (fixed old)", 1793860000), ("now", now), ("now+1h", now + 3600), ("now+1day", now + 86400),
-                    ("far future", 7374499933), ("now-1h", now - 3600), ("now-6h", now - 6 * 3600), ("now-12h", now - 12 * 3600)]:
-    st, n = test(f"{base}?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey={skey}")
-    p("skey", {"label": label, "skey": skey, "st": st, "bytes": n})
-for name, u in [("Forth 1", "https://stream-al.hellorayo.co.uk/forth1.aac"), ("KISS", "https://live-bauerkiss.sharp-stream.com/kissnational.aac"),
-                ("Planet Rock", "https://stream-mz.hellorayo.co.uk/planetrock.aac")]:
-    for label, skey in [("old", 1793860000), ("far future", 7374499933)]:
-        st, n = test(f"{u}?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey={skey}")
-        p("other", {"name": name, "label": label, "st": st, "bytes": n})
+base = "https://stream-al.hellorayo.co.uk/clyde1.aac?direct=true&aw_0_1st.playerid=kem0sab3_epg&aw_0_1st.skey="
+for label, skey in [("+2h", now+7200), ("+4h", now+4*3600), ("+8h", now+8*3600), ("-8h", now-8*3600), ("-10h", now-10*3600),
+                    ("2030", 1893456000), ("2050", 2524608000), ("2100", 4102444800), ("7374499933", 7374499933), ("9999999999", 9999999999),
+                    ("12345", 12345), ("abc", "abc"), ("13-digit ms now", now*1000)]:
+    p("skey", {"label": label, "st": test(base + str(skey))})
