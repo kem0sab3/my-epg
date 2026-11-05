@@ -13,6 +13,15 @@ with the guide rebuilt automatically every day.
 - **Playlist:** TiviMate → Settings → Playlists → Add playlist → Enter URL
 - **Guide:** TiviMate → Settings → EPG → EPG sources → Add source
 
+## What's in the playlist
+
+- **BBC:** every BBC TV channel and all BBC One regions in 1080p, 24 Red Button
+  event streams, BBC World News and the BBC's Arabic, Persian and Pashto
+  channels, plus 720p backups
+- **BBC radio:** 64 national, Scottish and local stations at 320k
+- **Other UK channels:** news, entertainment, kids, music, shopping, faith and S4C
+- **Free streaming channels:** the UK line-ups of Pluto TV and Samsung TV Plus
+
 ## How it updates
 
 Every morning at about 3am, GitHub runs `build_epg.py`. It downloads every guide

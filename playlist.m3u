@@ -54,6 +54,62 @@ https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_y
 https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_northern_ireland_hd/hevc_iptv_mse_v0.mpd
 #EXTINF:-1 tvg-id="BBCTwoWales.uk" tvg-name="BBC Two Wales" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-two-uk.png" group-title="BBC Regions",BBC Two Wales
 https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_wales_digital/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton1.uk" tvg-name="BBC Red Button 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-red-button-uk.png" group-title="BBC Red Button",BBC Red Button 1
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_001/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton2.uk@SD" tvg-name="BBC Red Button 2" tvg-logo="" group-title="BBC Red Button",BBC Red Button 2
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_002/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton3.uk@SD" tvg-name="BBC Red Button 3" tvg-logo="" group-title="BBC Red Button",BBC Red Button 3
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_003/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton4.uk@SD" tvg-name="BBC Red Button 4" tvg-logo="" group-title="BBC Red Button",BBC Red Button 4
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_004/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton5.uk@SD" tvg-name="BBC Red Button 5" tvg-logo="" group-title="BBC Red Button",BBC Red Button 5
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_005/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton6.uk@SD" tvg-name="BBC Red Button 6" tvg-logo="" group-title="BBC Red Button",BBC Red Button 6
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_006/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton7.uk@SD" tvg-name="BBC Red Button 7" tvg-logo="" group-title="BBC Red Button",BBC Red Button 7
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_007/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton8.uk@SD" tvg-name="BBC Red Button 8" tvg-logo="" group-title="BBC Red Button",BBC Red Button 8
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_008/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton9.uk@SD" tvg-name="BBC Red Button 9" tvg-logo="" group-title="BBC Red Button",BBC Red Button 9
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_009/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton10.uk@SD" tvg-name="BBC Red Button 10" tvg-logo="" group-title="BBC Red Button",BBC Red Button 10
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_010/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton11.uk@SD" tvg-name="BBC Red Button 11" tvg-logo="" group-title="BBC Red Button",BBC Red Button 11
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_011/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton12.uk@SD" tvg-name="BBC Red Button 12" tvg-logo="" group-title="BBC Red Button",BBC Red Button 12
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_012/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton13.uk@SD" tvg-name="BBC Red Button 13" tvg-logo="" group-title="BBC Red Button",BBC Red Button 13
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_013/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton14.uk@SD" tvg-name="BBC Red Button 14" tvg-logo="" group-title="BBC Red Button",BBC Red Button 14
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_014/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton15.uk@SD" tvg-name="BBC Red Button 15" tvg-logo="" group-title="BBC Red Button",BBC Red Button 15
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_015/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton16.uk@SD" tvg-name="BBC Red Button 16" tvg-logo="" group-title="BBC Red Button",BBC Red Button 16
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_016/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton17.uk@SD" tvg-name="BBC Red Button 17" tvg-logo="" group-title="BBC Red Button",BBC Red Button 17
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_017/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton18.uk@SD" tvg-name="BBC Red Button 18" tvg-logo="" group-title="BBC Red Button",BBC Red Button 18
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_018/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton19.uk@SD" tvg-name="BBC Red Button 19" tvg-logo="" group-title="BBC Red Button",BBC Red Button 19
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_019/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton20.uk@SD" tvg-name="BBC Red Button 20" tvg-logo="" group-title="BBC Red Button",BBC Red Button 20
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_020/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton21.uk@SD" tvg-name="BBC Red Button 21" tvg-logo="" group-title="BBC Red Button",BBC Red Button 21
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_021/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton22.uk@SD" tvg-name="BBC Red Button 22" tvg-logo="" group-title="BBC Red Button",BBC Red Button 22
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_022/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton23.uk@SD" tvg-name="BBC Red Button 23" tvg-logo="" group-title="BBC Red Button",BBC Red Button 23
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_023/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCRedButton24.uk@SD" tvg-name="BBC Red Button 24" tvg-logo="" group-title="BBC Red Button",BBC Red Button 24
+https://ve-cmaf-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:uk_bbc_stream_024/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCNews.uk@Africa" tvg-name="BBC World News" tvg-logo="" group-title="BBC World",BBC World News
+https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCArabic.uk@SD" tvg-name="BBC Arabic" tvg-logo="" group-title="BBC World",BBC Arabic
+https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_arabic_tv/pc_hd_abr_v2.mpd
+#EXTINF:-1 tvg-id="BBCPersian.uk@SD" tvg-name="BBC Persian" tvg-logo="" group-title="BBC World",BBC Persian
+https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="BBCNewsPashto.uk@HD" tvg-name="BBC Pashto" tvg-logo="" group-title="BBC World",BBC Pashto
+https://vs-cmaf-pushb-ww.live.cf.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_afghan_tv/pc_hd_abr_v2.mpd
 #EXTINF:-1 tvg-id="GBNews.uk" tvg-name="GB News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png" group-title="News",GB News
 https://amg01076-lightningintern-gbnews-samsunguk-0lu52.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/aljazeera-uk.png" group-title="News",Al Jazeera English
@@ -170,6 +226,134 @@ https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_yo
 https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_northern_ireland_hd/mobile_wifi_main_hd_abr_v2.m3u8
 #EXTINF:-1 tvg-id="BBCTwoWales.uk" tvg-name="BBC Two Wales (backup)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-kingdom/bbc-two-uk.png" group-title="BBC Backup (720p)",BBC Two Wales (backup)
 https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_wales_digital/iptv_hd_abr_v1.mpd
+#EXTINF:-1 radio="true" tvg-id="BBCRScotland.uk" tvg-name="BBC Radio Scotland" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Scotland.png" group-title="BBC Radio",BBC Radio Scotland
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Scotland MW" tvg-logo="" group-title="BBC Radio",BBC Radio Scotland MW
+https://as-hls-uk-live.akamaized.net/pool_59378121/live/uk/bbc_radio_scotland_mw/bbc_radio_scotland_mw.isml/bbc_radio_scotland_mw-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioGaidhael.uk" tvg-name="BBC Radio nan Gàidheal" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-nan-Gaidheal.png" group-title="BBC Radio",BBC Radio nan Gàidheal
+https://as-hls-uk-live.akamaized.net/pool_01935182/live/uk/bbc_radio_nan_gaidheal/bbc_radio_nan_gaidheal.isml/bbc_radio_nan_gaidheal-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioOrkney.uk" tvg-name="BBC Radio Orkney" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Orkney.png" group-title="BBC Radio",BBC Radio Orkney
+https://as-hls-uk-live.akamaized.net/pool_50082558/live/uk/bbc_radio_orkney/bbc_radio_orkney.isml/bbc_radio_orkney-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR1.uk" tvg-name="BBC Radio 1" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-1.png" group-title="BBC Radio",BBC Radio 1
+https://as-hls-uk-live.akamaized.net/pool_01505109/live/uk/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR1X.uk" tvg-name="BBC Radio 1Xtra" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-1Xtra.png" group-title="BBC Radio",BBC Radio 1Xtra
+https://as-hls-uk-live.akamaized.net/pool_92079267/live/uk/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio 1 Dance" tvg-logo="" group-title="BBC Radio",BBC Radio 1 Dance
+https://as-hls-uk-live.akamaized.net/pool_62063831/live/uk/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio 1 Anthems" tvg-logo="" group-title="BBC Radio",BBC Radio 1 Anthems
+https://as-hls-uk-live.akamaized.net/pool_11351741/live/uk/bbc_radio_one_anthems/bbc_radio_one_anthems.isml/bbc_radio_one_anthems-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR2.uk" tvg-name="BBC Radio 2" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-2.png" group-title="BBC Radio",BBC Radio 2
+https://as-hls-uk-live.akamaized.net/pool_74208725/live/uk/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR3.uk" tvg-name="BBC Radio 3" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-3.png" group-title="BBC Radio",BBC Radio 3
+https://as-hls-uk-live.akamaized.net/pool_23461179/live/uk/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio 3 Unwind" tvg-logo="" group-title="BBC Radio",BBC Radio 3 Unwind
+https://as-hls-uk-live.akamaized.net/pool_30624046/live/uk/bbc_radio_three_unwind/bbc_radio_three_unwind.isml/bbc_radio_three_unwind-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR4FM.uk" tvg-name="BBC Radio 4" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-4.png" group-title="BBC Radio",BBC Radio 4
+https://as-hls-uk-live.akamaized.net/pool_55057080/live/uk/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR4EX.uk" tvg-name="BBC Radio 4 Extra" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-4-Extra.png" group-title="BBC Radio",BBC Radio 4 Extra
+https://as-hls-uk-live.akamaized.net/pool_26173715/live/uk/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR5L.uk" tvg-name="BBC Radio 5 Live" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-5-Live.png" group-title="BBC Radio",BBC Radio 5 Live
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR5SX.uk" tvg-name="BBC Radio 5 Sports Extra" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-5-Sports-Extra.png" group-title="BBC Radio",BBC Radio 5 Sports Extra
+https://as-hls-uk-live.akamaized.net/pool_47700285/live/uk/bbc_radio_five_live_sports_extra/bbc_radio_five_live_sports_extra.isml/bbc_radio_five_live_sports_extra-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCR6M.uk" tvg-name="BBC Radio 6 Music" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-6-Music.png" group-title="BBC Radio",BBC Radio 6 Music
+https://as-hls-uk-live.akamaized.net/pool_81827798/live/uk/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRAsianNetwork.uk" tvg-name="BBC Asian Network" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Asian-Network.png" group-title="BBC Radio",BBC Asian Network
+https://as-hls-uk-live.akamaized.net/pool_22108647/live/uk/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCWorldService.uk" tvg-name="BBC World Service" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-World-Service.png" group-title="BBC Radio",BBC World Service
+https://as-hls-uk-live.akamaized.net/pool_87948813/live/uk/bbc_world_service/bbc_world_service.isml/bbc_world_service-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRUlster.uk" tvg-name="BBC Radio Ulster" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Ulster.png" group-title="BBC Radio",BBC Radio Ulster
+https://as-hls-uk-live.akamaized.net/pool_31244774/live/uk/bbc_radio_ulster/bbc_radio_ulster.isml/bbc_radio_ulster-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioFoyle.uk" tvg-name="BBC Radio Foyle" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Foyle.png" group-title="BBC Radio",BBC Radio Foyle
+https://as-hls-uk-live.akamaized.net/pool_43178797/live/uk/bbc_radio_foyle/bbc_radio_foyle.isml/bbc_radio_foyle-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRWales.uk" tvg-name="BBC Radio Wales" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Wales.png" group-title="BBC Radio",BBC Radio Wales
+https://as-hls-uk-live.akamaized.net/pool_97517794/live/uk/bbc_radio_wales_fm/bbc_radio_wales_fm.isml/bbc_radio_wales_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioCymru.uk" tvg-name="BBC Radio Cymru" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Cymru.png" group-title="BBC Radio",BBC Radio Cymru
+https://as-hls-uk-live.akamaized.net/pool_24792333/live/uk/bbc_radio_cymru/bbc_radio_cymru.isml/bbc_radio_cymru-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioCymru2.uk" tvg-name="BBC Radio Cymru 2" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Cymru-2.png" group-title="BBC Radio",BBC Radio Cymru 2
+https://as-hls-uk-live.akamaized.net/pool_98610936/live/uk/bbc_radio_cymru_2/bbc_radio_cymru_2.isml/bbc_radio_cymru_2-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioBerkshire.uk" tvg-name="BBC Radio Berkshire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Berkshire.png" group-title="BBC Local Radio",BBC Radio Berkshire
+https://as-hls-uk-live.akamaized.net/pool_64162474/live/uk/bbc_radio_berkshire/bbc_radio_berkshire.isml/bbc_radio_berkshire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioBristol.uk" tvg-name="BBC Radio Bristol" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Bristol.png" group-title="BBC Local Radio",BBC Radio Bristol
+https://as-hls-uk-live.akamaized.net/pool_41858929/live/uk/bbc_radio_bristol/bbc_radio_bristol.isml/bbc_radio_bristol-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioCambridgeshire.uk" tvg-name="BBC Radio Cambridgeshire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Cambridgeshire.png" group-title="BBC Local Radio",BBC Radio Cambridgeshire
+https://as-hls-uk-live.akamaized.net/pool_21074581/live/uk/bbc_radio_cambridge/bbc_radio_cambridge.isml/bbc_radio_cambridge-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioCornwall.uk" tvg-name="BBC Radio Cornwall" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Cornwall.png" group-title="BBC Local Radio",BBC Radio Cornwall
+https://as-hls-uk-live.akamaized.net/pool_72477894/live/uk/bbc_radio_cornwall/bbc_radio_cornwall.isml/bbc_radio_cornwall-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC CWR" tvg-logo="" group-title="BBC Local Radio",BBC CWR
+https://as-hls-uk-live.akamaized.net/pool_79805333/live/uk/bbc_radio_coventry_warwickshire/bbc_radio_coventry_warwickshire.isml/bbc_radio_coventry_warwickshire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioCumbria.uk" tvg-name="BBC Radio Cumbria" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Cumbria.png" group-title="BBC Local Radio",BBC Radio Cumbria
+https://as-hls-uk-live.akamaized.net/pool_85294020/live/uk/bbc_radio_cumbria/bbc_radio_cumbria.isml/bbc_radio_cumbria-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioDerby.uk" tvg-name="BBC Radio Derby" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Derby.png" group-title="BBC Local Radio",BBC Radio Derby
+https://as-hls-uk-live.akamaized.net/pool_63732303/live/uk/bbc_radio_derby/bbc_radio_derby.isml/bbc_radio_derby-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioDevon.uk" tvg-name="BBC Radio Devon" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Devon.png" group-title="BBC Local Radio",BBC Radio Devon
+https://as-hls-uk-live.akamaized.net/pool_08856933/live/uk/bbc_radio_devon/bbc_radio_devon.isml/bbc_radio_devon-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Essex" tvg-logo="" group-title="BBC Local Radio",BBC Essex
+https://as-hls-uk-live.akamaized.net/pool_23657270/live/uk/bbc_radio_essex/bbc_radio_essex.isml/bbc_radio_essex-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioGloucestershire.uk" tvg-name="BBC Radio Gloucestershire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Gloucestershire.png" group-title="BBC Local Radio",BBC Radio Gloucestershire
+https://as-hls-uk-live.akamaized.net/pool_74607547/live/uk/bbc_radio_gloucestershire/bbc_radio_gloucestershire.isml/bbc_radio_gloucestershire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Guernsey" tvg-logo="" group-title="BBC Local Radio",BBC Radio Guernsey
+https://as-hls-uk-live.akamaized.net/pool_65313722/live/uk/bbc_radio_guernsey/bbc_radio_guernsey.isml/bbc_radio_guernsey-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Hereford & Worcester" tvg-logo="" group-title="BBC Local Radio",BBC Hereford & Worcester
+https://as-hls-uk-live.akamaized.net/pool_80112859/live/uk/bbc_radio_hereford_worcester/bbc_radio_hereford_worcester.isml/bbc_radio_hereford_worcester-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioHumberside.uk" tvg-name="BBC Radio Humberside" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Humberside.png" group-title="BBC Local Radio",BBC Radio Humberside
+https://as-hls-uk-live.akamaized.net/pool_43379345/live/uk/bbc_radio_humberside/bbc_radio_humberside.isml/bbc_radio_humberside-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioJersey.uk" tvg-name="BBC Radio Jersey" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Jersey.png" group-title="BBC Local Radio",BBC Radio Jersey
+https://as-hls-uk-live.akamaized.net/pool_14000630/live/uk/bbc_radio_jersey/bbc_radio_jersey.isml/bbc_radio_jersey-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioKent.uk" tvg-name="BBC Radio Kent" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Kent.png" group-title="BBC Local Radio",BBC Radio Kent
+https://as-hls-uk-live.akamaized.net/pool_17754185/live/uk/bbc_radio_kent/bbc_radio_kent.isml/bbc_radio_kent-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioLancashire.uk" tvg-name="BBC Radio Lancashire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Lancashire.png" group-title="BBC Local Radio",BBC Radio Lancashire
+https://as-hls-uk-live.akamaized.net/pool_98146551/live/uk/bbc_radio_lancashire/bbc_radio_lancashire.isml/bbc_radio_lancashire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioLeeds.uk" tvg-name="BBC Radio Leeds" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Leeds.png" group-title="BBC Local Radio",BBC Radio Leeds
+https://as-hls-uk-live.akamaized.net/pool_50115440/live/uk/bbc_radio_leeds/bbc_radio_leeds.isml/bbc_radio_leeds-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioLeicester.uk" tvg-name="BBC Radio Leicester" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Leicester.png" group-title="BBC Local Radio",BBC Radio Leicester
+https://as-hls-uk-live.akamaized.net/pool_04542919/live/uk/bbc_radio_leicester/bbc_radio_leicester.isml/bbc_radio_leicester-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioLincolnshire.uk" tvg-name="BBC Radio Lincolnshire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Lincolnshire.png" group-title="BBC Local Radio",BBC Radio Lincolnshire
+https://as-hls-uk-live.akamaized.net/pool_77667780/live/uk/bbc_radio_lincolnshire/bbc_radio_lincolnshire.isml/bbc_radio_lincolnshire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioLondon.uk" tvg-name="BBC Radio London" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-London.png" group-title="BBC Local Radio",BBC Radio London
+https://as-hls-uk-live.akamaized.net/pool_98137350/live/uk/bbc_london/bbc_london.isml/bbc_london-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioManchester.uk" tvg-name="BBC Radio Manchester" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Manchester.png" group-title="BBC Local Radio",BBC Radio Manchester
+https://as-hls-uk-live.akamaized.net/pool_25317916/live/uk/bbc_radio_manchester/bbc_radio_manchester.isml/bbc_radio_manchester-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioMerseyside.uk" tvg-name="BBC Radio Merseyside" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Merseyside.png" group-title="BBC Local Radio",BBC Radio Merseyside
+https://as-hls-uk-live.akamaized.net/pool_46699767/live/uk/bbc_radio_merseyside/bbc_radio_merseyside.isml/bbc_radio_merseyside-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioNewcastle.uk" tvg-name="BBC Radio Newcastle" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Newcastle.png" group-title="BBC Local Radio",BBC Radio Newcastle
+https://as-hls-uk-live.akamaized.net/pool_46887953/live/uk/bbc_radio_newcastle/bbc_radio_newcastle.isml/bbc_radio_newcastle-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioNorfolk.uk" tvg-name="BBC Radio Norfolk" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Norfolk.png" group-title="BBC Local Radio",BBC Radio Norfolk
+https://as-hls-uk-live.akamaized.net/pool_61510571/live/uk/bbc_radio_norfolk/bbc_radio_norfolk.isml/bbc_radio_norfolk-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioNorthampton.uk" tvg-name="BBC Radio Northampton" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Northampton.png" group-title="BBC Local Radio",BBC Radio Northampton
+https://as-hls-uk-live.akamaized.net/pool_73827654/live/uk/bbc_radio_northampton/bbc_radio_northampton.isml/bbc_radio_northampton-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioNottingham.uk" tvg-name="BBC Radio Nottingham" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Nottingham.png" group-title="BBC Local Radio",BBC Radio Nottingham
+https://as-hls-uk-live.akamaized.net/pool_96088503/live/uk/bbc_radio_nottingham/bbc_radio_nottingham.isml/bbc_radio_nottingham-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Oxford" tvg-logo="" group-title="BBC Local Radio",BBC Radio Oxford
+https://as-hls-uk-live.akamaized.net/pool_19212690/live/uk/bbc_radio_oxford/bbc_radio_oxford.isml/bbc_radio_oxford-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioSheffield.uk" tvg-name="BBC Radio Sheffield" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Sheffield.png" group-title="BBC Local Radio",BBC Radio Sheffield
+https://as-hls-uk-live.akamaized.net/pool_19967704/live/uk/bbc_radio_sheffield/bbc_radio_sheffield.isml/bbc_radio_sheffield-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioShropshire.uk" tvg-name="BBC Radio Shropshire" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Shropshire.png" group-title="BBC Local Radio",BBC Radio Shropshire
+https://as-hls-uk-live.akamaized.net/pool_83478576/live/uk/bbc_radio_shropshire/bbc_radio_shropshire.isml/bbc_radio_shropshire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Solent" tvg-logo="" group-title="BBC Local Radio",BBC Radio Solent
+https://as-hls-uk-live.akamaized.net/pool_11685351/live/uk/bbc_radio_solent/bbc_radio_solent.isml/bbc_radio_solent-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Solent West Dorset" tvg-logo="" group-title="BBC Local Radio",BBC Radio Solent West Dorset
+https://as-hls-uk-live.akamaized.net/pool_48517520/live/uk/bbc_radio_solent_west_dorset/bbc_radio_solent_west_dorset.isml/bbc_radio_solent_west_dorset-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Somerset" tvg-logo="" group-title="BBC Local Radio",BBC Radio Somerset
+https://as-hls-uk-live.akamaized.net/pool_00727706/live/uk/bbc_radio_somerset_sound/bbc_radio_somerset_sound.isml/bbc_radio_somerset_sound-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Stoke" tvg-logo="" group-title="BBC Local Radio",BBC Radio Stoke
+https://as-hls-uk-live.akamaized.net/pool_34849862/live/uk/bbc_radio_stoke/bbc_radio_stoke.isml/bbc_radio_stoke-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Suffolk" tvg-logo="" group-title="BBC Local Radio",BBC Radio Suffolk
+https://as-hls-uk-live.akamaized.net/pool_18067288/live/uk/bbc_radio_suffolk/bbc_radio_suffolk.isml/bbc_radio_suffolk-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioSurrey.uk" tvg-name="BBC Radio Surrey" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Surrey.png" group-title="BBC Local Radio",BBC Radio Surrey
+https://as-hls-uk-live.akamaized.net/pool_27374427/live/uk/bbc_radio_surrey/bbc_radio_surrey.isml/bbc_radio_surrey-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Sussex" tvg-logo="" group-title="BBC Local Radio",BBC Radio Sussex
+https://as-hls-uk-live.akamaized.net/pool_76643803/live/uk/bbc_radio_sussex/bbc_radio_sussex.isml/bbc_radio_sussex-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioTees.uk" tvg-name="BBC Tees" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-Tees.png" group-title="BBC Local Radio",BBC Tees
+https://as-hls-uk-live.akamaized.net/pool_08918172/live/uk/bbc_tees/bbc_tees.isml/bbc_tees-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio Wiltshire" tvg-logo="" group-title="BBC Local Radio",BBC Radio Wiltshire
+https://as-hls-uk-live.akamaized.net/pool_44240917/live/uk/bbc_radio_wiltshire/bbc_radio_wiltshire.isml/bbc_radio_wiltshire-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="" tvg-name="BBC Radio WM" tvg-logo="" group-title="BBC Local Radio",BBC Radio WM
+https://as-hls-uk-live.akamaized.net/pool_05353924/live/uk/bbc_wm/bbc_wm.isml/bbc_wm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioYork.uk" tvg-name="BBC Radio York" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Radio-York.png" group-title="BBC Local Radio",BBC Radio York
+https://as-hls-uk-live.akamaized.net/pool_90848428/live/uk/bbc_radio_york/bbc_radio_york.isml/bbc_radio_york-audio%3d320000.norewind.m3u8
+#EXTINF:-1 radio="true" tvg-id="BBCRadioThreeCounties.uk" tvg-name="BBC Three Counties Radio" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/Radio/BBC-Three-Counties-Radio.png" group-title="BBC Local Radio",BBC Three Counties Radio
+https://as-hls-uk-live.akamaized.net/pool_69997923/live/uk/bbc_three_counties_radio/bbc_three_counties_radio.isml/bbc_three_counties_radio-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="68503d585965a2fd49fc2f0b" tvg-name="MacGyver" tvg-logo="https://images.pluto.tv/channels/68503d585965a2fd49fc2f0b/colorLogoPNG_1750164241502.png" group-title="Pluto TV · Bingeable Drama",MacGyver
 https://jmp2.uk/plu-68503d585965a2fd49fc2f0b.m3u8
 #EXTINF:-1 tvg-id="66d717d2abec540008ba7ec4" tvg-name="Pluto TV 80's Action" tvg-logo="https://images.pluto.tv/channels/66d717d2abec540008ba7ec4/colorLogoPNG_1787911717842.png" group-title="Pluto TV · Bingeable Drama",Pluto TV 80's Action
