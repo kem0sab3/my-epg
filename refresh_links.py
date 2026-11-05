@@ -15,7 +15,8 @@ def refresh(path=os.path.join(HERE, "playlist.m3u"), ahead=3 * 3600):
     if new != text:
         with open(path, "w", encoding="utf-8") as f:
             f.write(new)
-        print(f"Bauer radio links refreshed ({len(re.findall(r'aw_0_1st\\.skey=', new))} links)")
+        n = new.count("aw_0_1st.skey=")
+        print(f"Bauer radio links refreshed ({n} links)")
         return True
     return False
 

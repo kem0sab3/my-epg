@@ -16,6 +16,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Refresh the Bauer radio links
         run: python3 refresh_links.py
+      - name: Check a few stations play
+        run: |
+          for name in "Clyde 1" "Forth 1" "KISS" "Planet Rock"; do
+            url=$(grep -A1 -m1 ",$name\$" playlist.m3u | tail -n1)
+            code=$(curl -s -o /dev/null -r 0-2000 --max-time 8 -w '%{http_code}' "$url" || true)
+            echo "$name: $code"
+          done
       - name: Save
         run: |
           git config user.name "epg-bot"
