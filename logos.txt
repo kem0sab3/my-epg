@@ -19,3 +19,15 @@ magic-classical | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/
 cool-fm | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678805285/brand_manager/stations/enheqwgpzibdn4htnbyz.png
 downtown-radio | raw:https://media.bauerradio.com/image/upload/c_crop,g_custom/v1678805392/brand_manager/stations/yfddwlmfdtjdasqgtkek.png
 times-radio | Times Radio
+capital-dance | raw:https://herald.musicradio.com/media/5160d58f-efb3-432b-bcfb-bd2d53a8cb26.png
+capital-chill | raw:https://herald.musicradio.com/media/a1e905a0-c59a-44fd-ba89-a4988931e5b1.png
+capital-anthems | raw:https://herald.musicradio.com/media/dec0e4d9-1219-4687-9b2e-3b4af1d291db.png
+heart-70s | raw:https://herald.musicradio.com/media/03d8dfac-cb93-490d-912d-3175680567b2.png
+heart-00s | raw:https://herald.musicradio.com/media/a659dc4a-36af-4b5c-9719-d98d55688b49.png
+smooth-relax | raw:https://herald.musicradio.com/media/ca4b2112-3d7f-4cc1-9d6a-dfd5d07f45cf.png
+smooth-chill | raw:https://herald.musicradio.com/media/914a4134-9987-41ca-b8b3-5d3f032ff6bf.png
+smooth-country | raw:https://herald.musicradio.com/media/e296cae9-eb22-435c-a304-4804f16b313f.png
+smooth-70s | raw:https://herald.musicradio.com/media/6af9fbd8-bf25-4f5c-b1f1-09fe617d05db.png
+classic-fm-movies | raw:https://herald.musicradio.com/media/d5ef3faa-077d-41d7-8e28-4c484c68d05d.png
+classic-fm-calm | raw:https://herald.musicradio.com/media/aa8ef631-8525-46c5-8c19-c94899971f37.png
+radio-x-classic-rock | raw:https://herald.musicradio.com/media/04af66b9-6a22-47b5-a96a-a6156bc4bd5e.png
