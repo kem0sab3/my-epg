@@ -138,6 +138,39 @@ def grab_bauer(stations, days, out_path):
     print(f"   Bauer radio schedules: {total} programmes for {len(stations)} stations", flush=True)
     return out_path
 
+def grab_sky(services, days, out_path):
+    """Listings from Sky's TV guide, by Sky service number (e.g. 1005 = Times Radio)."""
+    tv = ET.Element("tv")
+    total = 0
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    for sid in services:
+        ch = ET.SubElement(tv, "channel", id=f"sky-{sid}")
+        ET.SubElement(ch, "display-name").text = sid
+        for d in range(int(days)):
+            date = (today + datetime.timedelta(days=d)).strftime("%Y%m%d")
+            try:
+                j = _get_json(f"https://awk.epgsky.com/hawk/linear/schedule/{date}/{sid}")
+                events = (j.get("schedule") or [{}])[0].get("events") or []
+            except Exception as e:
+                if d == 0:
+                    print(f"   !! sky {sid}: {e}", flush=True)
+                continue
+            for ev in events:
+                try:
+                    start = datetime.datetime.fromtimestamp(int(ev["st"]), datetime.timezone.utc)
+                    stop = start + datetime.timedelta(seconds=int(ev["d"]))
+                except Exception:
+                    continue
+                p = ET.SubElement(tv, "programme", start=start.strftime("%Y%m%d%H%M%S +0000"),
+                                  stop=stop.strftime("%Y%m%d%H%M%S +0000"), channel=f"sky-{sid}")
+                ET.SubElement(p, "title").text = ev.get("t") or sid
+                if ev.get("sy"):
+                    ET.SubElement(p, "desc").text = ev["sy"]
+                total += 1
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Sky guide: {total} programmes for {len(services)} channels", flush=True)
+    return out_path
+
 def grab_rakuten_uk(days, out_path):
     """Listings for Rakuten TV's free UK channels, from Rakuten's own channel guide."""
     now = datetime.datetime.now(datetime.timezone.utc).replace(minute=0, second=0, microsecond=0)
@@ -187,6 +220,9 @@ def fetch(src, tmpdir, i, days=7):
     if src.startswith("bauer:"):
         stations = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
         return grab_bauer(stations, int(days), os.path.join(tmpdir, f"src{i}.xml"))
+    if src.startswith("sky:"):
+        services = [s.strip() for s in src.split(":", 1)[1].split(",") if s.strip()]
+        return grab_sky(services, int(days), os.path.join(tmpdir, f"src{i}.xml"))
     if src.strip() == "rakuten-uk":
         return grab_rakuten_uk(days, os.path.join(tmpdir, f"src{i}.xml"))
     raw = os.path.join(tmpdir, f"src{i}.raw")

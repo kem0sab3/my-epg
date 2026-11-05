@@ -18,7 +18,10 @@ bbc-radio:bbc_radio_scotland_mw,bbc_radio_one_dance,bbc_radio_one_anthems,bbc_ra
 rakuten-uk
 
 # Bauer radio stations (Clyde 1, Forth 1, Greatest Hits Radio, KISS, Magic, Absolute...), from Bauer's own schedules
-bauer:cl1,fo1,no1,ta1,mf1,gh0,hit,abr,ab8,ab9,ki1,ki2,mag,jaz,ker
+bauer:cl1,fo1,no1,ta1,mf1,coo,dra,gh0,g6s,70s,80s,hit,h90,h00,abr,ab7,ab8,ab9,ab0,ab1,abc,ki1,ki3,ki2,ktb,htr,mag,mso,mel,mrs,jaz,ker
+
+# Sky's TV guide, by Sky service number (1005 = Times Radio)
+sky:1005
 
 # Big guide used for BBC Red Button 2-24 and BBC World News
 https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz
