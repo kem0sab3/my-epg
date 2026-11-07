@@ -62,4 +62,4 @@ football-man-united | crest:Manchester United F.C.
 football-newcastle | crest:Newcastle United F.C.
 football-nottingham-forest | crest:Nottingham Forest F.C.
 football-sunderland | crest:Sunderland A.F.C.
-football-spurs | crest:Tottenham Hotspur F.C.
+football-spurs | crest-white:Tottenham Hotspur F.C.

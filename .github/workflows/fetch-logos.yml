@@ -18,7 +18,7 @@ permissions:
 jobs:
   logos:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,11 +27,14 @@ jobs:
       - run: pip install pillow
       - name: Fetch and whiten logos
         run: python make_logos.py
+      - name: Rebuild the guide so it points at the new logos
+        run: python build_epg.py
+        continue-on-error: true
       - name: Save logos
         run: |
           git config user.name "epg-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add logos playlist.m3u
+          git add logos playlist.m3u epg.xml.gz
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update logos"
           git pull --rebase -X theirs
