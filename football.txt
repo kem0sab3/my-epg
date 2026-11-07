@@ -1,9 +1,7 @@
 # Scottish football fixtures guide. Each team below gets its own channel in the guide:
 #   before a match:  "Next: Kilmarnock (H) · Sun 8 Nov, 4pm"
 #   during it:       "Celtic v Kilmarnock"
-#   after it:        "FT: Celtic 2-1 Kilmarnock" (for 12 hours, then back to "Next: ...")
-# Fixtures and scores come from ESPN and cover every competition (league, cups, Europe, internationals).
-# Scores are refreshed every 15 minutes from midday to 10pm (see .github/workflows/update-football.yml).
+# Fixtures come from ESPN and cover every competition (league, cups, Europe, internationals).
 #
 # ESPN team lists the teams are looked up in (Premiership, Championship, League One, League Two, national teams):
 team_lists = sco.1, sco.2, sco.3, sco.4, uefa.nations
