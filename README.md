@@ -22,7 +22,7 @@ with the guide rebuilt automatically every day.
 - **Sport**
 - **Scottish Football:** a channel for each Premiership team and Scotland. Before a match the guide
   shows "Next: Kilmarnock (H) · Sun 8 Nov, 4pm", and during it "Celtic v Kilmarnock".
-  Selecting a team plays BBC Radio Scotland.
+  Selecting a team plays BBC Radio Scotland (Scotland plays BBC Scotland TV).
 - **Premier League:** the same for all 20 Premier League clubs (`premier-league.txt`). Selecting a
   team plays BBC Radio 5 Live.
 - **TV by category:** News, Entertainment, Comedy, Drama, Movies, Crime, Reality,
