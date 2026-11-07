@@ -556,6 +556,32 @@ https://jmp2.uk/stvp-GB500013LT
 https://epg.provider.plex.tv/library/parts/64305451fc3be5947773c339-621670feab2095ca85353ad4.m3u8?X-Plex-Token=PLEXTOKEN
 #EXTINF:-1 tvg-id="GB2000016YM" tvg-name="Your Sports News" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB2000016YM_20260811T045355SQUARE.png" group-title="Sport",Your Sports News
 https://jmp2.uk/stvp-GB2000016YM
+#EXTINF:-1 tvg-id="football-aberdeen" tvg-name="Aberdeen" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-aberdeen.png" group-title="Scottish Football",Aberdeen
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-celtic" tvg-name="Celtic" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-celtic.png" group-title="Scottish Football",Celtic
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-dundee" tvg-name="Dundee" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-dundee.png" group-title="Scottish Football",Dundee
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-dundee-united" tvg-name="Dundee United" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-dundee-united.png" group-title="Scottish Football",Dundee United
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-falkirk" tvg-name="Falkirk" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-falkirk.png" group-title="Scottish Football",Falkirk
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-hearts" tvg-name="Hearts" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-hearts.png" group-title="Scottish Football",Hearts
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-hibs" tvg-name="Hibs" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-hibs.png" group-title="Scottish Football",Hibs
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-kilmarnock" tvg-name="Kilmarnock" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-kilmarnock.png" group-title="Scottish Football",Kilmarnock
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-motherwell" tvg-name="Motherwell" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-motherwell.png" group-title="Scottish Football",Motherwell
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-rangers" tvg-name="Rangers" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-rangers.png" group-title="Scottish Football",Rangers
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-st-johnstone" tvg-name="St Johnstone" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-st-johnstone.png" group-title="Scottish Football",St Johnstone
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-st-mirren" tvg-name="St Mirren" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-st-mirren.png" group-title="Scottish Football",St Mirren
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-scotland" tvg-name="Scotland" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-scotland.png" group-title="Scottish Football",Scotland
+https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="GBNews.uk" tvg-name="GB News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png" group-title="News",GB News
 https://amg01076-lightningintern-gbnews-samsunguk-0lu52.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/aljazeera-uk.png" group-title="News",Al Jazeera English

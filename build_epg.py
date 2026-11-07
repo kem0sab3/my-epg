@@ -375,8 +375,228 @@ def static_guide(path, days, out_path):
     print(f"   Static guide: {n} all-day listings", flush=True)
     return out_path
 
+# ---------------------------------------------------------------- Scottish football fixtures
+ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates={start}-{end}&limit=500"
+SKY_SERVICES = "https://awk.epgsky.com/hawk/linear/services/4101/1"
+# Sky channels worth checking for live football (matched against Sky's channel names)
+SKY_FOOTBALL_CHANNELS = re.compile(r"sky ?sp|premier ?sp|tnt ?sp|bbc ?scot|bbc ?alba|bbc ?one ?sc|stv|viaplay", re.I)
+SKY_SKIP_CHANNELS = re.compile(r"news|racing|golf|f1|cricket|tennis|box ?office|nfl|darts|\+1", re.I)
+# Other clubs whose names contain a Scottish team's name, so "Rangers" isn't found inside "Queens Park Rangers"
+FOOTBALL_LOOKALIKES = ["queens park rangers", "cove rangers", "berwick rangers", "tranent rangers", "dundee united",
+                       "dundee utd", "dundee north end", "celtic nation", "hearts of oak", "falkirk juniors"]
+FOOTBALL_HOURS = 2            # how long each match listing lasts in the guide
+FOOTBALL_LOOKAHEAD_DAYS = 35  # fixtures this far ahead are used for the "Next: ..." listings between matches
+
+def _plain(s):
+    """Lower case, no accents, no 'FC', no punctuation: 'St. Mirren F.C.' -> 'st mirren'."""
+    import unicodedata
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower().replace("&", " and ")
+    s = re.sub(r"\b(a\.?f\.?c|f\.?c)\b\.?", " ", s)
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
+
+def _mentions(text, name, longer_names):
+    """True when 'name' appears in 'text' as words of its own, and not only as part of a longer club name."""
+    for other in longer_names:
+        if other != name and re.search(rf"(?<![a-z0-9]){re.escape(name)}(?![a-z0-9])", other):
+            text = re.sub(rf"(?<![a-z0-9]){re.escape(other)}(?![a-z0-9])", " ", text)
+    return bool(re.search(rf"(?<![a-z0-9]){re.escape(name)}(?![a-z0-9])", text))
+
+def _uk_time(d):
+    try:
+        from zoneinfo import ZoneInfo
+        d = d.astimezone(ZoneInfo("Europe/London"))
+    except Exception:
+        pass
+    h = d.strftime("%I").lstrip("0") + (d.strftime(":%M") if d.minute else "") + d.strftime("%p").lower()
+    return d.strftime("%a ") + str(d.day) + d.strftime(" %b, ") + h
+
+def _sky_channel_name(t):
+    """Tidy Sky's short channel names: 'Sky Sp MainEv HD' -> 'Sky Sports Main Event'."""
+    t = re.sub(r"\s*\b(UHD|HD|SD)\b\s*", " ", t or "").strip()
+    t = re.sub(r"^Sky ?Sp(orts)?\.?\s*", "Sky Sports ", t, flags=re.I)
+    for short, full in (("MainEv", "Main Event"), ("Main Ev", "Main Event"), ("PL", "Premier League"), ("Prem Lg", "Premier League"),
+                        ("Fball", "Football"), ("Ftball", "Football"), ("Footb", "Football")):
+        t = re.sub(rf"\b{re.escape(short)}\b", full, t)
+    t = re.sub(r"^Premier ?Sp(orts)?\.?\s*", "Premier Sports ", t, flags=re.I)
+    t = re.sub(r"^TNT ?Sp(orts)?\.?\s*", "TNT Sports ", t, flags=re.I)
+    return " ".join(t.split())
+
+def _sky_football_events(days):
+    """Everything on Sky's sports channels (plus BBC Scotland and BBC ALBA) for the next few days, to find which channel shows each match."""
+    events = []
+    try:
+        services = _get_json(SKY_SERVICES).get("services") or []
+    except Exception as e:
+        print(f"   !! Sky channel list: {e} (matches will show without TV channels)", flush=True)
+        return events
+    picked = {}
+    for s in services:
+        name = _sky_channel_name(s.get("t"))
+        if s.get("sid") and SKY_FOOTBALL_CHANNELS.search(s.get("t") or "") and not SKY_SKIP_CHANNELS.search(s.get("t") or ""):
+            picked.setdefault(name, s["sid"])
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    for name, sid in picked.items():
+        for d in range(-1, min(int(days), 7) + 1):
+            date = (today + datetime.timedelta(days=d)).strftime("%Y%m%d")
+            try:
+                j = _get_json(f"https://awk.epgsky.com/hawk/linear/schedule/{date}/{sid}")
+            except Exception:
+                continue
+            for ev in (j.get("schedule") or [{}])[0].get("events") or []:
+                try:
+                    start = datetime.datetime.fromtimestamp(int(ev["st"]), datetime.timezone.utc)
+                    stop = start + datetime.timedelta(seconds=int(ev["d"]))
+                except Exception:
+                    continue
+                events.append((start, stop, name, _plain(f"{ev.get('t', '')} {ev.get('sy', '')}"), (ev.get("t") or "").lower()))
+    print(f"   Sky guide: checked {len(picked)} sports channels ({', '.join(sorted(picked))})", flush=True)
+    return events
+
+def _tv_channels(kickoff, team_names, opp_names, longer, sky_events):
+    """Which channels show this match live, from Sky's guide. Best match: the listing names both teams."""
+    found = {}
+    for start, stop, channel, text, title in sky_events:
+        if not (start <= kickoff + datetime.timedelta(minutes=20) and stop >= kickoff + datetime.timedelta(minutes=45)):
+            continue
+        if not any(_mentions(text, n, longer) for n in team_names):
+            continue
+        both = any(_mentions(text, n, longer) for n in opp_names)
+        if both or "live" in title:
+            found[channel] = max(found.get(channel, 0), 2 if both else 1)
+    best = max(found.values(), default=0)
+    return [c for c, v in found.items() if v == best]
+
+def grab_scottish_football(config, days, out_path):
+    """A guide channel for each team in football.txt: its matches, where they're played and which TV channel shows them."""
+    tv = ET.Element("tv")
+    leagues, teams = [], []
+    for line in read_list(config):
+        if line.lower().startswith("leagues") and "=" in line:
+            leagues = [x.strip() for x in line.split("=", 1)[1].split(",") if x.strip()]
+        elif "|" in line:
+            parts = [x.strip() for x in line.split("|")] + [""]
+            cid, name, others = parts[0], parts[1], parts[2]
+            names = {_plain(name)} | {_plain(x) for x in others.split(",") if x.strip()}
+            teams.append({"id": cid, "name": name, "names": names - {""}, "matches": {}, "logo": None})
+    now = datetime.datetime.now(datetime.timezone.utc)
+    start, end = (now - datetime.timedelta(days=1)).strftime("%Y%m%d"), (now + datetime.timedelta(days=FOOTBALL_LOOKAHEAD_DAYS)).strftime("%Y%m%d")
+    n_fixtures = 0
+    for league in leagues:
+        try:
+            data = _get_json(ESPN_SCOREBOARD.format(league=league, start=start, end=end))
+        except Exception as e:
+            print(f"   !! fixtures {league}: {e}", flush=True)
+            continue
+        comp_name = ((data.get("leagues") or [{}])[0].get("name") or league)
+        for ev in data.get("events") or []:
+            try:
+                kickoff = datetime.datetime.fromisoformat(ev["date"].replace("Z", "+00:00"))
+                comp = (ev.get("competitions") or [{}])[0]
+                sides = comp.get("competitors") or []
+                home = next(c for c in sides if c.get("homeAway") == "home")
+                away = next(c for c in sides if c.get("homeAway") == "away")
+            except Exception:
+                continue
+            def names_of(c):
+                t = c.get("team") or {}
+                return {_plain(t.get(k)) for k in ("displayName", "shortDisplayName", "name", "location") if t.get(k)}
+            for team in teams:
+                for us, them in ((home, away), (away, home)):
+                    if team["names"] & names_of(us):
+                        team["logo"] = team["logo"] or (us.get("team") or {}).get("logo")
+                        broadcasts = [n for b in comp.get("broadcasts") or [] for n in b.get("names") or []]
+                        team["matches"][ev.get("id") or ev["date"]] = {
+                            "kickoff": kickoff, "home": home, "away": away, "us": us, "them": them,
+                            "competition": comp_name, "venue": (comp.get("venue") or {}).get("fullName"),
+                            "state": ((comp.get("status") or {}).get("type") or {}).get("state"),
+                            "round": ((comp.get("notes") or [{}])[0] or {}).get("headline") if comp.get("notes") else None,
+                            "espn_tv": broadcasts}
+                        n_fixtures += 1
+    sky_events = _sky_football_events(days) if n_fixtures else []
+    known_names = sorted({n for t in teams for n in t["names"]} | set(FOOTBALL_LOOKALIKES), key=len, reverse=True)
+
+    def team_label(c):
+        t = c.get("team") or {}
+        for cfg in teams:
+            if cfg["names"] & {_plain(t.get(k)) for k in ("displayName", "shortDisplayName", "name", "location") if t.get(k)}:
+                return cfg["name"]
+        return t.get("shortDisplayName") or t.get("displayName") or "TBC"
+
+    def stamp(d):
+        return d.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000")
+
+    total = 0
+    logo_dir = os.path.join(HERE, "logos")
+    for team in teams:
+        ch = ET.SubElement(tv, "channel", id=team["id"])
+        ET.SubElement(ch, "display-name").text = team["name"]
+        if team["logo"]:
+            ET.SubElement(ch, "icon", src=team["logo"])
+            # Keep a copy of the crest in logos/ so the playlist can point at it
+            path = os.path.join(logo_dir, team["id"] + ".png")
+            if not os.path.exists(path):
+                try:
+                    req = urllib.request.Request(team["logo"], headers={"User-Agent": "Mozilla/5.0"})
+                    with urllib.request.urlopen(req, timeout=30) as r:
+                        data = r.read()
+                    if data[:4] == b"\x89PNG":
+                        os.makedirs(logo_dir, exist_ok=True)
+                        with open(path, "wb") as f:
+                            f.write(data)
+                except Exception as e:
+                    print(f"   !! crest for {team['name']}: {e}", flush=True)
+        matches = sorted(team["matches"].values(), key=lambda m: m["kickoff"])
+        cursor = now.replace(minute=0, second=0, microsecond=0) - datetime.timedelta(hours=12)
+        horizon = now + datetime.timedelta(days=float(days) + 1)
+        for m in matches + [None]:
+            gap_end = m["kickoff"] if m else horizon
+            if gap_end > cursor + datetime.timedelta(minutes=30) and cursor < horizon:
+                p = ET.SubElement(tv, "programme", start=stamp(cursor), stop=stamp(min(gap_end, horizon)), channel=team["id"])
+                if m:
+                    where = "home" if m["us"] is m["home"] else "away"
+                    ET.SubElement(p, "title").text = f"Next: {team_label(m['them'])} ({where}) · {_uk_time(m['kickoff'])}"
+                    ET.SubElement(p, "desc").text = f"{team['name']}{chr(39) if team['name'].endswith('s') else chr(39) + 's'} next match: {team_label(m['home'])} v {team_label(m['away'])}, {m['competition']}."
+                else:
+                    ET.SubElement(p, "title").text = f"{team['name']}: no fixtures listed yet"
+                ET.SubElement(p, "category").text = "Sports"
+                total += 1
+            if not m:
+                break
+            ko = m["kickoff"]
+            stop = ko + datetime.timedelta(hours=FOOTBALL_HOURS)
+            if stop <= cursor:
+                continue
+            tv_names = _tv_channels(ko, team["names"], {_plain(team_label(m["them"]))} | {
+                _plain((m["them"].get("team") or {}).get(k)) for k in ("displayName", "shortDisplayName", "location") if (m["them"].get("team") or {}).get(k)},
+                known_names, sky_events) or m["espn_tv"]
+            p = ET.SubElement(tv, "programme", start=stamp(ko), stop=stamp(stop), channel=team["id"])
+            title = f"{team_label(m['home'])} v {team_label(m['away'])}"
+            if m["state"] == "post":
+                try:
+                    title = f"{team_label(m['home'])} {int(m['home']['score'])}-{int(m['away']['score'])} {team_label(m['away'])}"
+                except Exception:
+                    pass
+            ET.SubElement(p, "title").text = title
+            ET.SubElement(p, "sub-title").text = m["competition"] + (f" · {m['round']}" if m.get("round") else "")
+            lines = [f"{m['competition']}" + (f" · {m['round']}" if m.get("round") else "") + (f" · {m['venue']}" if m["venue"] else ""),
+                     f"Kick-off {_uk_time(ko)}."]
+            lines.append(f"Live on {' / '.join(tv_names)}." if tv_names else "No live TV listing found yet.")
+            ET.SubElement(p, "desc").text = "\n".join(lines)
+            ET.SubElement(p, "category").text = "Sports"
+            ET.SubElement(p, "category").text = "Football"
+            crest = (m["them"].get("team") or {}).get("logo")
+            if crest:
+                ET.SubElement(p, "icon", src=crest)
+            total += 1
+            cursor = stop
+    ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
+    print(f"   Scottish football: {n_fixtures} fixtures, {total} listings for {len(teams)} teams", flush=True)
+    return out_path
+
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
+    if src.startswith("scottish-football:"):
+        return grab_scottish_football(src.split(":", 1)[1].strip(), days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("bbc-ess:"):
         services = [x.strip() for x in src.split(":", 1)[1].split(",") if x.strip()]
         return grab_bbc_ess(services, os.path.join(tmpdir, f"src{i}.xml"))

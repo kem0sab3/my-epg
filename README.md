@@ -20,6 +20,10 @@ with the guide rebuilt automatically every day.
   channels, plus 720p backups
 - **BBC Radio, UK Radio and Irish Radio:** BBC, Global, Bauer, talkSPORT, Times Radio, Virgin, RTÉ and more
 - **Sport**
+- **Scottish Football:** a channel for each Premiership team and Scotland. The guide shows
+  each match (competition, ground, kick-off) and which TV channel has it live, from Sky's guide
+  (Sky Sports, Premier Sports, TNT Sports, BBC Scotland, BBC ALBA). Between matches it shows
+  "Next: ...". Selecting a team plays BBC Radio Scotland, home of Sportsound commentary.
 - **TV by category:** News, Entertainment, Comedy, Drama, Movies, Crime, Reality,
   Documentaries, Nature, Sci-Fi & Paranormal, Food & Lifestyle, Kids, Music,
   Christmas, Shopping, Faith and International. These mix the UK channels with
@@ -56,6 +60,7 @@ Open a file, click the ✏️ pencil, make the change, then **Commit changes**.
 | Add or remove a channel | `playlist_source.m3u` and `channels.txt` | Each channel is two lines in `playlist_source.m3u`: the `#EXTINF` line and the link under it. Its `tvg-id` also needs to be in `channels.txt` to get guide listings. |
 | Keep every channel from every guide | `channels.txt` | Delete all the IDs (keep the lines starting with `#`). |
 | Show more or fewer days | `settings.txt` | Change `days_ahead`. |
+| Add or remove a football team | `football.txt`, `playlist_source.m3u` and `channels.txt` | Copy a team's line in each file and change the name and id. The crest is saved in `logos/` on the next run. |
 | Change the all-day listing for a non-stop music station | `static_guide.txt` | Edit the title or description on that station's line. |
 | Add a logo from Wikipedia | `logos.txt` | Add a line like `bbc-radio-orkney \| BBC Radio Orkney` (file name \| Wikipedia article). GitHub downloads it, turns it white and saves it in `logos/`. Then set the channel's `tvg-logo` in `playlist.m3u` to `https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/` followed by the file name and `.png`. |
 
