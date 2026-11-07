@@ -581,7 +581,7 @@ https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm
 #EXTINF:-1 tvg-id="football-st-mirren" tvg-name="St Mirren" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-st-mirren.png" group-title="Scottish Football",St Mirren
 https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="football-scotland" tvg-name="Scotland" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-scotland.png" group-title="Scottish Football",Scotland
-https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+https://vs-cmaf-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/hevc_iptv_mse_v0.mpd
 #EXTINF:-1 tvg-id="football-arsenal" tvg-name="Arsenal" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-arsenal.png" group-title="Premier League",Arsenal
 https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="football-aston-villa" tvg-name="Aston Villa" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-aston-villa.png" group-title="Premier League",Aston Villa
