@@ -711,6 +711,8 @@ def main():
                             if key in names:
                                 el.remove(dn)
                             names.add(key)
+                            if not dn.get("lang"):
+                                dn.set("lang", "en")   # TiviMate's "assign EPG" search only lists names marked with a language
                         el.tail = "\n"
                         ch_out.write(ET.tostring(el, encoding="unicode"))
                         channels_done.add(cid)
