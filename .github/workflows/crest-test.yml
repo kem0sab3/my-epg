@@ -1,0 +1,25 @@
+name: crest-test
+on: push
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.parse, re
+          UA={"User-Agent":"my-epg-logo-fetcher/1.0 (personal TV playlist; github.com/kem0sab3/my-epg)"}
+          def get(q): return json.load(urllib.request.urlopen(urllib.request.Request("https://en.wikipedia.org/w/api.php?"+urllib.parse.urlencode(q), headers=UA), timeout=30))
+          clubs=["Aberdeen F.C.","Celtic F.C.","Dundee F.C.","Dundee United F.C.","Falkirk F.C.","Heart of Midlothian F.C.","Hibernian F.C.","Kilmarnock F.C.","Motherwell F.C.","Rangers F.C.","St Johnstone F.C.","St Mirren F.C.","Scotland national football team"]
+          for c in clubs:
+              try:
+                  rev=next(iter(get({"action":"query","format":"json","prop":"revisions","rvprop":"content","rvslots":"main","rvsection":0,"redirects":1,"titles":c})["query"]["pages"].values()))
+                  txt=rev["revisions"][0]["slots"]["main"]["*"]
+                  m=re.search(r"\|\s*(?:image|logo|badge|crest)\s*=\s*(?:\[\[)?(?:File:|Image:)?([^\|\]\n]+\.(?:svg|png|jpg))", txt, re.I)
+                  infobox=m.group(1).strip() if m else None
+                  print("CLUB", c, "| infobox:", infobox)
+                  if infobox:
+                      ii=next(iter(get({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|size|timestamp","iiurlwidth":800,"titles":"File:"+infobox})["query"]["pages"].values())).get("imageinfo",[{}])[0]
+                      print("   FILE", ii.get("width"), ii.get("height"), ii.get("timestamp"), "| thumb", ii.get("thumburl"), "| orig", ii.get("url"))
+              except Exception as e:
+                  print("CLUB", c, "ERR", e)
+          PY
