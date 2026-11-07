@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Downloads channel logos from Wikipedia, turns them white for dark TV app backgrounds,
 and saves them in logos/. The list is in logos.txt: one line per logo, 'file-name | Wikipedia article'.
-'file-name | crest:Wikipedia article' keeps the colours (football club crests)."""
+'file-name | crest:Wikipedia article' keeps the colours (football club crests); 'crest-white:' turns the crest white."""
 import io, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
@@ -105,11 +105,14 @@ def main():
         name, article = [x.strip() for x in line.split("|", 1)]
         time.sleep(1)
         try:
-            if article.startswith("crest:"):
+            if article.startswith(("crest:", "crest-white:")):
                 fname, url = crest(article.split(":", 1)[1].strip())
                 if not url:
                     print(f"!! {article}: no crest in the Wikipedia infobox"); continue
-                img = Image.open(io.BytesIO(get(url))).convert("RGBA")
+                data = get(url)
+                img = Image.open(io.BytesIO(data)).convert("RGBA")
+                if article.startswith("crest-white:"):   # for dark one-colour crests that vanish on a dark background
+                    img = whiten(data)
                 box = img.getchannel("A").getbbox()
                 img = img.crop(box) if box else img
                 img.thumbnail((600, 600))

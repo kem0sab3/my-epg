@@ -33,7 +33,7 @@ football-aberdeen | crest:Aberdeen F.C.
 football-celtic | crest:Celtic F.C.
 football-dundee | crest:Dundee F.C.
 football-dundee-united | crest:Dundee United F.C.
-football-falkirk | crest:Falkirk F.C.
+football-falkirk | crest-white:Falkirk F.C.
 football-hearts | crest:Heart of Midlothian F.C.
 football-hibs | crest:Hibernian F.C.
 football-kilmarnock | crest:Kilmarnock F.C.
