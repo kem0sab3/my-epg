@@ -480,6 +480,14 @@ def grab_scottish_football(config, days, out_path):
     def stamp(d):
         return d.astimezone(datetime.timezone.utc).strftime("%Y%m%d%H%M%S +0000")
 
+    repo = os.environ.get("GITHUB_REPOSITORY", "kem0sab3/my-epg")
+    def repo_crest(c):
+        et = c.get("team") or {}
+        for cfg in teams:
+            if cfg["names"] & _team_names(et) and os.path.exists(os.path.join(HERE, "logos", cfg["id"] + ".png")):
+                return logo_versions(f"https://raw.githubusercontent.com/{repo}/main/logos/{cfg['id']}.png")
+        return None
+
     tv = ET.Element("tv")
     total = n_matches = 0
     horizon = day0 + datetime.timedelta(days=int(float(days)) + 2)
@@ -492,8 +500,7 @@ def grab_scottish_football(config, days, out_path):
         if os.path.exists(path):
             ET.SubElement(ch, "icon", src=logo_versions(f"https://raw.githubusercontent.com/{repo}/main/logos/{t['id']}.png"))
         elif t["logo"]:
-            ET.SubElement(ch, "icon", src=t["logo"])
-            # until logos.txt fetches the Wikipedia crest, keep ESPN's crest so the playlist logo works
+            # no crest in logos/ yet: save ESPN's as a stand-in until Fetch logos gets the Wikipedia one
             if not os.path.exists(path):
                 try:
                     req = urllib.request.Request(t["logo"], headers={"User-Agent": "Mozilla/5.0"})
@@ -537,7 +544,7 @@ def grab_scottish_football(config, days, out_path):
             if end <= cursor:
                 continue
             them = m["away"] if m["us_home"] else m["home"]
-            crest = (them.get("team") or {}).get("logo") or ((them.get("team") or {}).get("logos") or [{}])[0].get("href")
+            crest = repo_crest(them)   # the opponent's crest from logos/, or none (never ESPN's older images)
             info = m["competition"] + (f" · {m['round']}" if m.get("round") else "") + (f" · {m['venue']}" if m["venue"] else "")
             hs, as_ = _score(m["home"]), _score(m["away"])
             if m["state"] == "post" and hs is not None and as_ is not None:
