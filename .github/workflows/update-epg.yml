@@ -13,6 +13,7 @@ on:
       - playlist_source.m3u
       - static_guide.txt
       - football.txt
+      - build_epg.py
 
 concurrency:
   group: epg

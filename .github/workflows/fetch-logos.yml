@@ -8,6 +8,10 @@ on:
       - logos.txt
       - make_logos.py
 
+concurrency:
+  group: epg
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -27,8 +31,8 @@ jobs:
         run: |
           git config user.name "epg-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add logos
+          git add logos playlist.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update logos"
-          git pull --rebase
+          git pull --rebase -X theirs
           git push
