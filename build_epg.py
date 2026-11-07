@@ -378,7 +378,6 @@ def static_guide(path, days, out_path):
 # ---------------------------------------------------------------- Scottish football fixtures
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 FOOTBALL_HOURS = 2         # how long each match listing lasts in the guide
-FOOTBALL_RESULT_HOURS = 12 # how long the final score stays up after a match
 
 def _plain(s):
     """Lower case, no accents, no 'FC', no punctuation: 'St. Mirren F.C.' -> 'st mirren'."""
@@ -399,15 +398,6 @@ def _uk_time(d):
 def _team_names(t):
     return {_plain(t.get(k)) for k in ("displayName", "shortDisplayName", "name", "location") if t.get(k)}
 
-def _score(c):
-    sc = c.get("score")
-    if isinstance(sc, dict):
-        sc = sc.get("displayValue", sc.get("value"))
-    try:
-        return int(float(sc))
-    except (TypeError, ValueError):
-        return None
-
 def read_football_config(config):
     lists, teams = ["sco.1", "sco.2", "sco.3", "sco.4", "uefa.nations"], []
     for line in read_list(config):
@@ -420,7 +410,7 @@ def read_football_config(config):
     return lists, teams
 
 def grab_scottish_football(config, days, out_path):
-    """A guide channel for each team in football.txt: 'Next: ...' before a match, the match while it's on, then the final score."""
+    """A guide channel for each team in football.txt: 'Next: ...' before a match, then the match itself."""
     lists, teams = read_football_config(config)
     # 1. Find each team's ESPN id and crest from the league team lists
     for lg in lists:
@@ -437,14 +427,14 @@ def grab_scottish_football(config, days, out_path):
                 if not t["espn"] and t["names"] & _team_names(et):
                     t["espn"] = et["id"]
                     t["logo"] = (et.get("logos") or [{}])[0].get("href") or et.get("logo")
-    # 2. Each team's results and upcoming fixtures, in every competition
+    # 2. Each team's upcoming fixtures, in every competition
     now = datetime.datetime.now(datetime.timezone.utc)
     day0 = now.replace(hour=0, minute=0, second=0, microsecond=0) - datetime.timedelta(days=1)
     for t in teams:
         if not t["espn"]:
             print(f"   !! {t['name']}: not found in ESPN's team lists ({', '.join(lists)})", flush=True)
             continue
-        for q in ("", "?fixture=true"):
+        for q in ("?fixture=true",):
             try:
                 data = _get_json(f"{ESPN}/all/teams/{t['espn']}/schedule{q}")
             except Exception as e:
@@ -459,7 +449,7 @@ def grab_scottish_football(config, days, out_path):
                     away = next(c for c in sides if c.get("homeAway") == "away")
                 except Exception:
                     continue
-                if kickoff < day0 - datetime.timedelta(hours=FOOTBALL_RESULT_HOURS):
+                if kickoff < day0 - datetime.timedelta(hours=FOOTBALL_HOURS):
                     continue
                 us_home = str((home.get("team") or {}).get("id")) == str(t["espn"])
                 notes = comp.get("notes") or []
@@ -546,54 +536,11 @@ def grab_scottish_football(config, days, out_path):
             them = m["away"] if m["us_home"] else m["home"]
             crest = repo_crest(them)   # the opponent's crest from logos/, or none (never ESPN's older images)
             info = m["competition"] + (f" · {m['round']}" if m.get("round") else "") + (f" · {m['venue']}" if m["venue"] else "")
-            hs, as_ = _score(m["home"]), _score(m["away"])
-            if m["state"] == "post" and hs is not None and as_ is not None:
-                result = f"{label(m['home'])} {hs}-{as_} {label(m['away'])}"
-                add(ko, end, f"{result} (FT)", f"{info}\nKick-off {_uk_time(ko)}.", crest)
-                later = matches[i + 1]["kickoff"] if i + 1 < len(matches) else horizon
-                res_end = min(end + datetime.timedelta(hours=FOOTBALL_RESULT_HOURS), later)
-                if res_end > end + datetime.timedelta(minutes=30):
-                    add(end, res_end, f"FT: {result}", info, crest)
-                    end = res_end
-            else:
-                add(ko, end, f"{label(m['home'])} v {label(m['away'])}", f"{info}\nKick-off {_uk_time(ko)}.", crest)
+            add(ko, end, f"{label(m['home'])} v {label(m['away'])}", f"{info}\nKick-off {_uk_time(ko)}.", crest)
             cursor = end
     ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
     print(f"   Scottish football: {n_matches} matches, {total} listings for {len(teams)} teams", flush=True)
     return out_path
-
-def update_football_only():
-    """Refresh just the football listings inside epg.xml.gz (run every 15 minutes on match days, so scores appear soon after full time)."""
-    src = next((s for s in read_list("sources.txt") if s.startswith("scottish-football:")), None)
-    out_path = os.path.join(HERE, "epg.xml.gz")
-    if not src or not os.path.exists(out_path):
-        sys.exit("No scottish-football line in sources.txt, or no epg.xml.gz yet.")
-    config = src.split(":", 1)[1].strip()
-    ids = [t["id"] for t in read_football_config(config)[1]]
-    tmp = tempfile.mkdtemp()
-    new = open(grab_scottish_football(config, read_settings().get("days_ahead", 7), os.path.join(tmp, "f.xml")), encoding="utf-8").read()
-    shutil.rmtree(tmp, ignore_errors=True)
-    if "Next:" not in new and "FT" not in new:
-        sys.exit("No fixtures came back - leaving the guide as it is.")
-    alt = "|".join(re.escape(i) for i in ids)
-    ch_re = re.compile(rf'<channel id="(?:{alt})">.*?</channel>\n?', re.S)
-    pr_re = re.compile(rf'<programme [^>]*channel="(?:{alt})"[^>]*>.*?</programme>\n?', re.S)
-    new_ch = "".join(m.group(0).rstrip("\n") + "\n" for m in ch_re.finditer(new))
-    new_pr = "".join(m.group(0).rstrip("\n") + "\n" for m in pr_re.finditer(new))
-    with gzip.open(out_path, "rt", encoding="utf-8") as f:
-        text = f.read()
-    old = "".join(m.group(0).rstrip("\n") + "\n" for m in ch_re.finditer(text)) + "".join(m.group(0).rstrip("\n") + "\n" for m in pr_re.finditer(text))
-    if old == new_ch + new_pr:
-        print("Football listings unchanged.")
-        return
-    text = pr_re.sub("", ch_re.sub("", text))
-    first = text.find("<programme")
-    text = (text[:first] + new_ch + text[first:]) if first >= 0 else text.replace("</tv>", new_ch + "</tv>")
-    text = text.replace("</tv>", new_pr + "</tv>")
-    with open(out_path + ".tmp", "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", compresslevel=9, mtime=0) as g:
-        g.write(text.encode("utf-8"))
-    os.replace(out_path + ".tmp", out_path)
-    print("Football listings updated in epg.xml.gz")
 
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
@@ -816,7 +763,4 @@ def main():
     print(f"Done: {len(channels_done)} channels, {total_prog} programmes, {mb:.1f} MB -> epg.xml.gz")
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["football"]:
-        update_football_only()
-    else:
-        main()
+    main()
