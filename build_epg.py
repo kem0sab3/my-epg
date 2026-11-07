@@ -490,7 +490,7 @@ def grab_scottish_football(config, days, out_path):
         path = os.path.join(logo_dir, t["id"] + ".png")
         repo = os.environ.get("GITHUB_REPOSITORY", "kem0sab3/my-epg")
         if os.path.exists(path):
-            ET.SubElement(ch, "icon", src=f"https://raw.githubusercontent.com/{repo}/main/logos/{t['id']}.png")
+            ET.SubElement(ch, "icon", src=logo_versions(f"https://raw.githubusercontent.com/{repo}/main/logos/{t['id']}.png"))
         elif t["logo"]:
             ET.SubElement(ch, "icon", src=t["logo"])
             # until logos.txt fetches the Wikipedia crest, keep ESPN's crest so the playlist logo works
@@ -656,6 +656,19 @@ def refresh_plex_token():
 
 STREAMING_SERVICES = ("jmp2.uk/", "epg.provider.plex.tv/", "rakuten", "amagi.tv", "wurl.", "tubi.video")
 
+LOGO_LINK = re.compile(r'(https://raw\.githubusercontent\.com/[^/"]+/[^/"]+/[^/"]+/logos/([^"?/]+\.png))(\?v=[0-9a-f]+)?', re.I)
+
+def logo_versions(text):
+    """Add ?v=<fingerprint> to links to this repo's own logos, so TV apps fetch a fresh copy whenever a logo changes."""
+    import hashlib
+    def stamp(m):
+        path = os.path.join(HERE, "logos", m.group(2))
+        if not os.path.exists(path):
+            return m.group(0)
+        with open(path, "rb") as f:
+            return f"{m.group(1)}?v={hashlib.md5(f.read()).hexdigest()[:8]}"
+    return LOGO_LINK.sub(stamp, text)
+
 def build_playlist(listed):
     """Make playlist.m3u from playlist_source.m3u. Channels from free streaming services (Pluto, Samsung, Rakuten, Plex)
     whose guide has nothing for them today are left out for today, and come back automatically when their listings return."""
@@ -684,7 +697,7 @@ def build_playlist(listed):
         else:
             out.append(line); i += 1
     with open(os.path.join(HERE, "playlist.m3u"), "w", encoding="utf-8") as f:
-        f.write("\n".join(out) + "\n")
+        f.write(logo_versions("\n".join(out) + "\n"))
     print(f"   playlist.m3u: {sum(1 for l in out if l.startswith('#EXTINF'))} channels"
           f" ({len(hidden)} streaming channels hidden today for having no listings: {', '.join(hidden[:15])}{'...' if len(hidden) > 15 else ''})", flush=True)
 

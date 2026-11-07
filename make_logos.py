@@ -146,5 +146,22 @@ def main():
         except Exception as e:
             print(f"!! {article}: {e}")
 
+def stamp_playlist():
+    """Give the playlist's logo links a fresh ?v= fingerprint, so TV apps notice the new logos."""
+    try:
+        sys.path.insert(0, HERE)
+        import build_epg
+        path = os.path.join(HERE, "playlist.m3u")
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        new = build_epg.logo_versions(text)
+        if new != text:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(new)
+            print("playlist.m3u logo links updated")
+    except Exception as e:
+        print(f"!! could not update playlist logo links: {e}")
+
 if __name__ == "__main__":
     main()
+    stamp_playlist()
