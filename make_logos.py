@@ -147,8 +147,9 @@ def main():
             print(f"!! {article}: {e}")
 
 def stamp_playlist():
-    """Give the playlist's logo links a fresh ?v= fingerprint, so TV apps notice the new logos."""
+    """Give the logo links in the playlist and the guide a fresh ?v= fingerprint, so TV apps notice the new logos."""
     try:
+        import gzip
         sys.path.insert(0, HERE)
         import build_epg
         path = os.path.join(HERE, "playlist.m3u")
@@ -159,8 +160,18 @@ def stamp_playlist():
             with open(path, "w", encoding="utf-8") as f:
                 f.write(new)
             print("playlist.m3u logo links updated")
+        path = os.path.join(HERE, "epg.xml.gz")
+        if os.path.exists(path):
+            with gzip.open(path, "rt", encoding="utf-8") as f:
+                text = f.read()
+            new = build_epg.logo_versions(text)
+            if new != text:
+                with gzip.open(path + ".tmp", "wt", encoding="utf-8", compresslevel=9) as f:
+                    f.write(new)
+                os.replace(path + ".tmp", path)
+                print("epg.xml.gz logo links updated")
     except Exception as e:
-        print(f"!! could not update playlist logo links: {e}")
+        print(f"!! could not update logo links: {e}")
 
 if __name__ == "__main__":
     main()
