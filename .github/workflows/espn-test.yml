@@ -6,15 +6,29 @@ jobs:
     steps:
       - run: |
           B=https://site.api.espn.com/apis/site/v2/sports/soccer
-          for q in "sco.1/scoreboard" "sco.1/scoreboard?dates=20261107" "sco.1/scoreboard?dates=20261106-20261212" "sco.1/scoreboard?dates=20261106-20261212&limit=500" "sco.1/scoreboard?dates=20261106-20261212&limit=100" "sco.1/scoreboard?dates=20261106-20261120" "sco.1/scoreboard?dates=20261107-20261114&limit=200" "sco.tennents/scoreboard?dates=20261106-20261212" "sco.cis/scoreboard" "sco.challenge/scoreboard" "uefa.europa/scoreboard?dates=20261106-20261212" "sco.1/teams"; do
-            code=$(curl -s -A Mozilla/5.0 -H 'Accept: application/json' -o out.json -w '%{http_code}' "$B/$q")
-            echo "$code $q events=$(python3 -c "import json;d=json.load(open('out.json'));print(len(d.get('events',[])), d.get('leagues',[{}])[0].get('name'))" 2>/dev/null) $(head -c 150 out.json)"
-          done
-          curl -s -A Mozilla/5.0 "$B/sco.1/scoreboard?dates=20261107-20261114" | python3 -c "
-          import json,sys;d=json.load(sys.stdin)
-          for e in d.get('events',[])[:8]:
-              c=e['competitions'][0]
-              print(e['date'],e['name'],[x['team'].get('displayName')+'/'+x['team'].get('shortDisplayName','')+'/'+x['team'].get('location','') for x in c['competitors']],c.get('broadcasts'),c.get('geoBroadcasts'),c.get('venue',{}).get('fullName'))
-          "
-          curl -s -o s.json -w 'sky %{http_code}\n' https://awk.epgsky.com/hawk/linear/services/4101/1; python3 -c "
-          import json;d=json.load(open('s.json'));print([ (s['sid'],s['t']) for s in d.get('services',[]) if any(k in s['t'].lower() for k in ('sky sp','premier','tnt','bbc scot','alba'))][:60])"
+          curl -s -A Mozilla/5.0 "$B/sco.1/teams" > teams.json
+          python3 - <<'PY'
+          import json, urllib.request
+          B="https://site.api.espn.com/apis/site/v2/sports/soccer"
+          def get(u):
+              try:
+                  return json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent":"Mozilla/5.0"}), timeout=30))
+              except Exception as e:
+                  return {"err": str(e)}
+          d=json.load(open("teams.json"))
+          teams=[t["team"] for t in d["sports"][0]["leagues"][0]["teams"]]
+          for t in teams: print("TEAM", t["id"], t.get("displayName"), "|", t.get("shortDisplayName"), "|", t.get("location"), "|", (t.get("logos") or [{}])[0].get("href"))
+          celtic=[t for t in teams if t["displayName"]=="Celtic"][0]["id"]
+          for q in (f"sco.1/teams/{celtic}/schedule?fixture=true", f"sco.1/teams/{celtic}/schedule", f"all/teams/{celtic}/schedule?fixture=true"):
+              s=get(f"{B}/{q}")
+              ev=s.get("events") or []
+              print("SCHED", q, s.get("err"), len(ev))
+              for e in ev[:6]:
+                  c=e["competitions"][0]
+                  print("   ", e.get("date"), e.get("name"), "|", (e.get("league") or {}).get("name"), "|", e.get("seasonType",{}).get("name"), "|", c.get("venue",{}).get("fullName"), "|", c.get("status",{}).get("type",{}).get("state"), "|", c.get("broadcasts"), "|", [ (x.get("homeAway"), x["team"].get("displayName"), x["team"].get("shortDisplayName"), x["team"].get("location"), bool(x["team"].get("logos") or x["team"].get("logo")), x.get("score")) for x in c.get("competitors",[])])
+              if ev: print("   KEYS", list(ev[0].keys()), list(ev[0]["competitions"][0].keys()))
+          for lg in ("uefa.europa","uefa.champions","uefa.europa.conf","sco.2","sco.tennents","uefa.nations","fifa.worldq.uefa","fifa.friendly","club.friendly"):
+              s=get(f"{B}/{lg}/scoreboard?dates=20261112"); print("LG", lg, s.get("err"), len(s.get("events") or []))
+          s=get("https://awk.epgsky.com/hawk/linear/services/4101/1")
+          print("SKY", s.get("err"), [(x["sid"], x["t"]) for x in s.get("services",[]) if any(k in x["t"].lower() for k in ("sky sp","premier","tnt","bbc scot","alba","bbc one sc","viaplay"))])
+          PY
