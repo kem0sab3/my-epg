@@ -582,6 +582,46 @@ https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm
 https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="football-scotland" tvg-name="Scotland" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-scotland.png" group-title="Scottish Football",Scotland
 https://as-hls-uk-live.akamaized.net/pool_43322914/live/uk/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-arsenal" tvg-name="Arsenal" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-arsenal.png" group-title="Premier League",Arsenal
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-aston-villa" tvg-name="Aston Villa" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-aston-villa.png" group-title="Premier League",Aston Villa
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-bournemouth" tvg-name="Bournemouth" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-bournemouth.png" group-title="Premier League",Bournemouth
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-brentford" tvg-name="Brentford" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-brentford.png" group-title="Premier League",Brentford
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-brighton" tvg-name="Brighton" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-brighton.png" group-title="Premier League",Brighton
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-chelsea" tvg-name="Chelsea" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-chelsea.png" group-title="Premier League",Chelsea
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-coventry" tvg-name="Coventry" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-coventry.png" group-title="Premier League",Coventry
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-crystal-palace" tvg-name="Crystal Palace" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-crystal-palace.png" group-title="Premier League",Crystal Palace
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-everton" tvg-name="Everton" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-everton.png" group-title="Premier League",Everton
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-fulham" tvg-name="Fulham" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-fulham.png" group-title="Premier League",Fulham
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-hull" tvg-name="Hull" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-hull.png" group-title="Premier League",Hull
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-ipswich" tvg-name="Ipswich" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-ipswich.png" group-title="Premier League",Ipswich
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-leeds" tvg-name="Leeds" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-leeds.png" group-title="Premier League",Leeds
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-liverpool" tvg-name="Liverpool" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-liverpool.png" group-title="Premier League",Liverpool
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-man-city" tvg-name="Man City" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-man-city.png" group-title="Premier League",Man City
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-man-united" tvg-name="Man United" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-man-united.png" group-title="Premier League",Man United
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-newcastle" tvg-name="Newcastle" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-newcastle.png" group-title="Premier League",Newcastle
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-nottingham-forest" tvg-name="Nottingham Forest" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-nottingham-forest.png" group-title="Premier League",Nottingham Forest
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-sunderland" tvg-name="Sunderland" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-sunderland.png" group-title="Premier League",Sunderland
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="football-spurs" tvg-name="Spurs" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-spurs.png" group-title="Premier League",Spurs
+https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="GBNews.uk" tvg-name="GB News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png" group-title="News",GB News
 https://amg01076-lightningintern-gbnews-samsunguk-0lu52.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/aljazeera-uk.png" group-title="News",Al Jazeera English

@@ -42,3 +42,24 @@ football-rangers | crest:Rangers F.C.
 football-st-johnstone | crest:St Johnstone F.C.
 football-st-mirren | crest:St Mirren F.C.
 football-scotland | crest:Scotland national football team
+# Premier League club crests, in colour, from each club's Wikipedia page
+football-arsenal | crest:Arsenal F.C.
+football-aston-villa | crest:Aston Villa F.C.
+football-bournemouth | crest:AFC Bournemouth
+football-brentford | crest:Brentford F.C.
+football-brighton | crest:Brighton & Hove Albion F.C.
+football-chelsea | crest:Chelsea F.C.
+football-coventry | crest:Coventry City F.C.
+football-crystal-palace | crest:Crystal Palace F.C.
+football-everton | crest:Everton F.C.
+football-fulham | crest:Fulham F.C.
+football-hull | crest:Hull City A.F.C.
+football-ipswich | crest:Ipswich Town F.C.
+football-leeds | crest:Leeds United F.C.
+football-liverpool | crest:Liverpool F.C.
+football-man-city | crest:Manchester City F.C.
+football-man-united | crest:Manchester United F.C.
+football-newcastle | crest:Newcastle United F.C.
+football-nottingham-forest | crest:Nottingham Forest F.C.
+football-sunderland | crest:Sunderland A.F.C.
+football-spurs | crest:Tottenham Hotspur F.C.

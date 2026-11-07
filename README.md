@@ -23,6 +23,8 @@ with the guide rebuilt automatically every day.
 - **Scottish Football:** a channel for each Premiership team and Scotland. Before a match the guide
   shows "Next: Kilmarnock (H) · Sun 8 Nov, 4pm", and during it "Celtic v Kilmarnock".
   Selecting a team plays BBC Radio Scotland.
+- **Premier League:** the same for all 20 Premier League clubs (`premier-league.txt`). Selecting a
+  team plays BBC Radio 5 Live.
 - **TV by category:** News, Entertainment, Comedy, Drama, Movies, Crime, Reality,
   Documentaries, Nature, Sci-Fi & Paranormal, Food & Lifestyle, Kids, Music,
   Christmas, Shopping, Faith and International. These mix the UK channels with
@@ -59,7 +61,7 @@ Open a file, click the ✏️ pencil, make the change, then **Commit changes**.
 | Add or remove a channel | `playlist_source.m3u` and `channels.txt` | Each channel is two lines in `playlist_source.m3u`: the `#EXTINF` line and the link under it. Its `tvg-id` also needs to be in `channels.txt` to get guide listings. |
 | Keep every channel from every guide | `channels.txt` | Delete all the IDs (keep the lines starting with `#`). |
 | Show more or fewer days | `settings.txt` | Change `days_ahead`. |
-| Add or remove a football team | `football.txt`, `playlist_source.m3u` and `channels.txt` | Copy a team's line in each file and change the name and id. The crest is saved in `logos/` on the next run. |
+| Add or remove a football team | `football.txt` (Scottish) or `premier-league.txt`, plus `playlist_source.m3u`, `channels.txt` and `logos.txt` | Copy a team's line in each file and change the name and id. The crest is saved in `logos/` on the next run. |
 | Change the all-day listing for a non-stop music station | `static_guide.txt` | Edit the title or description on that station's line. |
 | Add a logo from Wikipedia | `logos.txt` | Add a line like `bbc-radio-orkney \| BBC Radio Orkney` (file name \| Wikipedia article). GitHub downloads it, turns it white and saves it in `logos/`. Then set the channel's `tvg-logo` in `playlist.m3u` to `https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/` followed by the file name and `.png`. |
 

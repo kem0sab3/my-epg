@@ -1,0 +1,30 @@
+# Premier League fixtures guide. Each team below gets its own channel in the guide:
+#   before a match:  "Next: Chelsea (H) · Sat 14 Nov, 3pm"
+#   during it:       "Arsenal v Chelsea"
+# Fixtures come from ESPN and cover every competition (league, FA Cup, League Cup, Europe).
+#
+# ESPN team lists the teams are looked up in (Premier League, Championship):
+team_lists = eng.1, eng.2
+#
+# One line per team:  channel id | name shown | other names the team goes by (comma separated)
+# To add a team, copy a line, then add the same channel to playlist_source.m3u, channels.txt and logos.txt.
+football-arsenal | Arsenal |
+football-aston-villa | Aston Villa | Villa
+football-bournemouth | Bournemouth | AFC Bournemouth
+football-brentford | Brentford |
+football-brighton | Brighton | Brighton & Hove Albion, Brighton and Hove Albion
+football-chelsea | Chelsea |
+football-coventry | Coventry | Coventry City
+football-crystal-palace | Crystal Palace | Palace
+football-everton | Everton |
+football-fulham | Fulham |
+football-hull | Hull | Hull City
+football-ipswich | Ipswich | Ipswich Town
+football-leeds | Leeds | Leeds United
+football-liverpool | Liverpool |
+football-man-city | Man City | Manchester City
+football-man-united | Man United | Manchester United, Man Utd
+football-newcastle | Newcastle | Newcastle United
+football-nottingham-forest | Nottingham Forest | Nott'm Forest, Forest
+football-sunderland | Sunderland |
+football-spurs | Spurs | Tottenham Hotspur, Tottenham
