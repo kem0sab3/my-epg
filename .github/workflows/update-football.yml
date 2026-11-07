@@ -1,0 +1,34 @@
+name: Update football
+
+on:
+  schedule:
+    - cron: "*/15 11-22 * * *"   # every 15 minutes, 11am-11pm UK time (winter), so scores appear soon after full time
+  workflow_dispatch:              # adds a "Run workflow" button
+
+concurrency:
+  group: epg                      # never runs at the same time as Update EPG
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  football:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh football fixtures and scores
+        run: python build_epg.py football
+      - name: Save
+        run: |
+          git config user.name "epg-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epg.xml.gz logos
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Update football scores"
+          git pull --rebase -X theirs
+          git push
