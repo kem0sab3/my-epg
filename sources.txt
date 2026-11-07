@@ -39,3 +39,6 @@ islam-channel
 
 # Big guide used for BBC Red Button 2-24 and BBC World News
 https://github.com/ferteque/Curated-M3U-Repository/raw/refs/heads/main/epg6.xml.gz
+
+# Scottish football: a guide channel per team with its fixtures and the TV channel showing each match (edit football.txt)
+scottish-football:football.txt

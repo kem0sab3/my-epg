@@ -803,3 +803,16 @@ rakuten-top-movies-rakuten-tv
 sky-1005
 sky-news-weather
 tbn-uk
+football-aberdeen
+football-celtic
+football-dundee
+football-dundee-united
+football-falkirk
+football-hearts
+football-hibs
+football-kilmarnock
+football-motherwell
+football-rangers
+football-st-johnstone
+football-st-mirren
+football-scotland
