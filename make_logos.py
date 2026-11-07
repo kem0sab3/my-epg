@@ -1,15 +1,37 @@
 #!/usr/bin/env python3
 """Downloads channel logos from Wikipedia, turns them white for dark TV app backgrounds,
-and saves them in logos/. The list is in logos.txt: one line per logo, 'file-name | Wikipedia article'."""
-import io, json, os, sys, urllib.parse, urllib.request
+and saves them in logos/. The list is in logos.txt: one line per logo, 'file-name | Wikipedia article'.
+'file-name | crest:Wikipedia article' keeps the colours (football club crests)."""
+import io, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = {"User-Agent": "my-epg-logo-fetcher/1.0 (personal TV playlist; github.com/kem0sab3/my-epg)"}
 
 def get(url):
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
-        return r.read()
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 4:
+                raise
+            time.sleep(10 * (attempt + 1))   # Wikipedia asked us to slow down
+
+def crest(article):
+    """A club's current crest, in colour: the image in its Wikipedia infobox, rendered as a PNG."""
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "revisions", "rvprop": "content", "rvslots": "main",
+                                "rvsection": 0, "redirects": 1, "titles": article})
+    page = next(iter(json.loads(get("https://en.wikipedia.org/w/api.php?" + q))["query"]["pages"].values()))
+    text = page["revisions"][0]["slots"]["main"]["*"]
+    m = re.search(r"\|\s*(?:image|logo|badge|crest)\s*=\s*(?:\[\[)?(?:File:|Image:)?([^|\]\n]+\.(?:svg|png))", text, re.I)
+    if not m:
+        return None, None
+    f = "File:" + m.group(1).strip()
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "imageinfo", "iiprop": "url", "iiurlwidth": 800, "titles": f})
+    info = next(iter(json.loads(get("https://en.wikipedia.org/w/api.php?" + q))["query"]["pages"].values()))
+    ii = (info.get("imageinfo") or [{}])[0]
+    return f, ii.get("thumburl") or ii.get("url")
 
 def logo_url(article):
     q = urllib.parse.urlencode({"action": "query", "format": "json", "prop": "pageimages", "piprop": "thumbnail|name",
@@ -81,7 +103,19 @@ def main():
         if not line or line.startswith("#") or "|" not in line:
             continue
         name, article = [x.strip() for x in line.split("|", 1)]
+        time.sleep(1)
         try:
+            if article.startswith("crest:"):
+                fname, url = crest(article.split(":", 1)[1].strip())
+                if not url:
+                    print(f"!! {article}: no crest in the Wikipedia infobox"); continue
+                img = Image.open(io.BytesIO(get(url))).convert("RGBA")
+                box = img.getchannel("A").getbbox()
+                img = img.crop(box) if box else img
+                img.thumbnail((600, 600))
+                img.save(os.path.join(HERE, "logos", name + ".png"), optimize=True)
+                print(f"ok {name}.png  <- {article} ({fname}) {img.size}")
+                continue
             if article.startswith(("url:", "tile:", "raw:", "white:")):
                 mode, url = article.split(":", 1)
                 fname, url = "direct", url.strip()
