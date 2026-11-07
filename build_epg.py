@@ -539,12 +539,12 @@ def grab_scottish_football(config, days, out_path):
             add(ko, end, f"{label(m['home'])} v {label(m['away'])}", f"{info}\nKick-off {_uk_time(ko)}.", crest)
             cursor = end
     ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
-    print(f"   Scottish football: {n_matches} matches, {total} listings for {len(teams)} teams", flush=True)
+    print(f"   Football ({config}): {n_matches} matches, {total} listings for {len(teams)} teams", flush=True)
     return out_path
 
 def fetch(src, tmpdir, i, days=7):
     """Download (or copy) a source and return a path to the plain XML."""
-    if src.startswith("scottish-football:"):
+    if src.startswith(("scottish-football:", "football:")):
         return grab_scottish_football(src.split(":", 1)[1].strip(), days, os.path.join(tmpdir, f"src{i}.xml"))
     if src.startswith("bbc-ess:"):
         services = [x.strip() for x in src.split(":", 1)[1].split(",") if x.strip()]
