@@ -3,6 +3,7 @@ name: Fetch logos
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - logos.txt
       - make_logos.py

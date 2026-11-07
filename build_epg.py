@@ -487,9 +487,13 @@ def grab_scottish_football(config, days, out_path):
     for t in teams:
         ch = ET.SubElement(tv, "channel", id=t["id"])
         ET.SubElement(ch, "display-name").text = t["name"]
-        if t["logo"]:
+        path = os.path.join(logo_dir, t["id"] + ".png")
+        repo = os.environ.get("GITHUB_REPOSITORY", "kem0sab3/my-epg")
+        if os.path.exists(path):
+            ET.SubElement(ch, "icon", src=f"https://raw.githubusercontent.com/{repo}/main/logos/{t['id']}.png")
+        elif t["logo"]:
             ET.SubElement(ch, "icon", src=t["logo"])
-            path = os.path.join(logo_dir, t["id"] + ".png")   # copy of the crest for the playlist logo
+            # until logos.txt fetches the Wikipedia crest, keep ESPN's crest so the playlist logo works
             if not os.path.exists(path):
                 try:
                     req = urllib.request.Request(t["logo"], headers={"User-Agent": "Mozilla/5.0"})

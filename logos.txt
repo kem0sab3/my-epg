@@ -28,3 +28,17 @@ smooth-70s | white:https://herald.musicradio.com/media/6af9fbd8-bf25-4f5c-b1f1-0
 classic-fm-movies | white:https://herald.musicradio.com/media/d5ef3faa-077d-41d7-8e28-4c484c68d05d.png
 classic-fm-calm | white:https://herald.musicradio.com/media/aa8ef631-8525-46c5-8c19-c94899971f37.png
 radio-x-classic-rock | white:https://herald.musicradio.com/media/04af66b9-6a22-47b5-a96a-a6156bc4bd5e.png
+# Football club crests, in colour, from each club's Wikipedia page
+football-aberdeen | crest:Aberdeen F.C.
+football-celtic | crest:Celtic F.C.
+football-dundee | crest:Dundee F.C.
+football-dundee-united | crest:Dundee United F.C.
+football-falkirk | crest:Falkirk F.C.
+football-hearts | crest:Heart of Midlothian F.C.
+football-hibs | crest:Hibernian F.C.
+football-kilmarnock | crest:Kilmarnock F.C.
+football-motherwell | crest:Motherwell F.C.
+football-rangers | crest:Rangers F.C.
+football-st-johnstone | crest:St Johnstone F.C.
+football-st-mirren | crest:St Mirren F.C.
+football-scotland | crest:Scotland national football team
