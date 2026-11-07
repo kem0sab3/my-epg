@@ -20,10 +20,10 @@ with the guide rebuilt automatically every day.
   channels, plus 720p backups
 - **BBC Radio, UK Radio and Irish Radio:** BBC, Global, Bauer, talkSPORT, Times Radio, Virgin, RTÉ and more
 - **Sport**
-- **Scottish Football:** a channel for each Premiership team and Scotland. The guide shows
-  each match (competition, ground, kick-off) and which TV channel has it live, from Sky's guide
-  (Sky Sports, Premier Sports, TNT Sports, BBC Scotland, BBC ALBA). Between matches it shows
-  "Next: ...". Selecting a team plays BBC Radio Scotland, home of Sportsound commentary.
+- **Scottish Football:** a channel for each Premiership team and Scotland. Before a match the guide
+  shows "Next: Kilmarnock (H) · Sun 8 Nov, 4pm", during it "Celtic v Kilmarnock", and after it the
+  final score, "FT: Celtic 2-1 Kilmarnock". Scores are refreshed every 15 minutes from 11am to 11pm
+  (**Update football** in Actions). Selecting a team plays BBC Radio Scotland.
 - **TV by category:** News, Entertainment, Comedy, Drama, Movies, Crime, Reality,
   Documentaries, Nature, Sci-Fi & Paranormal, Food & Lifestyle, Kids, Music,
   Christmas, Shopping, Faith and International. These mix the UK channels with

@@ -5,6 +5,7 @@ on:
     - cron: "17 3 * * *"     # every day at 03:17 UK time (winter) / 04:17 (summer)
   workflow_dispatch:          # adds a "Run workflow" button so you can update it any time
   push:
+    branches: [main]
     paths:                    # also rebuild straight away when you change your lists
       - sources.txt
       - channels.txt
@@ -12,6 +13,10 @@ on:
       - playlist_source.m3u
       - static_guide.txt
       - football.txt
+
+concurrency:
+  group: epg
+  cancel-in-progress: false
 
 permissions:
   contents: write

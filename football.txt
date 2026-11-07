@@ -1,10 +1,12 @@
-# Scottish football fixtures guide. Each team below gets its own channel in the guide,
-# listing its upcoming matches (competition, ground, kick-off) and the TV channel showing it
-# when Sky's TV guide has it (Sky Sports, Premier Sports, TNT Sports, BBC Scotland, BBC ALBA...).
-# Between matches the guide shows "Next: ..." so the row is never empty.
+# Scottish football fixtures guide. Each team below gets its own channel in the guide:
+#   before a match:  "Next: Kilmarnock (H) · Sun 8 Nov, 4pm"
+#   during it:       "Celtic v Kilmarnock"
+#   after it:        "FT: Celtic 2-1 Kilmarnock" (for 12 hours, then back to "Next: ...")
+# Fixtures and scores come from ESPN and cover every competition (league, cups, Europe, internationals).
+# Scores are refreshed every 15 minutes from midday to 10pm (see .github/workflows/update-football.yml).
 #
-# Fixtures come from ESPN. These are the competitions checked (ESPN's codes):
-leagues = sco.1, sco.2, sco.tennents, sco.cis, sco.challenge, uefa.champions, uefa.europa, uefa.europa.conf, uefa.nations, fifa.worldq.uefa, fifa.friendly, club.friendly
+# ESPN team lists the teams are looked up in (Premiership, Championship, League One, League Two, national teams):
+team_lists = sco.1, sco.2, sco.3, sco.4, uefa.nations
 #
 # One line per team:  channel id | name shown | other names the team goes by (comma separated)
 # To add a team, copy a line, then add the same channel to playlist_source.m3u and channels.txt.
