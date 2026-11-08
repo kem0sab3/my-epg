@@ -395,6 +395,15 @@ def _uk_time(d):
     h = d.strftime("%I").lstrip("0") + (d.strftime(":%M") if d.minute else "") + d.strftime("%p").lower()
     return d.strftime("%a ") + str(d.day) + d.strftime(" %b, ") + h
 
+def _uk_clock(d):
+    """'7.45pm' / '3pm', UK time."""
+    try:
+        from zoneinfo import ZoneInfo
+        d = d.astimezone(ZoneInfo("Europe/London"))
+    except Exception:
+        pass
+    return d.strftime("%I").lstrip("0") + (d.strftime(".%M") if d.minute else "") + d.strftime("%p").lower()
+
 def _team_names(t):
     return {_plain(t.get(k)) for k in ("displayName", "shortDisplayName", "name", "location") if t.get(k)}
 
@@ -404,9 +413,10 @@ def read_football_config(config):
         if line.lower().startswith("team_lists") and "=" in line:
             lists = [x.strip() for x in line.split("=", 1)[1].split(",") if x.strip()]
         elif "|" in line:
-            parts = [x.strip() for x in line.split("|")] + [""]
+            parts = [x.strip() for x in line.split("|")] + ["", ""]
             names = {_plain(parts[1])} | {_plain(x) for x in parts[2].split(",") if x.strip()}
-            teams.append({"id": parts[0], "name": parts[1], "names": names - {""}, "espn": None, "logo": None, "matches": {}})
+            teams.append({"id": parts[0], "name": parts[1], "names": names - {""}, "espn": None, "logo": None, "matches": {},
+                          "international": (parts[3] if len(parts) > 3 else "").lower() == "international"})
     return lists, teams
 
 def grab_scottish_football(config, days, out_path):
@@ -525,25 +535,35 @@ def grab_scottish_football(config, days, out_path):
         n_matches += len(matches)
         cursor = day0
         for i, m in enumerate(matches + [None]):
-            nxt = m["kickoff"] if m else horizon
+            if m:
+                ko = m["kickoff"]
+                if t["international"]:   # national team: listed like BBC Scotland, 15 minutes before kick-off to 2h15 after
+                    start, end = ko - datetime.timedelta(minutes=15), ko + datetime.timedelta(minutes=135)
+                else:
+                    start, end = ko, ko + datetime.timedelta(hours=FOOTBALL_HOURS)
+            nxt = start if m else horizon
             if cursor >= horizon:
                 break
             if nxt > cursor + datetime.timedelta(minutes=30):
                 if m:
                     them = m["away"] if m["us_home"] else m["home"]
-                    add(cursor, min(nxt, horizon), f"Next: {label(them)} ({'H' if m['us_home'] else 'A'}) · {_uk_time(m['kickoff'])}",
+                    add(cursor, min(nxt, horizon), f"Next: {label(them)} ({'H' if m['us_home'] else 'A'}) · {_uk_time(ko)}",
                         f"{label(m['home'])} v {label(m['away'])}\n{m['competition']}" + (f" · {m['venue']}" if m["venue"] else ""))
                 else:
                     add(cursor, horizon, f"{t['name']}: next fixture not announced yet")
             if not m:
                 break
-            ko, end = m["kickoff"], m["kickoff"] + datetime.timedelta(hours=FOOTBALL_HOURS)
             if end <= cursor:
                 continue
+            start = max(start, cursor)
             them = m["away"] if m["us_home"] else m["home"]
             crest = repo_crest(them)   # the opponent's crest from logos/, or none (never ESPN's older images)
             info = m["competition"] + (f" · {m['round']}" if m.get("round") else "") + (f" · {m['venue']}" if m["venue"] else "")
-            add(ko, end, f"{label(m['home'])} v {label(m['away'])}", f"{info}\nKick-off {_uk_time(ko)}.", crest)
+            if t["international"]:
+                add(start, end, "Live International Football",
+                    f"{label(m['home'])} v {label(m['away'])} (Kick-off {_uk_clock(ko)})\n{info}", crest)
+            else:
+                add(start, end, f"{label(m['home'])} v {label(m['away'])}", f"{info}\nKick-off {_uk_time(ko)}.", crest)
             cursor = end
     ET.ElementTree(tv).write(out_path, encoding="utf-8", xml_declaration=True)
     print(f"   Football ({config}): {n_matches} matches, {total} listings for {len(teams)} teams", flush=True)
