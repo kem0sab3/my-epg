@@ -7,6 +7,7 @@
 team_lists = sco.1, sco.2, sco.3, sco.4, uefa.nations
 #
 # One line per team:  channel id | name shown | other names the team goes by (comma separated)
+# Add '| international' to list a team's matches as "Live International Football", 15 minutes before kick-off to 2h15 after.
 # To add a team, copy a line, then add the same channel to playlist_source.m3u and channels.txt.
 football-aberdeen | Aberdeen | Dons
 football-celtic | Celtic |
@@ -20,4 +21,4 @@ football-motherwell | Motherwell |
 football-rangers | Rangers |
 football-st-johnstone | St Johnstone | St. Johnstone, Saint Johnstone
 football-st-mirren | St Mirren | St. Mirren, Saint Mirren
-football-scotland | Scotland | Scotland national team
+football-scotland | Scotland | Scotland national team | international
