@@ -505,6 +505,13 @@ def grab_scottish_football(config, days, out_path):
 
         def add(start, stop, title, desc=None, icon=None):
             nonlocal total
+            # TV apps can ignore very long listings, so long gaps are split into blocks of up to 6 hours
+            block = datetime.timedelta(hours=6)
+            while stop - start > block:
+                edge = start.replace(minute=0, second=0, microsecond=0)
+                edge += datetime.timedelta(hours=6 - edge.hour % 6)
+                add(start, edge, title, desc, icon)
+                start = edge
             p = ET.SubElement(tv, "programme", start=stamp(start), stop=stamp(stop), channel=t["id"])
             ET.SubElement(p, "title").text = title
             if desc:
