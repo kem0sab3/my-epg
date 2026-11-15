@@ -45,3 +45,4 @@ scottish-football:football.txt
 
 # Premier League: a guide channel per team with its fixtures (edit premier-league.txt)
 football:premier-league.txt
+sky:4050
