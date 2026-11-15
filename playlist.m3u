@@ -580,6 +580,12 @@ https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/b
 https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
 #EXTINF:-1 tvg-id="football-spurs" tvg-name="Spurs" tvg-logo="https://raw.githubusercontent.com/kem0sab3/my-epg/main/logos/football-spurs.png?v=2eeead75" group-title="Premier League",Spurs
 https://as-hls-uk-live.akamaized.net/pool_89021708/live/uk/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d320000.norewind.m3u8
+#EXTINF:-1 tvg-id="sky-news-weather" tvg-name="Sky News Weather" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png" group-title="News",Sky News Weather
+https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8
+#EXTINF:-1 tvg-id="GB3300002NF" tvg-name="Sky News" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3300002NF_20260707T052102SQUARE.png" group-title="News",Sky News
+https://jmp2.uk/stvp-GB3300002NF
+#EXTINF:-1 tvg-id="sky-4050" tvg-name="Sky News 60fps" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png" group-title="News",Sky News 60fps (video only)
+https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1794746304/ei/YFP5aqLFKfzbmLAP89js0Qg/ip/81.108.135.46/id/umLWFz4izTM.3/itag/312/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr3---sn-8pgbpohxqp5-h5ok.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/ss/1/bui/AZFAFb8xUN-7zL8ZJZmL1-GA17XECuMLkb3q17x4ui53srAoiMORXWNNZsWHFNrQxuyfjbBIl35qFD_v/spc/nfZ8ZodMWaA_q5mkh0gcVybuObX_MH2B6Uk5uzdUSMEDC3cQ4Xc_OAH3ii1u/vprv/1/reg/0/playlist_type/DVR/initcwndbps/4868125/met/1794724704,/mh/84/mm/44/mn/sn-8pgbpohxqp5-h5ok/ms/lva/mv/m/mvi/3/pl/21/rms/lva,lva/dover/13/pacing/0/epbp/1/short_key/1/keepalive/yes/fexp/51565115/mt/1794724143/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgovp,rqh,xpc,playlist_duration,manifest_duration,ss,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRgIhALAi-ubQDcYaeitc5KVOb0zr2_39JKZtJ5BU97ARAHY7AiEA3RILlcjQAq2LfIXccxxtcRiTR1-PA4yWb34q93r0jZI%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAOJADbtt0OwZyMAE8RLPCwpEncDuplmcQNjcYP9ubF25AiEAgmsKQ-MtHHlWXUGPPSAkxZpi-FNB047d47xkdDspBKQ%3D/playlist/index.m3u8
 #EXTINF:-1 tvg-id="GBNews.uk" tvg-name="GB News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png" group-title="News",GB News
 https://amg01076-lightningintern-gbnews-samsunguk-0lu52.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlJazeeraEnglish.qa" tvg-name="Al Jazeera English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/aljazeera-uk.png" group-title="News",Al Jazeera English
@@ -596,8 +602,6 @@ https://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlis
 https://tv-trtworld.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 tvg-id="ArirangTV.kr" tvg-name="Arirang TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/international/arirang-int.png" group-title="News",Arirang TV
 https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="sky-news-weather" tvg-name="Sky News Weather" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png" group-title="News",Sky News Weather
-https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8
 #EXTINF:-1 tvg-id="GB1300001RX" tvg-name="DW English" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/dw-english-int.png" group-title="News",DW English
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8
 #EXTINF:-1 tvg-id="NHKWorldJapan.jp" tvg-name="NHK World-Japan" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/international/nhk-world-japan-int.png" group-title="News",NHK World-Japan
@@ -622,8 +626,6 @@ https://jmp2.uk/stvp-GBBB1500004LG
 https://amg17596-ntdtv-amg17596c1-rakuten-gb-6741.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-rakutengb/playlist.m3u8
 #EXTINF:-1 tvg-id="GBBD4900001RG" tvg-name="Reuters" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD4900001RG_20250107T030741SQUARE.png" group-title="News",Reuters
 https://jmp2.uk/stvp-GBBD4900001RG
-#EXTINF:-1 tvg-id="GB3300002NF" tvg-name="Sky News" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB3300002NF_20260707T052102SQUARE.png" group-title="News",Sky News
-https://jmp2.uk/stvp-GB3300002NF
 #EXTINF:-1 tvg-id="GB1200006IV" tvg-name="Talk" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GB1200006IV_20250506T021119SQUARE.png" group-title="News",Talk
 https://jmp2.uk/stvp-GB1200006IV
 #EXTINF:-1 tvg-id="S4C.uk" tvg-name="S4C" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/s4c-uk.png" group-title="Entertainment",S4C
@@ -1444,5 +1446,3 @@ https://jmp2.uk/stvp-GB200093HQ
 https://jmp2.uk/stvp-GB4400001OO
 #EXTINF:-1 tvg-id="GBBD1100013BJ" tvg-name="Zee One" tvg-logo="https://tvpnlogopeu.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/GBBD1100013BJ_20250701T033240SQUARE.png" group-title="International",Zee One
 https://jmp2.uk/stvp-GBBD1100013BJ
-#EXTINF:-1 tvg-id="sky-4050" tvg-name="Sky News 60fps" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png" group-title="News",Sky News 60fps (video only)
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1794746304/ei/YFP5aqLFKfzbmLAP89js0Qg/ip/81.108.135.46/id/umLWFz4izTM.3/itag/312/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr3---sn-8pgbpohxqp5-h5ok.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/ss/1/bui/AZFAFb8xUN-7zL8ZJZmL1-GA17XECuMLkb3q17x4ui53srAoiMORXWNNZsWHFNrQxuyfjbBIl35qFD_v/spc/nfZ8ZodMWaA_q5mkh0gcVybuObX_MH2B6Uk5uzdUSMEDC3cQ4Xc_OAH3ii1u/vprv/1/reg/0/playlist_type/DVR/initcwndbps/4868125/met/1794724704,/mh/84/mm/44/mn/sn-8pgbpohxqp5-h5ok/ms/lva/mv/m/mvi/3/pl/21/rms/lva,lva/dover/13/pacing/0/epbp/1/short_key/1/keepalive/yes/fexp/51565115/mt/1794724143/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgovp,rqh,xpc,playlist_duration,manifest_duration,ss,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRgIhALAi-ubQDcYaeitc5KVOb0zr2_39JKZtJ5BU97ARAHY7AiEA3RILlcjQAq2LfIXccxxtcRiTR1-PA4yWb34q93r0jZI%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAOJADbtt0OwZyMAE8RLPCwpEncDuplmcQNjcYP9ubF25AiEAgmsKQ-MtHHlWXUGPPSAkxZpi-FNB047d47xkdDspBKQ%3D/playlist/index.m3u8
